@@ -2,10 +2,10 @@
 [[medium]]
 == Medium
 
-* Source: <<iso690,clause 4.4>>, <<iso690,clause 5.4>>
+* Source: <<ISO690,clause 4.4>>, <<ISO690,clause 5.4>>
 * Serialisation: `bibitem/medium`
 
-<<iso690>> differentiates between the content type of the item,
+<<ISO690>> differentiates between the content type of the item,
 the media type (which includes file format for electronic media),
 the carrier type, the size of the item (which can include duration,
 and electronic file size, as well as physical medium size), and
@@ -14,13 +14,13 @@ modelled as elements of the item medium; the media type or file format
 is modelled as `medium/form`.
 
 There is no fixed vocabulary modelled for any of the elements of `medium`
-(although <<iso690>> suggests closed Resource Description and Access (RDA)
+(although <<ISO690>> suggests closed Resource Description and Access (RDA)
 vocabularies for `medium/content` and `medium/carrier`, and IANA Media Type
-is best practice for `medium/form` for electronic resources. As <<iso690>>
+is best practice for `medium/form` for electronic resources. As <<ISO690>>
 allows, there may be instances where the medium descriptions need to be
 discursive.
 
-<<iso690>> suggests specifying detailed information about the type of electronic
+<<ISO690>> suggests specifying detailed information about the type of electronic
 information resource (e.g. "statistical dataset"), which cannot be represented
 in the type of bibliographic item (`bibitem/@type`), and is likely to be to specific
 for the RDA triple of content, carrier and form. The `medium/genre` element is intended

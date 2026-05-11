@@ -1,0 +1,58 @@
+
+[[introduction]]
+== Introduction
+
+ISO 690 has been the International Standard for citations and bibliographic referencing
+since the publication of its first edition in 1975. Since then, a multitude of electronic
+referencing tools and conventions has evolved; many of them can be used
+to encode a subset of the bibliographic information captured in <<ISO690>>.
+
+However, there has not been an information model that allows
+faithful representation of the full guidelines provided in <<ISO690>>
+in an electronic manner.
+
+The lack of an information model meant that:
+
+* existing electronic referencing tools
+cannot be surveyed rigorously, to determine the extent to which
+they comply with the requirements of <<ISO690>>,
+either with regard to content coverage or with the base rendering requirements
+of the specification;
+
+* existing electronic referencing tools cannot easily draw on
+the guidelines provided by <<ISO690>> in order to fully
+cover the requirements of <<ISO690>>.
+
+With the latest edition of <<ISO690>> recently published, it is necessary to supplement the guidelines with information models that can rigorously express the needs of the guidelines specified in <<ISO690>>.
+
+
+////
+In addition, a rigorous logical model of <<ISO690>> would help identify
+any gaps, inconsistencies, or areas open for interpretation in the conceptual
+model proposed in the specification, and in the rendering model described there.
+(The latter is more liable to need ambiguities fixed than the former, since
+these will become apparent in any attempts to render references in a way
+compliant with <<ISO690>>.)
+////
+
+This document provides information models and a serialisation syntax for <<ISO690>>.
+The serialisation can be used to represent references compliant to <<ISO690>>;
+being formalised and complete,
+it can also be used to evaluate existing bibliographic tools for coverage of the
+standard, and to identify any issues they may have.
+
+The BibTeX tool <<bibtex>> has been used as a representative bibliographic tool
+in <<AnnexB>> to illustrate comparison against a reference model, because of
+its popularity and relative completeness.
+
+////
+A separate document is intended to propose an example rendering stylesheet for the
+serialisation of this model,
+which aligns with the examples used in <<ISO690>>. <<ISO690>> prescribes some
+aspects of rendering
+(e.g. sequence, use of "in:" and "at:"), and leaves others to implementation
+(e.g. use of italics, use of punctuation). The stylesheet allows the container
+model and the rendering
+model of <<ISO690>> to be differentiated, and the rendering items prescribed by
+<<ISO690>> to be identified clearly.
+////

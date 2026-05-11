@@ -1,0 +1,168 @@
+
+[[unpublished]]
+=== Unpublished information resources
+
+==== General
+
+Unpublished documents are a diverse group of information resources, including for instance personal communications, but also medieval or modern manuscripts, raw scientific data, preprints of scientific publications, doctoral dissertations and master's theses.
+
+
+==== Metadata elements
+
+<<table-elements-unpublished-information>> shows the elements, in order, to be included in references to unpublished information resources.
+
+[[table-elements-unpublished-information]]
+.Metadata elements for unpublished information resources
+[cols="<,<,^"]
+|===
+h| Elements (in order) h| Status h| Relevant clause(s)/ subclauses
+
+| *Name of creator(s)* | Required | <<creator>>
+| Standard identifiers of creators' public identities | Optional | <<creator>>
+| *Title of the item* | Required | <<form_of_title>>, <<translation_of_title>>
+| Subsidiary titles | Optional | <<additional_titles>> to <<no_title>>
+| *Resource type* | Required | <<unpublished-resource-type>>
+| Subsidiary creator | Optional | <<subsidiary_creator>>
+| *Date of creation* | Required if available | <<date>>
+| *Service or host archive* | Required, if applicable | <<archival_materials>>
+| *Physical location* | Required for print information resources if a limited number of copies are known to exist | <<physical_location>>
+| *Persistent identifier* | Required if available | <<persistent_identifiers>>
+| *Location and access (URI)* | Required for online information resources with no persistent identifier or archived copy | <<network_location>>
+| *Date of citation* | Required for dynamic online information resources | <<date-citation>>
+| *Relationships* | Required if available | <<relations>>
+| Other information may be added in whatever position is most appropriate | Optional | <<other_elements>>; <<web_specific>>
+
+|===
+
+
+==== Data elements and guidance specific to type
+
+[[unpublished-resource-type]]
+===== Resource type and location
+
+Resource type and the location or the name of the service via which the cited resource is available should be included.
+
+Resource type specific metadata elements, such as manuscript shelf mark, should be cited according to the practice of the memory institution which owns the resource.
+
+
+==== Personal communications
+
+Personal communications include for instance letters, emails and diaries, but also lectures and conversations, either face to face or via telephone.
+
+Unpublished personal communications should be referenced in text only, with the exact date and, if necessary, time in <<ISO8601-1>> format. A published, archived or recorded information resource (e.g., a letter, diary or performance) should be cited accordingly (e.g., as a publication, archival information resource or as an audio-visual material).
+
+====
+FRANKLIN, Benjamin. _Letter to Thomas Paine: Reason and Religion, from Philadelphia, 1786-07-03_ [letter] [personal communication].
+====
+
+====
+JOBS, Steve. _Re: International Customers are not happy_. 2010-04-15. [email] [personal communication]
+====
+
+====
+Nick Nicholas [opoudjis], personal communication, Skype direct message, 2001-01-01.
+====
+
+
+Inline citation examples follow.
+
+====
+According to Mr. J. Smith (personal communication, 2018-10-08), the situation was serious.
+====
+
+====
+"I wouldn't want to experience such a storm again (59 years old female participant)".
+====
+
+====
+"I enjoyed my first year at the university (Student A)".
+====
+
+
+==== Group communications
+
+Group communications, such as mailing lists, may be cited in a similar way as with serials.
+
+====
+CLAWSON, B. [tuv'el]. 2000-04-18. _RE: chaw' chu'_. tlhIngan-Hol mailing list. Available from: https://www.kli.org/tlhIngan-Hol/2000/April/msg00190.html[https://www.kli.org/tlhIngan-Hol/2000/April/msg00190.html]
+====
+
+==== Dissertations and theses
+
+The resource type of doctoral dissertations and master's theses should be indicated in the citation.
+
+====
+MACKIE, A. G. _The Impact of National Identity on the Brexit Vote: Explaining the Variance in Support of the European Union Between Scotland and England_. [Master's thesis]. [online]. Helsinki: University of Helsinki, Faculty of Social Sciences, 2016. Available from: E-thesis, http://urn.fi/URN:NBN:fi:hulib-201807022863[http://urn.fi/URN:NBN:fi:hulib-201807022863] [viewed 2018-10-16].
+====
+
+
+==== Manuscript
+
+Medieval manuscript folio numbers, including the recto/verso reference, should be provided when the citation does not cover the entire manuscript.
+
+If there is a facsimile of the cited medieval manuscript, it may be mentioned in the reference.
+
+====
+ATWOOD, Margaret. _Scribbler moon._ [Manuscript]. Location: Oslo, Deichmanske bibliotek.
+====
+
+====
+SALA, P. _Petit Livre d'Amour_. [Manuscript]. British Library Stowe MS 955, fols. 3r–12v. London: British Library. Available from: British Library Digitised Manuscripts, http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Stowe_MS_955[http://www.bl.uk/manuscripts/FullDisplay.aspx?ref=Stowe_MS_955]. Facsimile with comments by Janet Backhouse and Yves Giraud. Lucerne: Faksimile Verlag, 1994.
+====
+
+
+==== Preprint
+
+If a preprint is cited, the name of the access provider and the repository should be included in the citation. If there are several versions of the preprint, version number of the cited version should be included as well.
+
+Publication process information should be provided if available. For instance, if a cited version of a scientific article has already passed peer review and has been submitted for publication, a phrase "`Manuscript submitted for publication`" may be used.
+
+[[jenkins_ruostekoski_preprint]]
+====
+JENKINS, S. and Janne RUOSTEKOSKI. _Controlled manipulation of light by cooperative response of atoms in an optical lattice._ Manuscript submitted for publication. Available from: University of Southampton Institutional Research Repository, ePrints Soton, http://eprints.soton.ac.uk/id/eprint/338797[http://eprints.soton.ac.uk/id/eprint/338797]. [viewed 2017-06-24].
+====
+
+There are different policies regarding the usage of some unpublished resources, such as preprints. Some publishers may forbid their usage, while some others may require that preprints are treated as personal communications (that is, cited in the text only). This document does not provide guidelines in this respect, but it should be remembered that although most preprints will eventually be published, significant changes may take place during the peer review process. For instance, the published version of the article cited in <<jenkins_ruostekoski_preprint>> (see https://doi.org/10.1103/PhysRevA.86.031602[https://doi.org/10.1103/PhysRevA.86.031602]) is quite different from the preprint.
+
+
+==== Phone calls
+
+A personal phone call may be referred to, both for a transcript and its recording.
+
+====
+NIXON, R.M. and DEAN, J.W., III. _1973-03-14, 08:55-08:59. [Phone call]_.
+Transcript available from: http://nixontapes.org/watergate/037-099.pdf
+====
+
+====
+NIXON, R.M. and DEAN, J.W., III. _1973-03-14, 08:55-08:59. [Phone call]_.
+Recorded audio available from: http://nixontapes.org/watergate/037-099.mp3
+====
+
+
+==== Presentation
+
+Presentations may be referred to as unpublished information resources.
+
+====
+OLSSON, N. 2012. _One Search_. Presentation given in Google Atmosphere on Tour series, Royal Institute of Technology, Stockholm.
+Transcript available from: https://www.kth.se/blogs/1337/presentationer/one-search-presentation-transcript/
+Slides available from: https://www.kth.se/blogs/1337/files/2012/06/atmosphere-on-tour.pdf
+====
+
+A presentation video may also be referred to.
+
+====
+ONGARO, E. 2019-05-17. _Physics Capstones_. Presentation given at Sonoma State University. Available from: https://www.youtube.com/watch?v=AK24mOEq448
+====
+
+Presentation slides may be cited as well.
+
+====
+AINSWORTH, S. G., NELSON, M. L., VAN DE SOMPEL, H. _Evaluating the Temporal Coherence of archived pages_. 2015.
+Available from: https://www.slideshare.net/phonedude/evaluating-the-temporal-coherence-of-archived-pages.
+Archival copy available from: Internet Archive (distributor),
+https://web.archive.org/web/20151118113319/https://www.slideshare.net/phonedude/evaluating-the-temporal-coherence-of-archived-pages [slides 5–7] [archived 2015-11-18] [viewed 2019-02-28].
+====
+
+

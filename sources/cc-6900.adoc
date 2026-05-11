@@ -15,10 +15,6 @@
 :fullname_2: Nick Nicholas
 :surname_2: Nicholas
 :givenname_2: Nick
-:draft:
-:toc:
-:stem:
-:xrefstyle: short
 :docfile: cc-6900.adoc
 :mn-document-class: csd
 :mn-output-extensions: xml,html,pdf,rxl
@@ -26,7 +22,7 @@
 :data-uri-image:
 
 include::sections-cc/00-foreword.adoc[]
-include::sections/0b-intro.adoc[]
+include::sections/00-intro.adoc[]
 include::sections/01-scope.adoc[]
 include::sections/02-norm-refs.adoc[]
 include::sections/03-termsdef.adoc[]

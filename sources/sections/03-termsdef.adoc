@@ -8,3 +8,8 @@
 
 entity responsible for creating a reference
 
+[[term-citer]]
+=== citer
+
+entity responsible for creating a citation
+

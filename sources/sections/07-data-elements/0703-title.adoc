@@ -4,7 +4,7 @@
 
 === General
 
-* Source: <<iso690,clause 4.2>>
+* Source: <<ISO690,clause 4.2>>
 * Serialisation: `bibitem/title`
 
 [[alt-title]]

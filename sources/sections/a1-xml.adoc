@@ -1,6 +1,6 @@
 
 [[serialisation]]
-[appendix,subtype=informative]
+[appendix,obligation=informative]
 == Reference model XML serialization
 
 The following is a sample serialisation of <<refmodel>> in XML. This is not

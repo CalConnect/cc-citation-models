@@ -7,11 +7,16 @@ all of their content constitutes requirements of this document. For dated
 references, only the edition cited applies. For undated references, the latest
 edition of the referenced document (including any amendments) applies.
 
-* [[[iso639,ISO 639]]], _Codes for the representation of names of languages_
+* [[[ISO639,ISO 639]]], _Codes for the representation of names of languages_
 
-* [[[iso690,ISO 690]]], _Information and documentation -- Guidelines for bibliographic references and citations to information resources_
+* [[[ISO690,ISO 690]]] footnote:[Under preparation. (Stage at the time of publication ISO/DIS 690)], _Information and documentation -- Guidelines for bibliographic references and citations to information resources_
 
-* [[[iso8601,ISO 8601]]], _Data elements and interchange formats -- Information interchange -- Representation of dates and times_
+* [[[ISO4217,ISO 4217]]], _Codes for the representation of currencies_
 
-* [[[iso15924,ISO 15924]]], _Information and documentation -- Codes for the representation of names of scripts_
+* [[[ISO8601-1,ISO 8601-1]]], _Date and time -- Representations for information interchange -- Part 1: Basic rules_
 
+* [[[ISO8601-2,ISO 8601-2]]], _Date and time -- Representations for information interchange -- Part 2: Extensions_
+
+* [[[ISO15924,ISO 15924]]], _Information and documentation -- Codes for the representation of names of scripts_
+
+* [[[ISO24229,ISO 24229]]]  footnote:[Under preparation. (Stage at the time of publication ISO/DIS 24229)], _Information and documentation -- Codes for the representation of script conversion systems_

@@ -1,0 +1,89 @@
+
+[[monographs-parts]]
+=== Monograph components
+
+==== Metadata elements
+
+<<table-monograph-component-part>> shows the metadata elements, in order, to be included in references to component parts within monographs.
+
+
+[[table-monograph-component-part]]
+.Metadata elements for a monograph component part
+[cols="<,<,^"]
+|===
+h| Elements (in order) h| Status h| Relevant clause(s)/ subclauses
+
+| *Name of creator(s)* (of the component part) | Required | <<creator>>
+| Standard identifiers of creators' public identities | Optional | <<creator>>
+| *Title of the component part* | Required | <<form_of_title>>, <<translation_of_title>> and <<component_parts>>
+| Additional information for component part | Optional | <<other_elements>>
+| *In:* | Required | <<component_parts>>
+| *Name of creator(s)* (of the host item) | Required | <<creator>>
+| *Title of the host item* | Required | <<form_of_title>>, <<translation_of_title>> and <<component_parts>>
+| *Medium designation* | Required if the item is not in print | <<medium>>, <<web_specific>>
+| Subsidiary titles | Optional | <<additional_titles>> to <<no_title>>
+| *Edition and version* | Required if the item is not a first edition | <<edition_and_version>>
+| Subsidiary creator of the host item | Optional | <<subsidiary_creator>>
+| *Series title and number* | Required if the item is likely to be identified as part of a series | <<form_of_title>>, <<series_title_number>>
+| *Place and publisher* | Required | <<place>>, <<publisher>>
+| *Date of publication* | Required | <<date-publication>>
+| Rights metadata | Optional | <<rights_metadata>>
+| *Numeration* (of volume, etc., containing the component part) | Required | <<numeration>>
+| *Range of page number(s)* (of the component part) | Required | <<numeration_part_cited>>
+| *Date of update/revision* | Required, if available, for online information resources | <<web_specific>>
+| *Standard identifier* (ISBN, etc.) | Required if available | <<international_standard_identifiers>>
+| *Distributor or online host* | Required for electronic resources if available | <<distributor_host>>
+| *Persistent identifier* | Required if available | <<persistent_identifiers>>
+| *Network location and access (URL)* | Required for online information resources with no persistent identifier or archived copy | <<network_location>>
+| *Physical location* | Required for print information resources if a limited number of copies are known to exist | <<physical_location>>
+| *Relationships* | Required if available | <<relations>>
+| *Date of citation* | Required for dynamic online information resources | <<date-citation>>
+| Other information may be added in whatever position is most appropriate | Optional | <<other_elements>>, <<web_specific>>
+
+|===
+
+
+==== Component parts of a monograph
+
+If a component part of a monograph (e.g., an article within an encyclopaedia) is cited, information about the host information resource shall be provided along with locality information on the location of the cited information resource within the host information resource.
+
+====
+JUTURU, Vijaya. _Type 2 Diabetes_. In: Encyclopedia of Obesity. Vol. 2, pp. 158-59. ISBN 978-1412952385. Sage Publications, 2008.
+====
+
+If the identifier and creator of the host information resource are known, they shall be provided to facilitate identification of the resource.
+
+====
+JUTURU, Vijaya. _Type 2 Diabetes_. In: Kathleen KELLER (ed.). Encyclopedia of Obesity. Vol. 2, pp. 158-59. ISBN 978-1412952385. Sage Publications, 2008.
+====
+
+====
+BURCHARD, J. E. _How humanists use a library_. In: C. F. J. OVERHAGE and J. R. HARMAN (eds.). Intrex: Report on a planning conference and information transfer experiments. Cambridge, MA: MIT Press, 3 Sep. 1965, pp. 41–87.
+====
+
+====
+SMITH, C. _Problems of information studies in history._ In: S. STONE (ed.). Humanities information research. Sheffield: CRUS, 1980, pp. 27–30.
+====
+
+====
+MICHAEL, D. _The effect of local deformations on the elastic interaction of cross walls coupled by beams_. In: COULL, E. A. and B. STAFFORD-SMITH (eds.). Tall buildings. Oxford: Pergamon Press, 1967.
+====
+
+====
+KELLY, John D. _Seeing Red: Mao Fetishism, Pax Americana, and the Moral Economy of War_. In: KELLY, John D., Beatrice JAUREGUI, Sean T. MITCHELL, and Jeremy WALTON (eds.). Anthropology and Global Counterinsurgency. pp. 67–83. ISBN 978-0-226-42993-9. Chicago: University of Chicago Press, 2010.
+====
+
+The locality of the cited component part of an information resource should be stated according to hierarchical navigation, in order to facilitate the reader to locate the cited component part.
+
+// TODO!!! Replace example. No legal...
+
+====
+GREAT BRITAIN. _Data Protection Act 1984_. Schedule 1, c 35, Part 1, Clause 7. London: HMSO.
+====
+
+Component parts of monographs presented on non-printed medium may be referred to in the same way.
+
+====
+BAUM, L. Frank. _The Wonderful Land of Oz. Chapter 2: The Marvelous Powder of Life_ [online]. Etext no. 17426. Roy TRUMBULL (narrator). Project Gutenberg (distributor), 2005. [MP3]. Available from: http://www.gutenberg.org/files/17426/17426-mp3/17426-mp3-chap2.mp3[http://www.gutenberg.org/files/17426/17426-mp3/17426-mp3-chap2.mp3]. [viewed 2016-06-22].
+====
+

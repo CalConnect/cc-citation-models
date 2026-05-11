@@ -1,7 +1,10 @@
----
 metanorma:
   deploy:
-    email: "ci@metanorma.org"
+    email: ci@metanorma.org
+  source:
+    files:
+    - sources/cc-6900.adoc
+    - sources/iso-6900.adoc
 relaton:
   collection:
     name: Information and documentation -- Bibliographic reference model and serialization

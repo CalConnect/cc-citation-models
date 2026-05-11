@@ -1,0 +1,336 @@
+
+[[datasets]]
+=== Research datasets
+
+==== NEW
+
+
+=== Datasets
+
+* Source:  <<ISO690,clause 5.11>>
+
+The organisation publishing or producing the dataset is modelled as a publisher;
+the organisation hosting the dataset in a repository is modelled as a distributor.
+Data compilers, editors, investigators, and data managers are all modelled as editors.
+Timestamps are modelled as extents; queries wherever possible should be preented as URIs.
+Where that is not possible, the description of the necessary query to access the
+required data subset should be presented as an `accessLocation`.
+
+====
+MILBERGER, S. (2002). _Evaluation of violence against women with physical disabilities in Michigan, 2000–2001_ (ICPSR version) [dataset] [data in several file formats and codebook/questionnaire in PDF]. Detroit: Wayne State University [producer]. Ann Arbor, MI: Inter-university Consortium for Political and Social Research [distributor
+
+[source,xml]
+--
+<bibitem type="dataset">
+  <title>Evaluation of violence against women with physical disabilities in Michigan, 2000–2001</title>
+  <date type="created">2002</date>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      <name>
+        <surname>Milberger</surname>
+        <initials>S.</initials>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher">producer</role>
+    <organization>
+      <name>Wayne State University</name>
+      <address>
+        <city>Detroit</city>
+      </address>
+    </organization>
+  </contributor>
+  <contributor>
+    <role type="distributor">repository</role>
+    <organization>
+      <name>Inter-university Consortium for Political and Social Research</name>
+      <address>
+        <city>Ann Arbor</city>
+        <state>MI</state>
+      </address>
+    </organization>
+  </contributor>
+  <version>
+    <draft>ICPSR version</draft>
+  </version>
+  <note>data in several file formats and codebook/questionnaire in PDF</note>
+</bibitem>
+--
+====
+
+====
+LEUPRECHT [et al.]. tas_CNRM-CERFACS-CNRM-CM5_RCP4.5_r1i1p1_CLMcom-CCLM4-8-17, [dataset]. Version 2. [Subset used: January to June 2014]. Vienna, Austria. CCCA Data Centre [distributor], 2016. Available from: https://hdl.handle.net/20.500.11756/93887ecf. [accessed 2017-06-28].
+
+[source,xml]
+--
+<bibitem type="dataset">
+  <title>tas_CNRM-CERFACS-CNRM-CM5_RCP4.5_r1i1p1_CLMcom-CCLM4-8-17</title>
+  <docidentifier type="handle">https://hdl.handle.net/20.500.11756/93887ecf</docidentifier>
+  <date type="created">2016</date>
+  <date type="accessed">2017-06-28</date>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      <name>
+        <surname>Leuprecht</surname>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      <name>
+        <completename>et al.</completename>
+      </name>
+    </person>
+  </contributor>
+    <contributor>
+    <role type="distributor"/>
+    <organization>
+      <name>CCCA Data Centre</name>
+    </organization>
+  </contributor>
+  <version><draft>Version 2</draft></version>
+  <place>Vienna, Austria</place>
+  <extent type="time">
+    <referenceFrom>January 2014</referenceFrom>
+    <referenceTo>June 2014</referenceTo>
+  </extent>
+</bibitem>
+--
+====
+
+==== General
+
+Research datasets are usually electronic information resources, but they may be hybrid or even traditional (printed, hand-held). Whatever the form, traditionally datasets, like computer programs, have not been cited in publications. However, they should be treated in the same way as conventional publications, in order to give due credit to creators of these materials.
+
+This document provides guidelines only for citing electronic research datasets; more information about citing other kind of datasets are available from other sources.
+
+Since datasets are very diverse, no guidelines are provided on how to cite particular categories of data, with one exception (see <<unpublished>> on citing research interviews).
+
+In addition to the actual data (possibly in different versions and in multiple file formats) datasets often contain related items, such as codebooks and (in e.g., social sciences) questionnaires used for data collection. Programs and documentation for data analysis may also be available. These related items are often linked to a landing page to which the PID resolves. All these items may be cited independently.
+
+NOTE: Other dataset citation guidelines include Digital Curation Centre's guide "How to Cite Datasets and Link to Publications" <<dcc-cite-datasets>>; and Data citation principles published by FORCE11{blank}footnote:[https://www.force11.org/group/joint-declaration-data-citation-principles-final[https://www.force11.org/group/joint-declaration-data-citation-principles-final]], as well as DRYAD{blank}footnote:[http://datadryad.org/[http://datadryad.org/]] and Dataverse.footnote:[http://dataverse.org/[http://dataverse.org/]]
+
+
+==== Metadata elements
+
+<<table-elements-for-research-datasets>> shows the elements, in order, to be included in references to research datasets.
+
+[[table-elements-for-research-datasets]]
+.Metadata elements for research datasets
+[cols="<,<,^"]
+|===
+h| Elements (in order) h| Status h| Relevant clause(s)/ subclauses
+
+| *Name of creator(s)* | Required when referencing a specific content. | <<creator>>, <<datasets-roles>>
+| Standard identifiers of creators' public identities | Optional | <<creator>>
+| *Title of the item* | Required | <<form_of_title>>
+| *Edition and version* | Optional | <<datasets-edition>>, <<edition_and_version>>
+| *Medium designation* | Required | <<medium>>; <<web_specific>>
+| *Name of the host archive* | Required, if applicable | <<form_of_title>>
+| *Date of publication* | Required | <<season_month_day_time>>
+| Copyright | Optional | <<rights_metadata>>
+| License | Optional | <<datasets-license>>, <<rights_metadata>>
+| Data source | Optional | <<datasets-source>>
+| *Distributor or online host* | Required if available | <<distributor_host>>
+| *Persistent identifier* | Required | <<datasets-persistent>>, <<persistent_identifiers>>
+| Usage instructions | Optional | <<datasets-instructions>>
+| *Relationships* | Required if available | <<relations>>
+| *Data used* | Required if dataset was postprocessed | <<datasets-edition>> Edition and version
+| Provenance | Optional | <<datasets-provenance>>
+| Location and access (URI) | Optional (since the persistent identifier is required) | <<network_location>>
+| *File size* | Required if available | <<element-filesize>>, <<datasets-size>>
+| Other information may be added in whatever position is most appropriate | Optional | <<other_elements>>; <<web_specific>>
+
+|===
+
+
+
+
+[[datasets_specific]]
+==== Data elements and guidance specific to type
+
+[[datasets-license]]
+===== License
+
+The licenses of both the data itself and related items such programs  should be included in the reference if these resources are not in the public domain.
+
+[[datasets-roles]]
+===== Roles
+
+People responsible for the cited dataset and related items may include for instance investigators, technicians, data managers, compilers, editors and programmers. Names and roles of creators mentioned in the research dataset documentation and the full name of the project or organization responsible should be provided.
+
+A name identifier (e.g. ISNI, ORCID) should be provided in brackets after the name if known. If the host organization changes its name or is merged with another organization, the identifier makes it possible to find the name of the current organization.
+
+The name of the host organization or organizations shall be given. Identifier, if any, should be provided.
+
+====
+TURNER, D.P., W.D. RITTS, and M. GREGORY. _BigFoot NPP Surfaces for North and South American Sites_, 2002–2004. [dataset]. Oak Ridge National Laboratory Distributed Active Archive Center [ORNL DAAC], Oak Ridge, (TN), USA, 2006.
+====
+
+If the cited research dataset has been created by a project and no personal authors are described, the project may be specified as the author. Since projects are usually short-lived, the name of the organization hosting the project shall then be provided as well.
+
+Publisher or distributor of the dataset, such as a data repository, shall be included in the reference if it is different from the host organization.
+
+====
+MILBERGER, S. _Evaluation of violence against women with physical disabilities in Michigan, 2000–2001_ (ICPSR version) [dataset] [data in several file formats and codebook/questionnaire in PDF]. Detroit: Wayne State University (producer), 2002. Ann Arbor, MI: Inter-university Consortium for Political and Social Research (distributor).
+====
+
+[[datasets-persistent]]
+===== Persistent identifiers
+
+Persistent identifiers such as DOI names shall be given, if available. If the dataset has also a traditional standard identifier, it should be included as well.
+
+====
+TURNER, D.P., W.D. RITTS, and M. GREGORY. _BigFoot NPP Surfaces for North and South American Sites_, 2002–2004. [dataset]. Oak Ridge National Laboratory Distributed Active Archive Center [ORNL DAAC], Oak Ridge, (TN), USA, 2006. Available from: https://doi.org/10.3334/ORNLDAAC/750[https://doi.org/10.3334/ORNLDAAC/750] [viewed 2019-02-15].
+====
+
+[[datasets-instructions]]
+////
+===== Usage instructions
+
+Datasets may be very large (several gigabytes or even terabytes) or a user may need to acquire additional information before the data can be utilized. Therefore, persistent identifiers often provide access to a landing page via which relevant metadata about the dataset and a link to the actual data may be retrieved.
+////
+===== Linked resources
+
+A user may need to access various other resources before it is possible to utilize the dataset or the tools for processing the data. These resources include user guides, codebooks and questionnaires.
+
+Software user guide citations shall contain a link to an archived copy, since these documents are short-lived; when the application is updated, the user guide changes as well.
+
+====
+CKAN 2.8. User Guide. 2019. Available from: https://docs.ckan.org/en/2.8/user-guide.html [viewed 2019-09-13]. Archived copy available from: Internet Archive (distributor), https://web.archive.org/web/20190628220306/https://docs.ckan.org/en/2.8/user-guide.html  [viewed 2019-09-13].
+====
+
+====
+A codebook within the dataset is cited:
+
+
+POLITIIKKA JA NUORET 1999. _Koodikirja_. [verkkoaineisto]. Tampere: Yhteiskuntatieteellinen tietoarkisto [tuottaja ja jakaja]. Saatavissa: http://www.fsd.uta.fi/aineistot/luettelo/FSD2047/cbF2047.pdf]. [katsottu 2017-01-26]. Osa aineistoa HELLSTEN, Villiina & MARTIKAINEN, Tuomo: Politiikka ja nuoret 1999 [sähköinen tietoaineisto]. Versio 1.0 (2005-04-07). Yhteiskuntatieteellinen tietoarkisto (jakaja). Saatavissa: http://urn.fi/urn:nbn:fi:fsd:T-FSD2047 [katsottu 2017-07-04].
+====
+
+====
+A questionnaire within the dataset is cited:
+
+
+RUOSTETSAARI, Ilkka ja Jaana KUUSIPALO: _Valtarakennetutkimus 1991. Kyselylomake._ [verkkoaineisto]. Tampere: Yhteiskuntatieteellinen tietoarkisto [jakaja]. [viitattu 2010-02-02]. Saatavissa: http://www.fsd.uta.fi/aineistot/luettelo/FSD1090/quF1090_fin.pdf. Kyselylomake on osa aineistoa RUOSTETSAARI, Ilkka ja Jaana KUUSIPALO: Valtarakennetutkimus 1991 [sähköinen aineisto]. FSD1090, versio 1.1 (2004-04-27). Tampere: Yhteiskuntatieteellinen tietoarkisto (jakaja), 2004.
+====
+
+If the cited dataset is part of a series, it should be given.
+
+====
+U.S. DEPARTMENT OF HEALTH AND HUMAN SERVICES. SUBSTANCE ABUSE AND MENTAL HEALTH SERVICES ADMINISTRATION. OFFICE OF APPLIED STUDIES. _Treatment episode dataset — discharges (TEDS-D) — concatenated, 2006 to 2011 (ICPSR 30122). Version V5._ [dataset]. In: Treatment Episode Data Set — Discharges (TEDS-D) Series. Ann Arbor, MI: Inter-university Consortium for Political and Social Research (distributor), 2015. Available from: https://doi.org/10.3886/ICPSR30122.v5. [viewed 2019-09-05].
+====
+
+[[datasets-size]]
+===== File size
+
+File size of the dataset shall be included in the reference after the URI if the dataset is "big data",footnote:[https://en.wikipedia.org/wiki/Big_data[https://en.wikipedia.org/wiki/Big_data]] but it may be included whenever known.
+
+// TODO: No file size!
+////
+====
+INTERNATIONAL SOCIAL SURVEY PROGRAMME 2007. _Leisure Time and Sports_ ZA4850, version 2.0.0 (2009-10-29). [dataset]. Köln: GESIS (producer, distributor), 2009. Available from https://doi.org/10.4232/1.10079[https://doi.org/10.4232/1.1007] [accessed 2018-01-04].
+====
+////
+====
+PORTES, Alejandro and Rubén G. RUMBAUT. _Children of Immigrants. Longitudinal Study (CILS) 1991–2006 ICPSR20520, version 2_ (Jan 23, 2012). [dataset]. Ann Arbor, MI: Inter-university Consortium for Political and Social Research (distributor), 2012. Available from: https://doi.org/10.3886/ICPSR20520.v2[https://doi.org/10.3886/ICPSR20520.v2]. [82.7 MB]. [accessed 2018-05-06].
+====
+
+
+[[datasets-source]]
+===== Dataset and publications
+
+It may be necessary to cite both the publication based on the data, and the research dataset. These interlinked citations establish a connection between the data and the results based on the data.
+
+====
+HENEGHAN C., M. THOMPSON, M. BILLINGSLEY and D. COHEN _Medical-device recalls in the UK and the device-regulation process: retrospective review of safety notices and alerts_. BMJ Open 1(1): e000155. 2011. Available from: http://dx.doi.org/10.1136/bmjopen-2011-000155[http://dx.doi.org/10.1136/bmjopen-2011-000155]. [accessed 2015-12-02].
+====
+
+====
+HENEGHAN C., M. THOMPSON, M. BILLINGSLEY and D. COHEN. _Data from: Medical-device recalls in the UK and the device-regulation process: retrospective review of safety notices and alerts_ [dataset]. 2011. Available from: Dryad Digital Repository (distributor), https://doi.org/10.5061/dryad.585t4[https://doi.org/10.5061/dryad.585t4]. [accessed 2015-12-03].
+====
+
+
+
+[[datasets-provenance]]
+===== Provenance information
+
+Research data provenance is information about the inputs, entities, systems, and processes that influenced the cited dataset. Provenance information assists reproduction of the data and therefore, has a major role in increasing trust and credibility. It provides also a historical record of the data and its origins.
+
+Provenance information may be provided as plain text or as structured metadata, based on for instance W3C PROV data model.footnote:[https://www.w3.org/TR/prov-dm/[https://www.w3.org/TR/prov-dm/]] The model specifies agents, entities and activities relevant for provenance. An agent may be a person, organization or software agent. Citations should contain provenance metadata elements which may be relevant for future users of the data, such as the name(s) of researchers, programmers or funders; the name(s) of the program(s) the data was created or can be analysed (if a specific tool is needed) with.
+
+
+[[datasets-edition]]
+===== Edition and version
+
+Research datasets are often dynamic: new data is constantly added and past errors corrected. A single dataset can also be available in different versions, enabling variety of uses, and in multiple file formats. If there are several options, data used shall be cited in such a way that it is possible to identify the version and / or file format used from the reference.
+
+====
+U.S. DEPARTMENT OF HEALTH AND HUMAN SERVICES. SUBSTANCE ABUSE AND MENTAL HEALTH SERVICES ADMINISTRATION. OFFICE OF APPLIED STUDIES. _Treatment episode dataset — discharges (TEDS-D) — concatenated, 2006 to 2011 (ICPSR 30122). Version V5._ [dataset].
+====
+
+If only a subset of the dataset has been used, this subset should be specified. Following the Research Data Alliance Working Group on Data Citation recommendation footnote:[https://rd-alliance.org/system/files/documents/RDA-DC-Recommendations_151020.pdf[https://rd-alliance.org/system/files/documents/RDA-DC-Recommendations_151020.pdf]], this is done by providing a link to a query with which it is possible to extract the relevant data. Creation of such queries should be supported by the organizations hosting the datasets.
+
+====
+LEUPRECHT [et al.]. tas_CNRM-CERFACS-CNRM-CM5_RCP4.5_r1i1p1_CLMcom-CCLM4-8-17, [dataset]. Version 2. [Subset used: January to June 2014]. Vienna, Austria. CCCA Data Centre (distributor), 2016. Available from: https://hdl.handle.net/20.500.11756/93887ecf[https://hdl.handle.net/20.500.11756/93887ecf]. [accessed 2017-06-28].
+====
+
+Citations like the one above should facilitate re-creation of the dataset cited, even when this requires technological changes such as migration.{blank}footnote:[https://www.rd-alliance.org/system/files/documents/iPRES2016-Proell.pdf]
+
+This is possible if datasets are time-stamped and versioned, and if there are time-stamped queries with which to retrieve the desired subset of the data. This approach is promoted by the Research Data Alliance Data Citation WG{blank}footnote:[https://www.rd-alliance.org/group/data-citation-wg/outcomes/data-citation-recommendation.html ]. It supports a dynamic, query centric view of research datasets, which is a prerequisite for accurate data citations. Assigning persistent identifiers to queries to be executed against datasets{blank}footnote:[https://www.rd-alliance.org/system/files/RDA-DC-Recommendations_151020.pdf[https://www.rd-alliance.org/system/files/RDA-DC-Recommendations_151020.pdf ]]  is a good starting point.
+
+////
+[[datasets-data-used]]
+===== Data used
+
+If the cited resource is a research dataset, it may be necessary not only to specify in detail which part of the data was used, but also to provide a link to the query with which the relevant data can be extracted. This technique may also enable the user to extract the correct subset of data if the cited research dataset is dynamic.
+
+
+==== General datasets
+
+Datasets in general can be referred to using data elements defined in this document.
+
+====
+A dataset in form of a web site containing cartographic material can be referred as:
+
+NATIONAL LAND SURVEY OF FINLAND. _File service of open data_ [cartographic dataset]. Helsinki: National Land survey of Finland, [s. a.]. Public domain. Available from: https://tiedostopalvelu.maanmittauslaitos.fi/tp/kartta?lang=en[https://tiedostopalvelu.maanmittauslaitos.fi/tp/kartta?lang=en]. [viewed 2018-04-03].
+====
+
+Datasets within a dataset series may be referenced. Persistent identifiers are useful in identifying the specific dataset version.
+
+====
+U.S. DEPARTMENT OF HEALTH AND HUMAN SERVICES. SUBSTANCE ABUSE AND MENTAL HEALTH SERVICES ADMINISTRATION. OFFICE OF APPLIED STUDIES. _Treatment episode dataset -- discharges (TEDS-D) -- concatenated, 2006 to 2011 (ICPSR 30122). Version V5._ [dataset]. In: Treatment Episode Data Set -- Discharges (TEDS-D) Series. Ann Arbor, MI: Inter-university Consortium for Political and Social Research (distributor), 2015. Available from: https://doi.org/10.3886/ICPSR30122.v5[https://doi.org/10.3886/ICPSR30122.v5]. [viewed 2019-09-05].
+====
+
+Particular data within a dataset can be cited.
+
+====
+A codebook within the dataset is cited:
+
+POLITIIKKA JA NUORET 1999. _Koodikirja_. [verkkoaineisto]. Tampere: Yhteiskuntatieteellinen tietoarkisto [tuottaja ja jakaja]. Saatavissa: http://www.fsd.uta.fi/aineistot/luettelo/FSD2047/cbF2047.pdf[http://www.fsd.uta.fi/aineistot/luettelo/FSD2047/cbF2047.pdf]]. [katsottu 2017-01-26]. Osa aineistoa HELLSTEN, Villiina & MARTIKAINEN, Tuomo: Politiikka ja nuoret 1999 [sähköinen tietoaineisto]. Versio 1.0 (2005-04-07). Yhteiskuntatieteellinen tietoarkisto (jakaja). Saatavissa: http://urn.fi/urn:nbn:fi:fsd:T-FSD2047[http://urn.fi/urn:nbn:fi:fsd:T-FSD2047] [katsottu 2017-07-04].
+====
+
+====
+A questionnaire within the dataset is cited:
+
+RUOSTETSAARI, Ilkka ja Jaana KUUSIPALO: _Valtarakennetutkimus 1991. Kyselylomake._ [verkkoaineisto]. Tampere: Yhteiskuntatieteellinen tietoarkisto [jakaja]. [viitattu 2010-02-02]. Saatavissa: http://www.fsd.uta.fi/aineistot/luettelo/FSD1090/quF1090_fin.pdf[http://www.fsd.uta.fi/aineistot/luettelo/FSD1090/quF1090_fin.pdf]. Kyselylomake on osa aineistoa RUOSTETSAARI, Ilkka ja Jaana KUUSIPALO: Valtarakennetutkimus 1991 [sähköinen aineisto]. FSD1090, versio 1.1 (2004-04-27). Tampere: Yhteiskuntatieteellinen tietoarkisto (jakaja), 2004.
+====
+
+
+
+
+==== Derived datasets
+
+Researchers may filter and sort datasets in order to create subsets, which are then used instead of the original dataset. Citations should facilitate re-creation of the data used in the original research, even when this requires technological changes such as migrations.footnote:[https://www.rd-alliance.org/system/files/documents/iPRES2016-Proell.pdf]
+
+This can be accomplished if datasets are time-stamped and versioned, and if there are time-stamped queries which can be used to retrieve the desired subset of the data. This approach, promoted by the Research Data Alliance Data Citation WG,footnote:[https://www.rd-alliance.org/group/data-citation-wg/outcomes/data-citation-recommendation.html] supports a dynamic, query centric view of research datasets, which is a prerequisite for accurate data citations. In this approach, persistent identifiers are assigned to queries to be executed against datasets.footnote:[https://www.rd-alliance.org/system/files/RDA-DC-Recommendations_151020.pdf]
+
+====
+LEUPRECHT [et al.]. tas_CNRM-CERFACS-CNRM-CM5_RCP4.5_r1i1p1_CLMcom-CCLM4-8-17, [dataset]. Version 2. [Subset used: January to June 2014]. Vienna, Austria. CCCA Data Centre (distributor), 2016. Available from: https://hdl.handle.net/20.500.11756/93887ecf[https://hdl.handle.net/20.500.11756/93887ecf]. [accessed 2017-06-28].
+====
+////
+
+

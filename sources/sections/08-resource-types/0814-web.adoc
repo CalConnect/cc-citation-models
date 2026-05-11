@@ -1,0 +1,185 @@
+
+=== Web sites and their component parts
+
+==== General
+
+In this document, Web resource is any asset that can be identified, addressed or handled in some way on the Web or in a Web archive. Such resources are often dynamic, which makes citing them a challenge. For instance, newspaper home pages can change several times per day. There are of course also static documents; for instance, doctoral dissertations never change even on the Web, although their locations can.
+
+
+==== Metadata elements
+
+<<table-elements-for-websites>> shows the elements, in order, to be included in references to web sites and web pages.
+
+[[table-elements-for-websites]]
+.Metadata elements for web sites
+[cols="<,<,^"]
+|===
+h| Elements (in order) h| Status h| Relevant clause(s)/ subclauses
+
+| *Name of creator(s)* (of the cited resource) | Required | <<creator>>
+| Standard identifiers of creators' public identities | Optional | <<creator>>
+| *Page title* | Required | <<form_of_title>>, <<translation_of_title>>
+| *Web site title* | Required | <<form_of_title>>, <<translation_of_title>>
+| *Version* | Required if version exists | <<web-version>>, <<edition_and_version>>
+| Subsidiary creator | Optional | <<subsidiary_creator>>
+| Place and publisher | Optional | <<place>>, <<publisher>>
+| Date of publication | Optional | <<date-publication>>
+| Rights metadata | Optional | <<rights_metadata>>
+| *Date of update/revision* | Required, if available, for online information resources | <<web_specific>>
+| *Distributor or online host* | Required for electronic resources if available | <<distributor_host>>
+| *Standard identifier* | Required if available | <<international_standard_identifiers>>
+| *Persistent identifier* | Required if available | <<persistent_identifiers>>
+| *Archive location(s) (URI)* | Optional | <<web-archive>>, <<network_location>>
+| *Archive date and time* | Optional | <<web-archive>>, <<date>>
+| *Location and access (URI)* | Required for online information resources with no persistent identifier or archived copy | <<network_location>>
+| *Relationships* | Required if available | <<relations>>
+| *Date of citation* | Required for dynamic online information resources | <<date-citation>>
+| Other information may be added in whatever position is most appropriate | Optional | <<other_elements>>; <<web_specific>>
+
+|===
+
+
+==== Data elements and guidance specific to type
+
+[[web-archive]]
+===== Archive reference
+
+A Web archive reference should provide the name of the Web archive as the distributor, the date and time{blank}footnote:[If a Web page consists of several components, different files may have been harvested at different times. Due to this, archived copy of a page may not be fully synchronized.] the information resource (Web page, collection of pages etc.) was archived and the archive URI. The original URI should also be included, if it is not embedded in the archive URI. These elements of the citation should be specified by appropriate headers, such as "archived".
+
+====
+_British Library Web site_ _February 1997_ [online]. British Library, 1997. Archived copy available from: Internet archive (distributor), https://web.archive.org/web/19970218190613/http://www.bl.uk/[https://web.archive.org/web/19970218190613/http://www.bl.uk/]. [archived 1997-02-18]. [viewed 2019-02-28].
+====
+
+[[web-version]]
+===== Edition or version
+
+Reference to a past edition or version of a Web information resource should specify edition or version (e.g. by number) and/or date and time in an appropriate manner and provide a link to the archived copy used.footnote:[Web archives, such as the Internet Archive (http://archive.org[http://archive.org]) allow the users to search archived copies of documents with their URIs. Users may also make archival copies of web pages. If the link in the reference is dead or if the retrieved document is no longer the cited document due to content drift, it may still be possible to retrieve the cited document from an archive. Referencing archived Web documents increases precision and persistence, but the latter depends on sustainability of the Web archives.]
+
+
+====
+INTERNATIONAL DOI FOUNDATION. _DOI Handbook_ [online]. Version 4.2.0, February 2005. Archived copy available from: Internet Archive (distributor), https://web.archive.org/web/20060111075618/http://www.doi.org/hb.html[https://web.archive.org/web/20060111075618/http://www.doi.org/hb.html]. [archived 2006-01-11].
+====
+
+
+[[web_specific]]
+==== Web site
+
+If the reference covers the entire web site, a coverage note should be supplied after the web site title.
+
+====
+_BBC Weather_ [web site]. Available from: https://www.bbc.com/weather[https://www.bbc.com/weather].
+====
+
+====
+_Words Without Borders: The online magazine for international literature_ [online]. PEN American Center, ©2005. Available from: http://www.wordswithoutborders.org[http://www.wordswithoutborders.org]. [viewed 2016-06-12]. https://portal.issn.org/resource/ISSN/1936-1459[https://portal.issn.org/resource/ISSN/1936-1459].
+====
+
+====
+_Language Log_ [web site]. Available from: https://languagelog.ldc.upenn.edu/nll/ [viewed 2019-09-03]
+====
+
+If there is any doubt that both the cited information resource and its URL will be stable, citation should include a link to an archived copy of the resource. The original location may be provided as well.
+
+In an inline reference, if the context makes it clear that the entire site is being referenced, it is sufficient to give just the name of the service and the URI of the entry page.
+
+====
+The BBC Web site (http://www.bbc.com/[http://www.bbc.com/]) contained a lot of material that was useful for me.
+====
+
+
+If the cited information resource is a defunct web site, such as the domain having been taken over by another host, the time span of the relevant archived copies should be specified.
+
+====
+The National Digital Library Project. Archived copy available from: Internet archive (distributor), {kdk_fi_archive} [2011/2018-08]. [viewed 2019-05-05].
+====
+
+
+
+==== Web archives
+
+Time span of archived copies may be provided.
+
+====
+BBC Weather [web site]. Archived copy available from: Internet archive (distributor), {bbc_archive} [2002–2019]. [viewed 2019-06-12].
+====
+
+See <<annex_b>> for more information on the use of Web archives.
+
+[[web_page]]
+==== Web page
+
+The citation shall contain the name of the page / site and the dates it has been used and archived.
+
+If the cited Web page is dynamic and a specific version is used, an archived version of the resource shall be cited. If an accurate archival copy of the page is not found, one shall be made.
+
+If version information is not relevant, archive reference may be omitted.
+
+If all versions of a dynamic pages are cited simultaneously, Web archive citation shall be generic and specify the date range covered (see <<web_page_ex_2>> and <<web_page_ex_3>>).
+
+There are Web sites (belonging for instance to newspapers) that are harvested several times per day. Web archives may have thousands of copies of e.g., home pages of these sites. Almost all of these copies will be different within one archive, but due to harvesting techniques, even the copies in different archives harvested at (almost) the same time may differ from one another.  Only the archival copy actually used should be cited, not a copy from another archive even if it has been harvested at about the same time. If for any reason it is necessary to cite another archived copy, it is important to check that it contains the cited information.
+
+Web archives usually do not check if the harvested Web page has changed since it was harvested last time. Some or even all harvested copies of the page can be identical. Even in such cases it is important to include the date, since the page may change in the future.
+////
+NOTE: Archives can capture thousands of copies of the archived pages. However, many or even all of these copies can be identical. Therefore it is not relevant to include the number of archived copies of the page in the reference.
+////
+
+====
+ISO home page [online]. Available from: https://www.iso.org/home.html
+====
+
+[[web_page_ex_2]]
+====
+ISO home page 2010-2017 [online]. Archived copy available from: Internet Archive (distributor), https://web.archive.org/web/*/https://www.iso.org/iso/home.html [2010-05/2017-02]. [viewed 2019-09-01].
+====
+
+[[web_page_ex_3]]
+====
+ISO home page 2017-. Archived copy available from: Internet Archive (distributor), https://web.archive.org/web/*/https://www.iso.org/home.html [2017-02-27/-].
+====
+
+====
+ISO home page. [2016-01-03]. Geneve: International Organization for Standardization, 2016. Archived copy available from: Internet archive (distributor), https://web.archive.org/web/20160103090843/http://www.iso.org/iso/home.html[https://web.archive.org/web/20160103090843/http://www.iso.org/iso/home.html]. [archived 2016-01-03T09:08:43Z]. [viewed 2019-02-28].
+====
+
+
+====
+CLARK, Carol. _On the threshold of a brave new world_ [online]. In: Blueprint of the body. CNN.com, 2000. In-depth specials. Archived copy available from: Internet Archive (distributor), https://web.archive.org/web/20010223233730/http://www.cnn.com/SPECIALS/2000/genome/story/overview/[https://web.archive.org/web/20010223233730/http://www.cnn.com/SPECIALS/2000/genome/story/overview/]. [archived: 2001-02-23 23:37:30Z]. [viewed 2015-02-14].
+====
+
+====
+FREEMAN, John. _Book reviews pushed to the margins_ [online]. The blog books. Guardian Unlimited, 25 April 2007, 12:27 BST. Archived copy available from: Internet Archive (distributor), https://web.archive.org/web/20070505044910/http://blogs.guardian.co.uk/books/2007/04/last_week_the_london_book.html[https://web.archive.org/web/20070505044910/http://blogs.guardian.co.uk/books/2007/04/last_week_the_london_book.html]. [viewed 2016-04-26].
+====
+
+====
+McLEAN, Renwick. _Canary Islands species threatened by soft borders_ [online]. International Herald Tribune. Paris, France, 21 June 2006. Archived copy available from: Internet Archive (distributor), https://web.archive.org/web/20060811105404/http://www.iht.com/articles/2006/06/20/news/ecology.php/[https://web.archive.org/web/20060811105404/http://www.iht.com/articles/2006/06/20/news/ecology.php/]. [viewed 2016-05-07].
+====
+
+====
+PAX, Salam. _Where Is Raed?_ [online]. 21 Feb. 2003, 19:17. Available from: Blogger (distributor), http://dear_raed.blogspot.com[http://dear_raed.blogspot.com]. Path: Homepage; archive; 2003. [viewed 2018-08-06].
+====
+
+====
+INTERNATIONAL ISBN AGENCY. _E-Books and ISBNs: a position paper and action points from the International ISBN Agency_ [online]. [London]: International ISBN Agency, 2010. Available from: http://www.isbn.org/sites/default/files/images/isbn_agency_e-books_position_paper.pdf[http://www.isbn.org/sites/default/files/images/isbn_agency_e-books_position_paper.pdf]. [viewed 2012-02-06].
+====
+
+====
+_Internet forum_ [online] [2017-05-26]. In: Wikipedia (distributor). Archived copy available from: Internet Archive (distributor), https://web.archive.org/web/20170702110010/[https://web.archive.org/web/20170702110010/] http://en.wikipedia.org/wiki/Internet_forum[http://en.wikipedia.org/wiki/Internet_forum]. [archived 2017-07-02]. [viewed 2018-07-04].
+====
+
+====
+PLAGGE, Kallie. _Mario Kart 8 Deluxe review on Nintendo Switch_ [online] [2017-04-20]. Available from: https://www.gamespot.com/reviews/mario-kart-8-deluxe-review/1900-6416660/[https://www.gamespot.com/reviews/mario-kart-8-deluxe-review/1900-6416660/] [viewed 2019-09-02].
+====
+
+
+
+[[component_web_page]]
+==== Component part of a web page
+
+If it is necessary to specify a component part within a larger resource such as a Web page, its media type may be supplied in brackets, e.g., [still image]. Note that a component part can be a part of a resource which is itself a component part.
+
+====
+_DNA_ [still image]. In: CLARK, Carol. On the threshold of a brave new world. In: Blueprint of the body [online]. Archived copy available from: Internet Archive (distributor), https://web.archive.org/web/20010820180003/http://www.cnn.com/SPECIALS/2000/genome/story/overview/dna.strips.jpg[https://web.archive.org/web/20010820180003/http://www.cnn.com/SPECIALS/2000/genome/story/overview/dna.strips.jpg]. [archived 2001-08-20T18:00:03Z]. [viewed 2019-05-12].
+====
+
+
+

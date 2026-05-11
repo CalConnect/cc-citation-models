@@ -1,0 +1,22 @@
+
+[[resource_types]]
+== Resource types
+
+include::08-resource-types/0801-general.adoc[]
+include::08-resource-types/0802-monographs.adoc[]
+include::08-resource-types/0803-mono-parts.adoc[]
+include::08-resource-types/0804-continuing.adoc[]
+include::08-resource-types/0805-programs.adoc[]
+include::08-resource-types/0806-cartography.adoc[]
+include::08-resource-types/0807-audiovisual.adoc[]
+include::08-resource-types/0808-graphics.adoc[]
+include::08-resource-types/0809-music.adoc[]
+include::08-resource-types/0810-patents.adoc[]
+include::08-resource-types/0811-reports.adoc[]
+include::08-resource-types/0812-archival.adoc[]
+include::08-resource-types/0813-datasets.adoc[]
+include::08-resource-types/0814-web.adoc[]
+include::08-resource-types/0815-social.adoc[]
+include::08-resource-types/0816-unpublished.adoc[]
+
+

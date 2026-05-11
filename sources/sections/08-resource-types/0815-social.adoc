@@ -1,0 +1,443 @@
+
+[[social_media]]
+=== Social media and services
+
+==== NEW
+
+* Source:  <<ISO690,clause 5.12>>
+
+Social media items are typically items of `bibitem/@type` "webresource",
+although they may not always have an associated exposed URI (particularly
+for social media accessed primarily via phone app, rather than web browser).
+As with <<ISO690>>, a distinction is made between items publicly available
+(or at least, broadcast to a defined group of people), and one-on-one
+text messages; the latter are conflated with voice and face-to-face communications
+between individuals, and are cited as personal communications.
+
+A person's real name may be related to the online identity assumed by the
+author of the item, if both are known. The online identity is treated as a
+pseudonym of the real life identity, and is serialised in the same way (<<variantnames>>).
+
+The particular form of social media communication (e.g. blog post, forum post, tweet,
+message) should be given through `medium/genre`.
+At a lower priority, the service name or type should be encoded as `medium/form`, since it relates
+to how the content is to be accessed by an intermediary app. (For example, a tweet
+is not just accessed by a web browser, as a web resouurce; it is accessed and rendered
+by a web browser in the context of Twitter.)
+
+
+
+====
+GATES, B. [BillGates]. (2013, February 26). #Polio is 99% eradicated. Join me & @FCBarcelona as we work to finish the job and #EndPolio. [Tweet]. Available from: https://twitter.com/BillGates/status/306195345845665792. [viewed 2016-07-06T12:30:15+02:00]. See also VIDEO: http://b-gat.es/X75Lvy.
+
+[source,xml]
+--
+<bibitem type="social_media">
+  <title>#Polio is 99% eradicated. Join me & @FCBarcelona as we work to finish the job and #EndPolio</title>
+  <date type="published"><on>2013-02-26</on></date>
+  <date type="accessed"><on>2016-07-06T12:30:15+02:00</on></date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <surname>Gates</surname>
+        <initial>B.</initial>
+      </name>
+      <variant type="username">
+        <completename>BillGates</completename>
+      </variant>
+    </person>
+  </contributor>
+  <uri>https://twitter.com/BillGates/status/306195345845665792</uri>
+  <medium>
+    <form>Twitter</form>
+    <genre>tweet</genre>
+  </medium>
+  <relation type="complements">
+    <bibitem type="video">
+       <uri>http://b-gat.es/X75Lvy</uri>
+    </bibitem>
+  </relation>
+</bibitem>
+--
+====
+
+
+
+
+==== General
+
+Information shared via social media and services is frequently used in research, both within and outside the academic community (<<NSCUSocial>>).
+
+This document does not specify rules on what kind of social media may or may not be cited, but if the information is not publicly available, it should be cited as personal communications. Organizations may specify their own limitations on what they think is acceptable.
+
+Guidelines listed below are partially based on the ones published by the American Psychological Association <<apa-social-media>>.
+
+NOTE: Social media services include Twitter, Facebook, LinkedIn, Instagram, Snapchat, etc.
+
+==== Metadata elements
+
+<<table-elements-social-media-and-services>> shows the elements, in order, to be included in references to social media and services.
+
+[[table-elements-social-media-and-services]]
+.Metadata elements for social media and services
+[cols="<,<,^"]
+|===
+h| Elements (in order) h| Status h| Relevant clause(s)/ subclauses
+
+| *Name of poster(s)* (person who posted the message) | Required when referencing a specific content. Social media identity must also be provided | <<social-creator>>, <<creator>>
+| Standard identifiers of posters' public identities | Optional | <<creator>>
+| *Title of message* (name of the page or the content or caption of the post) | Required; normally the subject line is used as the title of the message | <<social-title>>, <<form_of_title>>
+| *Service name* | Required, if applicable | <<social-service-name>>
+| *Medium designation* | Required | <<social-medium>>, <<medium>>
+| *Date message was sent* | Required | <<social-date>>, <<season_month_day_time>>
+| Time message was sent | Required, if available | <<social-date>>, <<season_month_day_time>>
+| *Creator of original content(s)* (person who created the posted information) | Required if known when referencing a specific content, only supplied when distinct from poster. Social media identity must also be provided | <<social-creator>>, <<creator>>
+| Standard identifiers of creators' public identities | Optional, only supplied when creator distinct from poster | <<creator>>
+| *Distributor or online host* | Required for electronic resources if available | <<distributor_host>>
+| *Persistent identifier* | Required if available | <<persistent_identifiers>>
+| Archive location(s) (URI) | Optional | <<social-archive>>, <<network_location>>
+| Archive date and time | Optional | <<web-archive>>, <<date>>
+| Location and access (URI) | Optional if the persistent identifier is given; otherwise required | <<social-network-location>>, <<network_location>>
+| *Relationships* | Required if available | <<relations>>
+| *Date / time viewed* | Required | <<date-citation>>, <<season_month_day_time>>
+| Other information may be added in whatever position is most appropriate | Optional | <<other_elements>>; <<web_specific>>
+
+|===
+
+
+[[social_media_elements]]
+==== Data elements and guidance specific to type
+
+[[social-creator]]
+===== Creator
+
+A personal author's last name and initials, or organization's full name should be provided. A name identifier may be provided in brackets after the name.
+
+====
+PARLAND – VON ESSEN, J.
+====
+
+====
+National Library of Finland. Library network services.
+====
+
+Following the real name, social media identity information should be supplied when available. The author's screen name should be given as associated information (in brackets).
+The screen name is considered to be the user identifier that allows others use to address the creator on the service. It is preferable to prefix the service name to the screen name.
+
+NOTE: The author's screen name is provided to facilitate communication to the creator.
+
+====
+TRUMP, Donald J. [Twitter: @realDonaldTrump]
+====
+
+====
+OBAMA, Barack [Facebook: @barackobama]
+====
+
+The poster is the person who posted the content, not necessarily the person who created it. The real creator should be included in the reference when applicable.
+
+In a citation, if the service name is provided in other parts of the reference, omission of the service name in the screen name is possible.
+
+====
+OBAMA, Barack [@barackobama]. Available from: Facebook, https://www.facebook.com/[https://www.facebook.com/]
+====
+
+
+[[social-title]]
+===== Title
+
+The name of the page or the content or caption of the post should be specified as the title. Translation of the title may be provided after the title.
+
+The titles of status updates, tweets, pages, blog posts or photographs should not be italicized; the titles of items that stand alone, such as videos and photo albums, should be italicized.
+
+If the item contains no words (e.g., a photograph without a caption), a description of the item should be provided as a supplied title.
+
+====
+THE SIMPSONS [Twitter: @TheSimpsons]. [_Happy Labor Day animation_]. Available from: Twitter,
+https://twitter.com/TheSimpsons/status/1168539078444208131
+====
+
+
+[[social-medium]]
+===== Medium
+
+Medium designation (e.g., Tweet, Facebook status update, photograph, blog post, timeline, video file) should be provided after the title.
+
+====
+_Essetter_ [Small essays]. [blog].
+====
+
+====
+_Öppen tillgång – till vilket pris?_ [blog post].
+====
+
+
+[[social-service-name]]
+===== Service name and type
+
+Service name or type should be specified. This information is especially important if it might otherwise be difficult to tell the nature of the resource.
+
+====
+[Facebook page].
+====
+
+====
+[Facebook status update].
+====
+
+====
+[Tweet].
+====
+
+====
+[Twitter page].
+====
+
+====
+[blog].
+====
+
+====
+[blog post].
+====
+
+
+[[social-date]]
+===== Date
+
+Full date should be specified in <<ISO8601-1, ISO 8601>> format for items that have a date associated with them; otherwise, the year is sufficient.
+
+The date and time the content has been viewed should be provided in addition to the date associated with the post.
+
+====
+_Essetter_ [Small essays]. [blog]. [2009–].
+====
+
+====
+Öppen tillgång – till vilket pris? [blog post]. [2016-07-07]. [viewed 2018-09-04].
+====
+
+The accurate time should be provided in the <<ISO8601-1>> format when citing social media.
+
+====
+[accessed 2010-04-22T14:30:15Z].
+====
+
+
+[[social-network-location]]
+===== Network location
+
+Network location of the cited resource shall be provided.
+
+====
+PARLAND – VON ESSEN, J. _Öppen tillgång – till vilket pris?_ [blog post]. [2016-07-07]. Available from: http://essetter.blogspot.fi/2016/07/oppen-tillgang-till-vilket-pris.html[http://essetter.blogspot.fi/2016/07/oppen-tillgang-till-vilket-pris.htm]. [viewed 2018-07-19].
+====
+
+====
+COHEN, Dan. _Digital Ephemera and the Calculus of Importance_ [blog post]. May 17, 2010. Available from: https://dancohen.org/2010/05/17/digital-ephemera-and-the-calculus-of-importance/[https://dancohen.org/2010/05/17/digital-ephemera-and-the-calculus-of-importance/]. [viewed 2018-02-12].
+====
+
+When a social media Web site is first mentioned in the text, just the URI may be provided.
+
+====
+The blog, called Essetter, is available from: http://essetter.blogspot.fi/[http://essetter.blogspot.fi/].
+====
+
+
+[[social-archive]]
+===== Archived copy
+
+Like other Internet resources, social media may be short-lived. Therefore, if there is a copy of the resource in a Web archive, URI to the archived copy may be provided as well.
+
+====
+PARLAND – VON ESSEN, J. _Öppen tillgång – till vilket pris?_[blog post]. [2016-07-07]. Available from: http://essetter.blogspot.fi/2016/07/oppen-tillgang-till-vilket-pris.html[http://essetter.blogspot.fi/2016/07/oppen-tillgang-till-vilket-pris.htm]. Archived copy available from: Internet archive (distributor), https://web.archive.org/web/20161107150327/http://essetter.blogspot.fi/2016/07/oppen-tillgang-till-vilket-pris.html[https://web.archive.org/web/20161107150327/http://essetter.blogspot.fi/2016/07/oppen-tillgang-till-vilket-pris.html]. [archived: 2016-11-07T15:03:27Z]. [viewed 2018-07-19].
+====
+
+If there is a reason to believe that the resource will suffer from link rot or content drift, only the URI of the archived copy may be given.
+
+Generic Web archives do harvest social media resources, but there is a subscription-based program for archiving social media, ArchiveSocial.footnote:[https://archivesocial.com/]
+
+
+==== Services
+
+Record aggregators, such as blogs, message boards and forums, can all be considered services. They may be cited using data elements provided in this document. Forum posts and comments may be referred to in the same way.
+
+====
+Citing an entire message board service:
+
+_Planet Science_ [message board]. BBC Science & Nature message boards. Available from: http://www.bbc.co.uk/dna/mbsn/F2801717[http://www.bbc.co.uk/dna/mbsn/F2801717]. [registration required]. [viewed 2017-06-13].
+====
+
+====
+Citing an entire blog:
+
+DODSON. S. [languagehat]. _Language Hat_. Available from: http://languagehat.com
+====
+
+Inline citations may be made by referencing the URIs of the service or of the service accounts.
+
+====
+BBC has multiple Twitter accounts (including https://twitter.com/bbc[https://twitter.com/bbc], https://twitter.com/bbcnews[https://twitter.com/bbcnews], https://twitter.com/bbcbreaking[https://twitter.com/bbcbreaking] and https://twitter.com/bbcworld[https://twitter.com/bbcworld]) which reach millions of people every day. We have analyzed the content of BBC's Twitter feeds during the year 2015.
+====
+
+==== Stream of records
+
+A stream of records may be referenced by referring to their appropriate URIs.
+
+
+====
+Facebook page:
+
+BRITISH BROADCASTING CORP. [n. d.]. _Timeline_ [Facebook page]. Available from: https://www.facebook.com/bbcnews/[https://www.facebook.com/bbcnews/]. [viewed 2015-07-07].
+====
+
+====
+Twitter page:
+
+NATIONAL INSTITUTE OF MENTAL HEALTH [NIMHgov]. [n.d.]. _Tweets_ [Twitter page]. Available from https://twitter.com/NIMHgov[https://twitter.com/NIMHgov]. [viewed 2014-07-15].
+====
+
+
+
+==== Individual records
+
+Individual records may be referenced on a service using data elements provided.
+
+====
+Citing a particular post in a forum:
+
+UBUNTU COMMUNITY. _ForumsGovernance_ [online]. Edited 2017-11-27 15:50:48. In: Ubuntu forums. Available from: http://www.ubuntuforums.org[http://www.ubuntuforums.org]/ Path: Ubuntu forums; Forum community; Forum Governance. [viewed 2018-06-10].
+====
+
+====
+Citing a blog post:
+
+PARLAND – VON ESSEN, Jessica. _Öppen tillgång – till vilket pris?_ [blog post]. (2016-07-07). Available from: http://essetter.blogspot.fi/2016/07/oppen-tillgang-till-vilket-pris.html[http://essetter.blogspot.fi/2016/07/oppen-tillgang-till-vilket-pris.html]. [viewed 2016-07-13].
+====
+
+====
+Citing a blog post:
+
+NICHOLAS, Nick. _What Metanorma is_ [blog post] (2018-12-05). Available from: https://www.metanorma.com/blog/2018-12-05-intro-to-metanorma/[https://www.metanorma.com/blog/2018-12-05-intro-to-metanorma/] [viewed 2019-09-05].
+====
+
+====
+Citing a blog post in a collection:
+
+FRANKLIN, MJ. _Three cheers for 'Hamlet', the greatest Shakespeare play of all time_. In: Mashable: Shakespeare. Available from: http://mashable.com/2016/04/23/this-be-madness-hamlet-winner/[http://mashable.com/2016/04/23/this-be-madness-hamlet-winner/]. [viewed 2017-06-04].
+====
+
+====
+Citing a blog post comment:
+
+LOLOS, E. 2019-05-09. Comment on: Nicholas, N. Greek -eza Ethnonyms. Available from: http://hellenisteukontos.opoudjis.net/greek-eza-ethnonyms/#comment-1361[http://hellenisteukontos.opoudjis.net/greek-eza-ethnonyms/#comment-1361]
+====
+
+====
+Citing a Facebook status update from a group author:
+
+APA STYLE. (2011, March 10). _How do you spell success in APA Style? Easy! Consult Merriam-Webster's Collegiate Dictionary or APA's Dictionary of Psychology. Read more over at the APA Style Blog_ [Facebook status update]. Available from: https://www.facebook.com/APAStyle/posts/206877529328877[https://www.facebook.com/APAStyle/posts/206877529328877]. [viewed 2015-05-25].
+====
+
+Some records such as posts and status updates do not usually have titles. The message body may be treated as its title; though truncation may be required in citation.
+
+====
+Citing a Facebook post:
+
+ADAMS, John [@earbox]. (2019-03-23). _Christina and Michelle Naughton's new album "American Postcard" releases today on Warner Classics & Erato._ Available from: https://www.facebook.com/earbox/posts/2430059523679590. [viewed 2019-08-10]
+====
+
+====
+Citing a tweet from an organizational author:
+
+STANFORD MEDICINE [SUMedicine]. _Animal study shows sleeping brain behaves as if it's remembering_: http://stan.md/RrqyEt #sleep #neuroscience #research [Tweet]. 2012-10-09. Available from https://twitter.com/SUMedicine/status/255644688630046720[https://twitter.com/SUMedicine/status/255644688630046720]. [viewed 2014-06-17].
+====
+
+====
+Citing a tweet from an organizational author:
+
+THE SIMPSONS [@TheSimpsons]. _The one day of the year where it's this easy. Happy #LaborDay from #TheSimpsons! [with Happy Labor Day animation]_.
+Available from: Twitter,
+https://twitter.com/TheSimpsons/status/1168539078444208131[https://twitter.com/TheSimpsons/status/1168539078444208131]
+====
+
+====
+Citing a photo from a Facebook post:
+
+OBAMA, Barack [@barackobama]. [_Portrait of Dolores Huerta_] [photo].
+Available from: Facebook, https://www.facebook.com/obamafoundation/photos/a.635434296657262/1115943111939709/[https://www.facebook.com/obamafoundation/photos/a.635434296657262/1115943111939709/]
+[viewed 2019-09-05].
+====
+
+====
+Citing a photo from tweet posted by a group author:
+
+THE SIMPSONS [@TheSimpsons]. [_Happy Labor Day animation_]. [photo]
+Available from: Twitter,
+https://twitter.com/TheSimpsons/status/1168539078444208131[https://twitter.com/TheSimpsons/status/1168539078444208131]
+====
+
+====
+Citing a tweet from an individual author:
+
+GATES, B. [BillGates]. (2013, February 26). _#Polio is 99% eradicated. Join me & @FCBarcelona as we work to finish the job and #EndPolio._ [Tweet]. Available from: Twitter, https://twitter.com/BillGates/status/306195345845665792[https://twitter.com/BillGates/status/306195345845665792]. [viewed 2016-07-06T12:30:15+02:00].
+See also VIDEO: http://b-gat.es/X75Lvy[http://b-gat.es/X75Lvy].
+====
+
+====
+Citing an Instagram post by an organizational author:
+
+MANCHESTER UNITED F.C [@manchesterunited]. _👁 St Mary’s Stadium 📌 #MUFC_ 2019-09-01.
+Available from: Instagram, https://www.instagram.com/p/B10wy1OAiS9/[https://www.instagram.com/p/B10wy1OAiS9/] [viewed: 2019-09-05]
+====
+
+====
+Citing an Instagram post by an individual author:
+
+MERKEL, Angela [@bundeskanzlerin]. _Stille Teilnahme der Kanzlerin und eine Rede des Bundespräsidenten..._ 2019-09-02.
+Available from: Instagram, https://www.instagram.com/p/B131I-poO6O/[https://www.instagram.com/p/B131I-poO6O/] [viewed: 2019-09-05]
+====
+
+====
+Citing an IRC message:
+
+[Theriex]. 2009-04-04. [Discussion on #kubuntu channel]. [IRC chat].
+Available from: https://irclogs.ubuntu.com/2009/04/04/%23kubuntu.txt[https://irclogs.ubuntu.com/2009/04/04/%23kubuntu.txt]
+====
+
+Some social media allow direct links to comments; but some do not. The following example indicates the limitations when there is no direct link and that the comment date is not precisely dated.
+
+====
+Citing a comment on YouTube:
+
+[YouTube: HGA Mxsfitlxvin]. 2019-05-XX. Comment on: [musiquelabruyere], _ADAMS - Short Ride in a Fast Machine_.
+Available from: YouTube, https://www.youtube.com/watch?v=DJvniUzPoDU[https://www.youtube.com/watch?v=DJvniUzPoDU]. [viewed 2019-08-10]
+====
+
+
+Newsgroups should be treated as serials. USENET posts should be cited by date and time.
+
+====
+Citing a USENET post:
+
+TANENBAUM, A.S. 1992-01-29, 12:12:50 GMT. _LINUX is obsolete._ comp.os.minix [USENET].
+Available from https://groups.google.com/forum/#!topic/comp.os.minix/wlhw16QWltI%5B1-25%5D[https://groups.google.com/forum/#!topic/comp.os.minix/wlhw16QWltI%5B1-25%5D]
+====
+
+
+==== Posting of content belonging to an original creator
+
+The poster and original content creator should be distinguished.
+The original content and its creator should be cited as part of
+the information resource being cited.
+
+A relationship binds the cited information resource with the original information resource, therefore rules in <<relations>> apply. Relation labels may be created as appropriate to facilitate citations.
+
+====
+In this example, the relation label is "`Original tweet from:`":
+
+GORKA, Sebastian [Twitter: @SebGorka]. [Screenshot of tweet of Donald J. TRUMP] [tweet], 2019-07-14.
+Original tweet from: Donald J. TRUMP [Twitter: @realDonaldTrump]. _@SebGorka Wins Big, No Contest!_ [tweet]. 2019-07-12.
+Available from: Twitter, https://twitter.com/SebGorka/status/1150351166997442562
+====

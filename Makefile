@@ -5,7 +5,7 @@ SHELL := /bin/bash
 # Ensure the xml2rfc cache directory exists locally
 IGNORE := $(shell mkdir -p $(HOME)/.cache/xml2rfc)
 
-SRC := $(lastword $(shell yq r metanorma.yml metanorma.source.files))
+SRC := $(shell yq r metanorma.yml metanorma.source.files | cut -c 3-)
 
 ifeq ($(SRC),null)
 SRC :=
@@ -65,6 +65,7 @@ documents/%.html: documents/%.xml | documents
 	${PREFIX_CMD} metanorma $<
 
 documents/%.xml: sources/%.xml | documents
+	mkdir -p $(dir $@)
 	mv $< $@
 
 # Build canonical XML output
@@ -85,7 +86,7 @@ sources/%.xml: | bundle
 	fi
 
 documents.rxl: $(XML) $(HTML)
-	$(PREFIX_CMD) relaton concatenate \
+	${PREFIX_CMD} relaton concatenate \
 	  -t "$(shell yq r metanorma.yml relaton.collection.name)" \
 		-g "$(shell yq r metanorma.yml relaton.collection.organization)" \
 		documents $@
@@ -173,3 +174,4 @@ published: documents.html
 	mkdir -p $@ && \
 	cp -a documents $@/ && \
 	cp $< $@/index.html;
+

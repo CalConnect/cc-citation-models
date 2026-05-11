@@ -1,0 +1,224 @@
+
+=== Programs and applications
+
+==== NEW
+
+
+* Source: <<ISO690,clause 5.3>>
+
+System requirements are modelled as a note, prefixed with "System requirements:".
+(Note that detailed system requirements are
+less commonly expressed now for software than they were in the 1990s and 2000s.)
+
+URLs should not be broken at the end of a line: that
+is a rendering requirement, not an information modelling requirement.
+
+As discussed in <<resource-types>>, where possible, a more specific category
+should be used than "electronic resource",
+which is properly a description of a medium and not a resource type; monographs and
+journals are now routinely published online.
+
+The specific type of electronic resource, if not covered by `bibitem/@type` (e.g.
+"book", "dataset"), should be given as `medium/genre`.
+
+====
+Ubisoft. _Far Cry 5_ [computer game]. 2018. Viewed: 2018-05-10.
+System requirements: CPU: Intel Core i5-2400 | AMD FX-6300 @ 3.5 GHz or better
+(minimum); Intel Core i7-4770 @ 3.4 GHz | AMD Ryzen 5 1600 @ 3.2 GHz or equivalent (recommended).
+RAM: 8 GB. OS: Windows 7 SP1, Windows 8.1, Windows 10 (64-bit versions only).
+VIDEO CARD: NVIDIA GeForce GTX 670 | AMD R9 270 (2GB VRAM with Shader Model 5.0 or better) (minimum);
+NVIDIA GeForce GTX 970 or AMD R9 290X (4GB VRAM with Shader Model 5.0 or better) (recommended).
+
+[source,xml]
+--
+<bibitem type="software">
+  <title>Far Cry 5</title>
+  <date type="published"><on>2018</on></date>
+  <date type="accessed"><on>2018-05-10</on></date>
+  <contributor>
+    <role type="author"/>
+    <organization>
+      <name>Ubisoft</name>
+    </person>
+  </organization>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>Ubisoft</name>
+    </organization>
+  </contributor>
+  <medium>
+    <genre>computer game</genre>
+  </medium>
+  <note>System requirements: CPU: Intel Core i5-2400 | AMD FX-6300 @ 3.5 GHz or better
+(minimum); Intel Core i7-4770 @ 3.4 GHz | AMD Ryzen 5 1600 @ 3.2 GHz or equivalent (recommended).
+RAM: 8 GB. OS: Windows 7 SP1, Windows 8.1, Windows 10 (64-bit versions only).
+VIDEO CARD: NVIDIA GeForce GTX 670 | AMD R9 270 (2GB VRAM with Shader Model 5.0 or better) (minimum);
+NVIDIA GeForce GTX 970 or AMD R9 290X (4GB VRAM with Shader Model 5.0 or better) (recommended).</note>
+</bibitem>
+--
+====
+
+
+==== General
+
+Programs and applications should be referenced like traditional information resources, such as printed and electronic publications.
+
+NOTE: Games are considered applications.
+
+NOTE: The FORCE11 Software Citation Working group{blank}footnote:[https://www.force11.org/group/software-citation-working-group] published an initial set of software citation principles{blank}footnote:[https://peerj.com/articles/cs-86/] in 2016. These principles form the basis of these recommendations.
+
+
+==== Metadata elements
+
+Due to the diversity of programs and applications, it is impossible to provide a full list of metadata elements which should or may be used when citing these resources, but for instance, the following elements in <<table-metadata-elements-for-programs>> may be present:
+
+
+[[table-metadata-elements-for-programs]]
+.Metadata elements for programs
+[cols="<,<,^"]
+|===
+h| Elements (in order) h| Status h| Relevant clause(s)/ subclauses
+
+| *Name of creator(s)* (of the cited resource) | Required | <<program-creator>>, <<creator>>
+| Standard identifiers of creators' public identities | Optional | <<program-creator>>, <<creator>>
+| *Program title* | Required | <<form_of_title>>, <<translation_of_title>>
+| Subsidiary titles | Optional | <<additional_titles>> to <<no_title>>
+| *Edition, version, revision* | Optional | <<program-edition>>, <<edition_and_version>>
+| Subsidiary creator | Optional | <<subsidiary_creator>>
+| *Place and publisher* | Required | <<place>>, <<publisher>>
+| *Date of publication* | Required | <<program-pub-date>>, <<date-publication>>
+| Copyright | Optional | <<rights_metadata>>
+| License | Optional | <<program-license>>, <<rights_metadata>>
+| *Date of update/revision* | Required, if available, for online information resources | <<web_specific>>
+| *Distributor or online host* | Required for electronic resources if available | <<distributor_host>>
+| *Persistent identifier* | Required if available | <<persistent_identifiers>>
+| *Location and access (URI)* | Required for online information resources with no persistent identifier or archived copy | <<network_location>>
+| *System requirements* | Optional | <<system_requirements>>
+| *File size*           | Required for large files  | <<element-filesize>>, <<datasets-size>>
+| *Date of citation* | Required for dynamic online information resources | <<date-citation>>
+| *Relationships* | Required if available | <<relations>>
+| Other information may be added in whatever position is most appropriate | Optional | <<other_elements>>; <<web_specific>>
+
+|===
+
+
+NOTE: Programs and applications are sets of data, but a specific category of data that are used as a tool to operate on data. Therefore, they are not treated in the same way as research datasets in citations. See  https://peerj.com/preprints/2630/[https://peerj.com/preprints/2630/] for more information about this.
+
+
+[[programs_specific]]
+==== Data elements and guidance specific to type
+
+[[program-creator]]
+===== Creator
+
+The name(s) of the creator(s) should be given in preference to that of the distributor, even if the latter is more prominently displayed.
+
+Often a computer program is treated as corporately authored, and neither the designer nor the programmers are credited. In that case the organization publishing the program is credited as the creator.
+
+====
+ORACLE CORP. _MySQL®_ [computer program]. Enterprise edition. Redwood City: Oracle, 2015. [accessed 2016-03-23].
+====
+
+====
+RIBOSE INC. _metanorma-standoc_ [computer program]. Version 1.3.1, 2019-09-04. Available from: GitHub (distributor), https://github.com/metanorma/metanorma-standoc.
+See also: https://www.metanorma.com/[https://www.metanorma.com].
+====
+
+The system designer of a program should be treated as the creator; other developers involved that are credited in the software are treated as subsidiary creators. If there is no system designer distinct from programmers, the lead developer should be treated as the creator, if present, since they have assumed design responsibility for the developer team.
+
+====
+TANENBAUM, Andrew S. _MINIX_ [computer program]. Version 3.4.0rc6, 2017-05-09. License: BSD.
+====
+
+
+[[program-pub-date]]
+===== Date of publication
+
+The publication date should be the date (or year) on which the cited version of the program was released for use.
+
+
+[[program-edition]]
+===== Edition and version
+
+Citation should enable identification of the edition and/or version of the program used in order to support reproducibility.
+
+If there is no actionable and persistent identifier,footnote:[There is no standard identifier for programs and applications. But Software Heritage Archive ( https://www.softwareheritage.org/[https://www.softwareheritage.org/]), which archives open source programs from various sources, assigns identifiers for information resources harvested into the archive. See https://docs.softwareheritage.org/devel/swh-model/persistent-identifiers.html[https://docs.softwareheritage.org/devel/swh-model/persistent-identifiers.html].] URL may be used as a link.
+
+If the citation is not version specific, the publication date may be replaced by the date of citation, which should be the date on which the program was accessed in the context of the material being referenced.
+
+[[program-license]]
+===== License
+
+The license should be described if it is known (see <<rights_metadata>>).
+
+====
+License: BSD
+====
+
+====
+License: MIT
+====
+
+====
+License: Apache
+====
+
+===== Additional information
+
+Reproducibility of results is important. Therefore, citation of a program or application should provide sufficient technical metadata or a link to such metadata, in order to enable access to both the program itself and to its associated metadata, needed for using the referenced program. Such metadata is often available via the landing page of the resource.
+
+If the landing page does not exist or it does not provide sufficient information about, e.g., configuration of the program or acceptable software and hardware platforms, this information should be included either in the citation or elsewhere in the citing publication.
+
+====
+VILLANOVA UNIVERSITY. _VuFind. Release 4.1.2._ [program]. Philadelphia, PA: Villanova university, 2017. License: GNU GPL 2.0. Available from: GitHub (distributor), https://github.com/vufind-org/vufind[https://github.com/vufind-org/vufind]. [viewed 2018-03-02]. See also: http://vufind-org.github.io/vufind/[http://vufind-org.github.io/vufind/]. [viewed 2018-03-19].
+====
+
+See <<system_requirements>> for additional information.
+
+
+==== Operating systems
+
+When operating systems are cited, version or edition should be included only if necessary, since such information becomes outdated quickly.
+
+Hardware requirements should be included if the edition / version information is provided.
+
+====
+APPLE COMPUTER, INC. _Mac OS X El Capitan_ [computer program]. 25 June 2016 [accessed 2016-06-27]. Available from: http://www.apple.com[http://www.apple.com]. Path: Homepage; Mac OS X El Capitan; Upgrade now.
+====
+
+====
+_Linux kernel_. [computer program]. The Linux Kernel Organization, 2002–. License: GNU GPL version 2. Available from: https://www.kernel.org/[https://www.kernel.org/]. [accessed 2018-04-15]. See also: https://en.wikipedia.org/wiki/Linux[https://en.wikipedia.org/wiki/Linux].
+====
+
+
+==== General programs
+
+When programs are cited, version or edition should be included only if necessary, since such information becomes outdated quickly.
+
+System requirements should be included if edition / version information is provided.
+
+====
+MOZILLA FOUNDATION. _Mozilla Firefox_ [computer program]. Available from: https://www.mozilla.org/[https://www.mozilla.org/]. Path: Download Firefox. [accessed 2017-06-27].
+====
+
+====
+ORACLE CORP. _MySQL®_ [computer program]. Enterprise edition. Redwood City: Oracle, 2015. [accessed 2016-03-23].
+====
+
+====
+MICROSOFT CORP. _Office 2019_ [computer program]. Windows edition. Redwood: Microsoft, 2019. Minimum system requirements: Windows 10 SAC, Windows Server 2019, or Windows 10 LTSC 2019 at release; 1.6 gigahertz (GHz) or faster 2-core processor, 4GB RAM (2GB RAM 32-bit); 4.0 GB of available disk space; 1280 &times; 768 screen resolution. [Additional information available from: https://products.office.com/en/office-system-requirements[https://products.office.com/en/office-system-requirements]] Available from: https://www.office.com[https://www.office.com]
+====
+
+
+==== Games
+
+Electronic games should be referenced using the criteria for programs.
+
+====
+NINTENDO. _Mario Kart 8 Deluxe for Nintendo Switch_ [game]. Nintendo Switch edition. Kyoto: Nintendo, 2017. Available from: https://mariokart8.nintendo.com[https://mariokart8.nintendo.com].
+====
+
+====
+FIRAXIS GAMES._Sid Meier's Civilization VI: Gathering Storm_ [game]. Windows edition. Novato: 2K, 2016. Recommended system requirements: Windows 7x64 / Windows 8.1x64 / Windows 10x64; Fourth Generation Intel Core i5 2.5 Ghz or AMD FX8350 4.0 Ghz or greater; 8 GB RAM, 16 GB available space; AMD 7970 or nVidia 770 or greater with 2GB, DirectX 11 Video Card. Available from: https://civilization.com[https://civilization.com].
+====

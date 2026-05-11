@@ -1,0 +1,348 @@
+
+[[av-material]]
+=== Audio-visual material
+
+==== NEW
+
+
+
+=== Films, videos and broadcasts
+
+* Source: <<ISO690,clause 5.5>>
+
+
+If a single contributor is to be singled out as the creator of a resource, they
+are assigned the `bibitem/contributor/role@type` of "author".
+Otherwise, if the
+resource is treated as a collaborative effort, the various contributors should
+be listed with `bibitem/contributor/role@type` of "performer", with their
+contributions differentiated in the `bibitem/contributor/role`.
+
+Programmes within a series have the series modelled as a `bibitem/series`.
+The title of the series is modelled as `bibitem/series/title`, and the title
+of the episode as `bibitem/title`. The transmitting organisation and channel
+are modelled as a contributor of type "distributor".
+
+If an audiovisual resource is a contained item, the `bibitem/extent` gives
+its location within the host item; this is typically a timestamp for visual
+material, and a timestamp or a track for audio material.
+
+====
+_The Death of Stalin_. Directed by Armando Iannucci. 2017.
+
+[source,xml]
+--
+<bibitem type="film">
+  <title>The Death of Stalin</title>
+  <date type="published"><on>2017</on></date>
+  <contributor>
+    <role type="performer">Directed by</role>
+    <person>
+      <name>
+        <surname>Iannucci</surname>
+        <forename>Armando</forename>
+      </name>
+    </person>
+  </contributor>
+</bibitem>
+--
+====
+
+====
+Armando Iannucci. _The Death of Stalin_. 2017.
+
+[source,xml]
+--
+<bibitem type="film">
+  <title>The Death of Stalin</title>
+  <date type="published"><on>2017</on></date>
+  <contributor>
+    <role type="author">Directed by</role>
+    <person>
+      <name>
+        <surname>Iannucci</surname>
+        <forename>Armando</forename>
+      </name>
+    </person>
+  </contributor>
+</bibitem>
+--
+====
+
+====
+_Columbo_, Season 7, Episode 5. The Conspirators. Teleplay by Howard Berk.
+NBC. 1978-05-13.
+
+[source,xml]
+--
+<bibitem type="audiovisual">
+  <title>The Conspirators</title>
+  <date type="transmitted"><on>1978-05-13</on></date>
+  <contributor>
+    <role type="performer">Teleplay by</role>
+    <person>
+      <name>
+        <surname>Berk</surname>
+        <forename>Howard</forename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="distributor"/>
+    <organization>
+      <name>NBC</name>
+    </organization>
+  </contributor>
+  <series>
+    <title>Columbo</title>
+    <number>Season 7</number>
+    <partnumber>Episode 5</partnumber>
+  </series>
+</bibitem>
+--
+====
+
+
+==== General
+
+Audio-visual materials include films, videos, radio and TV programmes and broadcasts. For audiobooks, see <<audiobooks>>.
+
+==== Metadata elements
+
+Due to the diversity of audio-visual materials, it is impossible to provide a full list of metadata elements these citations may contain.
+
+<<table-audio-visual-material>> shows the elements, in order, to be included in references to audio-visual material.
+
+
+[[table-audio-visual-material]]
+.Metadata elements for audio-visual material
+[cols="<,<,^"]
+|===
+h| Elements (in order) h| Status h| Relevant clause(s)/ subclauses
+
+| *Name of creator(s)* (of the cited resource) | Required | <<creator>>, <<av-roles>>
+| Standard identifiers of creators' public identities | Optional | <<creator>>
+| *Title of the item* | Required | <<form_of_title>>, <<translation_of_title>>
+| *Content, Medium and/or Carrier* | Required if relevant for the citation | <<medium>>
+| Subsidiary titles | Optional | <<additional_titles>> to <<no_title>>
+| *Edition and version* | Required | <<edition_and_version>>
+| Subsidiary creator | Optional | <<subsidiary_creator>>
+| *Series title and number* | Required if the item is likely to be identified as part (episode) of a series | <<form_of_title>>, <<series_title_number>>
+| *Place and publisher* / distributor | Required if known | <<place>>, <<publisher>>
+| *Date of publication* | Required if known | <<av-date>>, <<date-publication>>
+| Rights metadata | Optional | <<rights_metadata>>
+| *Date of restoration/revision* | Required, if available | <<web_specific>>
+| *Standard identifier* _(ISAN, etc.)_ | Required if available | <<international_standard_identifiers>>
+| *Distributor or online host* | Required for electronic resources if available | <<distributor_host>>
+| *Persistent identifier* | Required if available | <<av-persistent>>, <<persistent_identifiers>>
+| *Location and access (URI)* | Required for online information resources with no persistent identifier or archived copy | <<network_location>>
+| *Physical location* | Required for archival resources when a limited number of copies are known to exist | <<physical_location>>
+| Playback requirements | Optional | <<av-playback>>
+| *Relationships* | Required if available | <<relations>>
+| *Date of citation* | Required for online information resources | <<date-citation>>
+| Other information may be added in whatever position is most appropriate | Optional | <<other_elements>>; <<web_specific>>
+
+|===
+
+
+
+==== Data elements and guidance specific to type
+
+[[av-persistent]]
+===== Persistent identifiers
+
+Actionable persistent identifier should be provided as HTTP URI if the cited information resource has a PID.
+
+URI fragment may be used to specify and access a segment within an audio-visual resource such as a video. Such a segment may be for instance a conference presentation embedded in the broadcast covering the entire conference.
+
+====
+KÖNIG, Rainer. _Combining linear Support Vector Machines by constraining them to use the same set of features improves consistency of biomarker discovery for blood infections_. In: _Leipzig MMS Days_, 2017. [Start time 04:55:00, Duration 00:06:28:00]. Available from: https://doi.org/10.5446/30617#t=04:55,06:28[https://doi.org/10.5446/30617#t=04:55,06:28].
+====
+
+====
+HYSEN, Eric. _Let's build the road network of civic technology._ [online]. In: Open Knowledge Festival – Day 2. Available from: YouTube (distributor), https://www.youtube.com/watch?v=0UNRZEsLxKc#t=54m52s[https://www.youtube.com/watch?v=0UNRZEsLxKc#t=54m52s].
+====
+
+[[av-roles]]
+===== Roles
+
+Many audio-visual materials are the co-operative output of many individuals, no one of whom has a dominant role as the creator. These resources should be cited with the title as the first element in the reference. If there is a principal creator, such as the director, the resource should be cited with his or her name as the first element.
+
+If one individual is clearly responsible for the intellectual content of an item, he or she should be given as creator in the first element.
+
+====
+HAWKING, Stephen. _Do black holes have no hair? 2016 Reith lecture_. BBC Radio. [2016-01-26].
+====
+
+Principal performers may be included as well.
+
+====
+_Annihilation_ [film]. [Blu-Ray]. GARLAND, Alex (director). Natalie PORTMAN and Jennifer Jason LEIGH (performers). [London]: DNA Films, 2018.
+====
+
+[[av-date]]
+===== Date of transmission
+
+In addition to <<date-publication>>, for audio-visual materials cited from a transmission rather than from the physical item, the date and time of transmission and the transmitting organization should be given, if no other unique identifier of the particular edition is available.
+
+====
+HAWKING, Stephen and Sue LAWLEY. _Desert island discs: Stephen Hawking._ [online]. [mp3]. BBC Radio 4, 1992-12-25. Available from: https://www.bbc.co.uk/programmes/p0093xb2. [viewed 2019-08-11].
+====
+
+====
+HAWKING, Stephen and Sue LAWLEY. _Classic desert island discs: Stephen Hawking._ [online]. BBC Radio 4, [2018-04-15]. Available from: https://www.bbc.co.uk/programmes/p063yw6r. [viewed 2019-08-11].
+====
+
+Broadcast date and time should be omitted when citing dynamic sites.
+
+====
+_The Archers._ [online]. BBC Radio. [online]. Latest episodes available from: https://www.bbc.co.uk/programmes/b006qpgr [viewed 2019-05-12].
+====
+
+[[av-playback]]
+===== Medium, carrier and playback requirements
+
+Sufficient information about physical medium and/or file formats of the cited audio-visual resource should be given if such information is needed for identification of suitable playback devices.
+
+See <<system_requirements>> for a more detailed description of system requirements.
+
+
+
+==== Films
+
+For films, the primary date is the year of the initial release in the country of production.
+
+====
+_Macbeth_ [film]. 1948. WELLES, Orson (director).
+====
+
+Medium and carrier of the version or edition cited, and its publication date should be included, if features of that version/edition are relevant (if, for instance, commentary only available on the 4K version of a movie is discussed).
+
+====
+_Inception_ [film]. 2010. NOLAN, Christopher (writer, director). [4K UHD + Blu-ray, 2015].
+====
+
+Publisher should be included, with the location if relevant and known. If the publisher has changed since the film was originally released and the current publisher is shown, the date should reflect the change.
+
+====
+_Star Wars: Episode IV – A New Hope_ [film]. 1977. LUCAS, George (director). Twentieth Century Fox, 1977.
+====
+
+====
+_Cutter's Way_ [Cutter and Bone] [film]. PASSER, Ivan (director). Gürian Entertainments & United Artists, 1981.
+====
+
+Local distributor may be indicated in addition to the publisher.
+
+====
+_The last command_ [silent film]. STERNBERG, Josef von (director). Paramount Pictures, 1928. London: distributed in the UK by Universal International Pictures (UK).
+====
+
+====
+_Macbeth_ [film]. 1948. WELLES, Orson (director). WELLES, Orson, Jeanette NOLAN, Dan O’HERLIHY [et. al] (actors). USA: Republic Pictures, 1948. Location of 35 mm viewing copy: National Film Archive, London.
+====
+
+====
+_Unknown soldier_. [film]. 2017. [ISAN 0000-0005-007D-0000-Q-0000-0000-X]. LOUHIMIES, Aku (ohjaaja). [ISNI 0000 0000 7235 9611].
+====
+
+If a digitally restored version of the film is cited, the year of restoration should be provided alongside the year of original release. Restoration year is mandatory if the resource has been restored more than once or if the film has been modified (e.g. colorized) during restoration.
+
+====
+_My fair lady_ [film]. [Blu-ray]. 1964 [restored 2015]. CUKOR, George (director).
+====
+
+Film includes film of musical performances. Such references should indicate the attributes of both films and musical performances.
+
+====
+MOZART, Wolfgang Amadeus. _The Magic Flute_. [DVD]. TAYMOR, Julie (director). Metropolitan Opera. LEVINE, James (conductor). Sony Classical, 2011.
+====
+
+====
+METALLICA. _Orgullo, Pasión, y Gloria: Tres Noches en la Ciudad de México._ [DVD]. ISHAM, Wayne (director). Universal Records, 2009.
+====
+
+==== Broadcasts
+
+Broadcast is a continuous programme stream on certain channel or distribution networks, and it may or may not contain unique programmes with a title that could be referenced in addition to a time range reference of the broadcast segment in question.
+
+Time range specification of a specific programme within broadcast, if included, may be encoded as the URI fragment part of the persistent identifier or URL in the reference. Start time and duration of the programme item may be provided as well.
+
+====
+HYSEN, Eric. _Let's build the road network of civic technology._ [online]. In: Open Knowledge Festival – Day 2. Available from: YouTube (distributor), https://www.youtube.com/watch?v=0UNRZEsLxKc#t=54m52s[https://www.youtube.com/watch?v=0UNRZEsLxKc#t=54m52s]. [viewed 2019-07-14].
+====
+
+====
+KÖNIG, Rainer. _Combining linear Support Vector Machines by constraining them to use the same set of features improves consistency of biomarker discovery for blood infections_. In: Leipzig MMS Days, 2017. [Start time 04:55:00, Duration 00:06:28:00]. Available from: https://doi.org/10.5446/30617#t=04:55[https://doi.org/10.5446/30617#t=04:55]. [viewed 2018-03-12].
+====
+
+====
+_Cantonese Radio Podcasts_. [podcast] London: BBC News. Available from: https://www.bbc.co.uk/podcasts/cantoneseradio
+====
+
+
+==== Individual items
+
+Individual items within a programme or broadcast should be cited as component parts, which may contain starting and ending time relative to the start of the programme or in case of a broadcast to absolute time. Duration may be specified after the starting time.
+
+====
+MONTY PYTHON. _The Parrot Sketch._  [online]. In: Monty Python's Flying Circus, Season 1, Episode 8. [Recorded 1969-11-25, broadcasted 1969-12-07.] Available from: Dailymotion (distributor),
+https://www.dailymotion.com/video/x2hwqnp. [viewed 2019-03-30].
+====
+
+====
+THATCHER, Margaret. _Interview_. In: Six O'Clock News. TV, BBC 1, 29 Jan. 1986, 18:23 GMT.
+====
+
+====
+_Tribute to Elizabeth Taylor._ In: Yle News, TV1. 2011-03-24T11:07:52:01+02:00 [Duration: 00:00:24:00].
+====
+
+====
+_About Time._ In: Bell System Science Series. Burbank, (CA): Warner Bros, 1962. [broadcasted 1962-02-05.]
+====
+
+The SMPTE timecode{blank}footnote:[https://en.wikipedia.org/wiki/SMPTE_timecode[https://en.wikipedia.org/wiki/SMPTE_timecode]] (hour:minute:second:frame) may be used to specify individual frames of a film or video.
+
+====
+01:02:15:24 is an SMPTE timecode for one hour, two minutes, 15 seconds and 24 frames (starting at specified time).
+====
+
+==== Episode in series
+
+For an individual episode within a series broadcasted in TV, the number and title of the season and episode should be given. They should be accompanied with the series title, the transmitting organization and channel, and the full date (i.e. year, month, day and, if necessary, the time of transmission) as expressed in the cited resource and/or in <<ISO8601-1>> format.
+
+====
+_Yes. Prime Minister. Episode 1_. The Ministerial Broadcast. BBC 2. 16 Jan. 1986. [1986-01-16].
+====
+
+====
+_News at Ten_. ITV. 27 Jan. 2006. 22:00. [2006-01-27T22:00Z].
+====
+
+====
+_Dave Allen at large_. BBC TV, 25 February 2006.
+====
+
+====
+DIMBLEBY, David. _Any questions_. BBC Radio, 4 March 2006.
+====
+
+====
+HENDERSON, David. _1985 Reith lectures_. BBC Radio, 3 and 4 Nov. – Dec. 1985.
+====
+
+When a series is released on a physical carrier, the publisher and the carrier type should be included.
+
+====
+MILLER, Bruce. _The Handmaid's tale. Season 1_. [DVD]. MGM Television, 2017.
+====
+
+====
+MILLER, Bruce. _Offred_. In: The Handmaid's tale. Season 1. [DVD]. MGM Television, 2017.
+====
+
+====
+_Wrestling for equality_. [podcast]. BBC News, World Service, 31 August 2019. [Duration: 00:23].
+====
+

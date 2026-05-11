@@ -2,8 +2,27 @@
 [[bibitem]]
 == Bibliographic Item Model
 
+This clause provides information models that collectively
+provide the necessary data elements for creation of citations and bibliographic references in accordance with <<ISO690>>.
+
+In this document, the model is discussed with reference to <<ISO690>>, with the
+rendered
+bibliographic references of each clause in <<ISO690>> serialised according to
+<<serialisation>>.
+
+Each aspect of the model is given with a cross-reference to <<ISO690>>; a
+listing of the
+relevant model components; and a listing of the corresponding components of
+<<bibtex>>.
+
+
+
+
+
+
+
 The following is a UML model intended to capture the structures represented in
-<<iso690>>, and is intended as a reference model for <<iso690>>. The various
+<<ISO690>>, and is intended as a reference model for <<ISO690>>. The various
 elements of the model are discussed below, with illustrations using the sample
 serialisation (<<serialisation>>).
 
@@ -102,7 +121,7 @@ BibliographicItem/keyword/taxon:: A sequence of taxa presenting a keyword in a h
 
 BibliographicItem/validity:: Information about how long the current description of the bibliographic item is valid for.
 
-The foregoing elements map to the overall structure of <<iso690>> as follows:
+The foregoing elements map to the overall structure of <<ISO690>> as follows:
 
 * `BibliographicItem/contributor`: 4.1 Creator
 * `BibliographicItem/title`: 4.2 Title
@@ -225,13 +244,13 @@ image::relaton-models/images/RelBib_BibItemType.png[]
 ====
 
 BibItemType:: The range of possible bibliographic items covered by this model. Note that
-legal documents are expressly outside the scope of <<iso690>>.
+legal documents are expressly outside the scope of <<ISO690>>.
 
 === Keywords
 
 Keywords may optionally be aligned to one or more items in controlled vocabularies. That
 alignment involves an identifier for the controlled vocabulary item,
-and a label or namespace for the controlled vocabulary. The item identifier may be a keyword, 
+and a label or namespace for the controlled vocabulary. The item identifier may be a keyword,
 a code for the keyword, or a URI for the keyword: the basic Relaton model does not
 differentiate between these. The controlled vocabulary item may be presented in isolation,
 or as a hierarchy of terms (taxons).

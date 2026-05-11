@@ -2,7 +2,7 @@
 [[numeration]]
 == Numeration and pagination
 
-* Source: <<iso690,clause 4.7>>
+* Source: <<ISO690,clause 4.7>>
 * Serialisation: `bibitem/extent`
 
 TODO: we have them as referenceFrom and referenceTo, but from and to would be enough

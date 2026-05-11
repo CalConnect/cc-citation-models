@@ -1,14 +1,14 @@
-= Information and documentation -- Bibliographic reference model and serialization
+= Information and documentation -- Bibliographic reference and citation information models and serialization
 :technical-committee-number: 46
 :docnumber: 6900
 :tc-document-number: 9999
 :edition: 1
-:copyright-year: 2018
+:copyright-year: 2020
 :language: en
 :title-intro-en: Information and documentation
-:title-main-en: Bibliographic reference model and serialization
+:title-main-en: Bibliographic reference and citation information models and serialization
 :title-intro-fr: Information et documentation
-:title-main-fr: Modèle de référence bibliographique et sérialisation
+:title-main-fr: Modèles de référence bibliographique et d'information sur les citations et sérialisation
 :doctype: international-standard
 :docstage: 00
 :docsubstage: 00
@@ -29,10 +29,10 @@
 :data-uri-image:
 :docfile: iso-6900.adoc
 :mn-document-class: iso
-:mn-output-extensions: xml,html,doc,html_alt,rxl
+:mn-output-extensions: xml,html,doc,pdf,rxl
 
 include::sections-iso/00-foreword.adoc[]
-include::sections/0b-intro.adoc[]
+include::sections/00-intro.adoc[]
 include::sections/01-scope.adoc[]
 include::sections/02-norm-refs.adoc[]
 include::sections/03-termsdef.adoc[]
