@@ -1,0 +1,182 @@
+
+[[archival_materials]]
+=== Archival materials
+
+==== NEW
+
+
+
+=== Archival materials
+
+* Source:  <<ISO690,clause 5.10>>
+
+The fonds or collection of an archival item is modelled as a series.
+The box and folder number is encoded as an access location. The reference code
+is encoded as an identifier. The archive is encoded as a contributor
+of type "distributor" (since the archive makes the resource available,
+even if to a restricted public).
+
+====
+HICKS, H. D. _Correspondence from Henry Davies Hicks to the Annapolis County electorate_. [1956-10-24]. MS-2-511, Box 15, Folder 9. Henry Davies Hicks fonds. At: Dalhousie University Archives, Halifax, Nova Scotia, Canada.
+
+[source,xml]
+--
+<bibitem type="archival">
+  <title>Correspondence from Henry Davies Hicks to the Annapolis County electorate</title>
+  <docidentifier type="reference code">MS-2-511</docidentifier>
+  <date type="created">1956-10-24</date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <surname>Hicks</surname>
+      <initials>H. D.</initials>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="distributor">archive</role>
+    <organization>
+      <name>Dalhousie University Archives</name>
+      <address>
+        <city>Halifax</city>
+        <state>Nova Scotia</state>
+        <country>Canada</country>
+      </address>
+    </organization>
+  </contributor>
+  <series>
+    <title>Henry Davies Hicks fonds</title>
+  </series>
+  <accessLocation>Box 15, Folder 9</accessLocation>
+</bibitem>
+--
+====
+
+
+==== General
+
+Archival materials may be individual documents or collections of documents. They may be printed or born digital resources, and there are also digital surrogates of other types of material, such as manuscripts or art.
+
+An archival information resource may be a publication; e.g., a book, article or graphical work, and if so, it is referenced accordingly. Normally this is not the case and archival resources usually require additional information (such as fonds/collection or geographic location).
+
+Archival materials include all kinds of governmental publications but also private documents such as letters, diaries or other textual documents; photographs, and various (other) ephemeral resources, or digital surrogates of these resources.
+
+NOTE: This document does not cover citing ephemeral resources outside the archival context.
+
+==== Metadata elements
+
+<<table-elements-for-archival-sources>> shows the elements, in order, to be included in references to archival information sources.
+
+
+[[table-elements-for-archival-sources]]
+.Metadata elements for archival sources
+[cols="<,<,^"]
+|===
+h| Elements (in order) h| Status h| Relevant clause(s)/ subclauses
+
+| *Name of creator(s)* | Required | <<creator>>, <<archival-owner>>
+| Standard identifiers of creators' public identities | Optional | <<creator>>
+| *Title of the item* | Required | <<archival-title>>, <<form_of_title>>
+| *Medium designation* | Required | <<medium>>, <<web_specific>>
+| *Name of the fonds / collection* | Required, if applicable | <<archival_materials>>
+| *Name and location of the host archive* | Required, if applicable | <<archival_materials>>
+| *Date of publication* | Required, if applicable | <<season_month_day_time>>
+| *Distributor or online host* | Required for electronic resources if available | <<distributor_host>>
+| *Persistent identifier* | Required if available | <<persistent_identifiers>>
+| *Network location and access* | Required for electronic archive sources | <<network_location>>
+| *Relationships* | Required if available | <<relations>>
+| Other information may be added in whatever position is most appropriate | Optional | <<other_elements>>, <<web_specific>>
+
+|===
+
+[[archival_specific]]
+==== Data elements and guidance specific to type
+
+
+[[archival-title]]
+===== Title
+
+Titles of archival materials are sometimes vague (e.g., "Correspondence") and therefore additional elements should be included in the citation whenever necessary.
+
+[[archival-owner]]
+////
+===== Owner
+
+If the host organization does not own the resource, the owner may be mentioned (if known and if the information is not confidential).
+////
+===== Creator
+
+Personal and / or organizational authors should be included when possible.
+
+====
+SUBCOMMITTEE ON MENTAL HYGIENE PERSONNEL IN SCHOOL PROGRAMS. _Meeting of Subcommittee on Mental Hygiene Personnel in School Programs. (1949, November 5–6)._
+====
+
+If the host organization does not own the cited information resource, the owner should be mentioned (if known and if the information is not confidential).
+
+==== Individual documents
+
+If a hand-held document is cited, the location information has to be sufficiently precise.
+
+====
+SUBCOMMITTEE ON MENTAL HYGIENE PERSONNEL IN SCHOOL PROGRAMS. _Meeting of Subcommittee on Mental Hygiene Personnel in School Programs._ (1949, November 5–6). In: David Shakow Papers (M1360). At: Archives of the History of American Psychology, University of Akron, Akron, OH.
+====
+
+====
+HICKS, H. D. _Correspondence from Henry Davies Hicks to the Annapolis County electorate_. [1956-10-24]. In: Henry Davies Hicks fonds. MS-2-511, Box 15, Folder 9. At: Dalhousie University Archives, Halifax, Nova Scotia, Canada.
+====
+
+For digital information resources, URI may replace the physical location information.
+
+====
+TALBOT, E. 1570?. _Letter from Henry Cavendish._ In: Bess of Hardwick's Letters. Available from: https://www.bessofhardwick.org/letter.jsp?letter=9 [Normalized version]
+====
+
+If the cited digital document is a surrogate, the location of the original document may also be given.
+
+====
+ORTEIG, R. _Telegram, 1932 May 23, Paris, to Amelia Earhart, London._ (1932-05-23). In: The George Palmer Putnam Collection of Amelia Earhart Papers. At: Purdue University Libraries, Archives and Special Collections, Purdue University, West Lafayette, IN. Purdue ID: b2f30i12. ark:/34231/c6hh6h7x. Digital surrogate available from: http://earchives.lib.purdue.edu/cdm/singleitem/collection/earhart/id/3422/[http://earchives.lib.purdue.edu/cdm/singleitem/collection/earhart/id/3422/]. [viewed 2019-03].
+====
+
+References to born-digital documents may be made using data elements specified in this document, including digital identification mechanisms.
+
+
+==== Collections
+
+Collection level citations should specify the creator and the title of the collection and the location.
+
+====
+SELL, John M. _John M. Sell Civil War Collection._ At: Special Collections and Archives, Oviatt Library, California State University, Northridge, Los Angeles, CA.
+====
+
+If the cited collection is part of a larger collection, both collections should be specified.
+
+====
+ALLPORT, G. W. _Correspondence_. (1930–1967). In: Gordon W. Allport Papers (HUG 4118.10). At: Harvard University Archives, Cambridge, MA.
+====
+
+////
+==== Digital surrogate in collection
+
+A digital surrogate within a collection can be referred to.
+
+====
+ORTEIG, R. _Telegram, 1932 May 23, Paris, to Amelia Earhart, London._ (1932-05-23). In: The George Palmer Putnam Collection of Amelia Earhart Papers. At: Purdue University Libraries, Archives and Special Collections, Purdue University, West Lafayette, IN. Purdue ID: b2f30i12. ark:/34231/c6hh6h7x.
+Digital surrogate available from: http://earchives.lib.purdue.edu/cdm/singleitem/collection/earhart/id/3422/[http://earchives.lib.purdue.edu/cdm/singleitem/collection/earhart/id/3422/]. [viewed 2019-03].
+====
+
+==== Born-digital document
+
+References to born-digital documents can be made using data elements from this document, including digital identification mechanisms.
+
+====
+KKO:2019:3. KORKEIN OIKEUS. _Konkurssi – Konkurssivalvonta – Jakoluettelon vahvistaminen._ ECLI:FI:KKO:2019:3. FINLEX [jakelija]. Helsinki: Oikeusministeriö, 2019. Saatavissa: http://finlex.fi/fi/oikeus/kko/kko/2019/20190003[http://finlex.fi/fi/oikeus/kko/kko/2019/20190003]. [viitattu 2019-07-09].
+====
+
+==== Organizational authored archive
+
+Archival materials that have an organizational author can be used for reference.
+
+====
+SUBCOMMITTEE ON MENTAL HYGIENE PERSONNEL IN SCHOOL PROGRAMS. _Meeting of Subcommittee on Mental Hygiene Personnel in School Programs_. (1949, November 5–6). In: David Shakow Papers (M1360). At: Archives of the History of American Psychology, University of Akron, Akron, OH.
+====
+////

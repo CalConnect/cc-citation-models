@@ -1,0 +1,19 @@
+
+[[data_elements]]
+== Data elements
+
+include::07-data-elements/0701-general.adoc[]
+include::07-data-elements/0702-creator.adoc[]
+include::07-data-elements/0703-title.adoc[]
+include::07-data-elements/0704-component-parts.adoc[]
+include::07-data-elements/0705-medium.adoc[]
+include::07-data-elements/0706-edition.adoc[]
+include::07-data-elements/0707-date.adoc[]
+include::07-data-elements/0708-production.adoc[]
+include::07-data-elements/0709-numeration.adoc[]
+include::07-data-elements/0710-series.adoc[]
+include::07-data-elements/0711-identifiers.adoc[]
+include::07-data-elements/0712-location.adoc[]
+include::07-data-elements/0713-surrogate.adoc[]
+include::07-data-elements/0714-relation.adoc[]
+include::07-data-elements/0715-additional.adoc[]

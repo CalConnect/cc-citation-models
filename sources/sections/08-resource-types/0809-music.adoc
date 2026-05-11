@@ -1,0 +1,264 @@
+
+=== Music material
+
+==== NEW
+
+
+=== Music
+
+* Source: <<ISO690,clause 5.7>>
+* Serialisation: `bibitem/contributor/role`
+
+Librettists and composers are both contributors of role type "author"; the role
+of composer and librettist needs to be differentiated in the contributor
+role for proper rendering.
+
+The type "music" covers both music scores and music recordings, as is done
+in <<ISO690>>. The two are differentiated in `medium`; following
+the practice in <<ISO690>>, `medium/content` "notated music" is used
+for music scores, while `medium/carrier` is used for recordings
+(audio disc = CD, online resource). While it is possible to cite music in the
+abstract, without referencing either a score or a recording (especially if the
+score is not published), this is not
+good practice, for the same reason that particular editions are required
+for citation of textual works.
+
+====
+ADAMS, John Coolidge. _Nixon in China_. Libretto by Alice GOODMAN. 2004 [1987].
+Vocal score. New York: Boosey & Hawkes.
+
+
+[source,xml]
+--
+<bibitem type="music">
+  <title>Nixon in China</title>
+  <date type="created"><on>1987</on></date>
+  <date type="published"><on>2004</on></date>
+  <contributor>
+    <role type="author">composer</role>
+    <person><name><completeName>John Coolidge ADAMS</completeName></name></person>
+  </contributor>
+  <contributor>
+    <role type="author">libretto by</role>
+    <person><name><completeName>Alice GOODMAN</completeName></name></person>
+  </contributor>
+  <contributor>
+    <role type="publisher">
+    <organization><name>Boosey &amp; Hawkes</name></organization>
+  </contributor>
+  <medium>
+    <content>notated music</content>
+    <genre>vocal score</genre>
+  </medium>
+  <place>New York</place>
+</bibitem>
+--
+====
+
+====
+ADAMS, John Coolidge. _Nixon in China_. Libretto by Alice GOODMAN. 2009.
+Marin Alsop (Conductor). Colorado Symphony Orchestra. [Audio CD].
+3 CDs. Naxos.
+
+[source,xml]
+--
+<bibitem type="music">
+  <title>Nixon in China</title>
+  <date type="created"><on>1987</on></date>
+  <date type="published"><on>2004</on></date>
+  <contributor>
+    <role type="author">composer</role>
+    <person><name><completeName>John Coolidge ADAMS</completeName></name></person>
+  </contributor>
+  <contributor>
+    <role type="author">libretto by</role>
+    <person><name><completeName>Alice GOODMAN</completeName></name></person>
+  </contributor>
+  <contributor>
+    <role type="performer">conductor</role>
+    <person><name><completeName>Marin ALSOP</completeName></name></person>
+  </contributor>
+  <contributor>
+    <role type="performer"/>
+    <organization><name>Colorado Symphony Orchestra</name></organization>
+  </contributor>
+  <contributor>
+    <role type="publisher">
+    <organization><name>Naxos</name></organization>
+  </contributor>
+  <medium>
+    <carrier>audio disc</carrier>
+  </medium>
+  <place>New York</place>
+  <extent type="locality:CD">
+    <referenceTo>3</referenceTo>
+  </extent>
+</bibitem>
+--
+
+====
+
+
+==== General
+
+Citable music material includes printed resources (sheet music), recordings on hand-held devices and on-line resources.
+
+
+==== Metadata elements
+
+<<table-elements-for-music-material>> shows the elements, in order, to be included in references to music material.
+
+
+[[table-elements-for-music-material]]
+.Metadata elements for music material
+[cols="<,<,^"]
+|===
+h| Elements (in order) h| Status h| Relevant clause(s)/ subclauses
+
+| *Name of creator(s)* (of the cited resource) | Required | <<music-creator>>, <<creator>>
+| Standard identifiers of creators' public identities | Optional | <<creator>>
+| *Title with opus number* | Required if present | <<music-title>>, <<form_of_title>>, <<translation_of_title>>
+| *Media type* | Required if present | <<medium>>
+| Subsidiary titles | Optional | <<additional_titles>> to <<no_title>>
+| *Edition and version* | Required if the item is not the first edition | <<edition_and_version>>
+| Subsidiary creator | Optional | <<subsidiary_creator>>
+| *Series title and number* | Required if the item is likely to be identified as part of a series | <<form_of_title>>, <<series_title_number>>
+| *Place and publisher* | Required | <<place>>, <<publisher>>
+| *Date of publication* | Required | <<date-publication>>
+| Rights metadata | Optional | <<rights_metadata>>
+| *Date of update/revision* | Required, if available, for online information resources | <<web_specific>>
+| *Standard identifier* _(ISRC, etc.)_ | Required if available | <<international_standard_identifiers>>
+| *Distributor or online host* | Required for electronic resources if available | <<distributor_host>>
+| *Persistent identifier* | Required if available | <<persistent_identifiers>>
+| *Location and access (URI)* | Required for online information resources with no persistent identifier or archived copy | <<network_location>>
+| *Physical location* | Required for print information resources if a limited number of copies are known to exist | <<physical_location>>
+| *Relationships* | Required if available | <<relations>>
+| *Date of citation* | Required for dynamic online information resources | <<date-citation>>
+| Other information may be added in whatever position is most appropriate | Optional | <<other_elements>>; <<web_specific>>
+
+|===
+
+
+
+[[music_specific]]
+==== Data elements and guidance specific to type
+
+[[music-title]]
+===== Title
+
+The title for classical musical works must include the opus number or catalogue number where available.
+
+====
+_Violin concerto in D minor, Op. 47._
+====
+
+====
+_Toccata and fugue in D minor, BWV 565._
+====
+
+
+[[music-creator]]
+===== Creator
+
+In references to written music, the composer should normally be shown as the creator, and the librettist or lyricist as the (first) subsidiary creator, even if a librettist or lyricist is given equal prominence in the source.
+
+====
+PACINI, Giovanni. _II Corsaro_. Libretto by Giacomo FERRETTI after Lord Byron.
+====
+
+====
+GERSHWIN, George. _Fascinating Rhythm._ Ira GERSHWIN (lyricist).
+====
+
+==== Performed and recorded music
+
+// TODO!!! ADD PERFORMED MUSIC
+
+In references to recorded music, the composer should be shown as the creator, and the librettist or lyricist, as in <<music-creator>>, should appear as the first subsidiary creator, if applicable. The conductor, soloists and other artists or groups involved with the recording should be named as subsidiary creators. Creator and contributor information should enable unique identification of the information resource; this may require even including persons in other roles, such as cantors.
+
+
+====
+SIBELIUS, Jean. _Violin concerto in D minor, Op. 47._ Maxim VENGEROV (violin). [CD]. Chicago Symphony Orchestra. Daniel BARENBOIM (conductor). Teldec Classics, 1996.
+====
+
+====
+EVANS, Bill. _Sleeve note to Kind of Blue_. [Sound disc]. Columbia, 1959. CBS (E) SBPG 62066. Reissued in 1997 as Columbia Legacy CD CK 64935.
+====
+
+==== Printed music
+
+For printed music, a score that is musically identical with a full score, but reduced in size, may be described as a miniature score or pocket score if it does not exceed 200 mm in height, or as a study score if it exceeds 200 mm in height.
+
+====
+BACH, C. Ph. E. _Sonate G-moll für Violine und obligates Cembalo_. Herausgegeben von Anne Marlene GURGEL. Leipzig: Peters, 1981.
+====
+
+====
+BRITTEN, Benjamin. _Eight folk song arrangements for high voice and harp_. Osian ELLIS (ed.). London: Faber Music, 1980.
+====
+
+====
+HANDEL, Georg Friedrich. _Two trio sonatas for two violins and basso continuo_ [Op. 5 no. 4, 5]. FLESCH, Siegfried (ed.). Kassel: Nagels Verlag; London: Bärenreiter, 1981.
+====
+
+====
+MENDELSSOHN BARTHOLDY, Felix. _Six Christmas pieces_, op. 72 [for piano]. FERGUSON, Howard (ed.). London: Associated Board of the Royal Schools of Music, 1983.
+====
+
+If a printed score has an identifier, it should be included. The identifier is usually an ISMN [International Standard Music Number], but a printed score may also have an ISBN in addition to or even instead of
+ISMN. If ISMN is available, it should be used instead of the ISBN.
+
+// A printed score may be assigned both an ISBN and an ISMN [International Standard Music Number]. If the latter is known, it should be used instead of ISBN.
+
+====
+MOZART, Wolfgang Amadeus. _Die Sinfonien I_. Kassel: Bärenreiter, 2005. ISMN M-006-20466-3.
+====
+
+====
+MOZART, Wolfgang Amadeus. _The Magic Flute in Full Score._ [notated music]. Emanuel SCHIKANEDER (librettist). Study score, 15.5 &times; 21.5 cm. Mineola, NY: Dover, [s.a.]. ISBN 9780486466163.
+====
+
+Multiple creators of a musical score may be indicated, with their roles.
+
+====
+PACINI, Giovanni. _Il Corsaro_. Libretto by Giacomo FERRETTI after Lord BYRON. [facsimile edition of the printed piano-vocal score with an introduction by Philip GOSSETT]. New York, London: Garland Publishing, 1985.
+====
+
+Digital surrogates of music scores may be provided via specification of the online access location.
+
+====
+MELARTIN, Erkki. _Sinfonia nro 3, op. 40, F-duuri_ [nuottijulkaisu]. [online]. Erkki Melartin –seura, [2017]. ISMN 979-0-55011-134-9. Saatavissa: http://erkkimelartin.fi/em/wp-content/uploads/2017/02/Sinfonia-3-score.pdf[http://erkkimelartin.fi/em/wp-content/uploads/2017/02/Sinfonia-3-score.pdf] [viitattu 2019-07-03].
+====
+
+====
+BOMTEMPO, João Domingos (1775–1842). [_Quinteto para piano e cordas_] [18XX] [online]. Biblioteca Nacional de Portugal, Biblioteca Nacional Digital, 2006-06-23, 10:32:53. Available from: http://purl.pt/792[http://purl.pt/792]. [viewed 2010-06-19].
+====
+
+
+==== As a component part
+
+If the cited resource is a part of a larger work, or one of the works published together in an aggregation, information about the musical work or recording should be included in the reference. For example, a track within an album. The creator name may be repeated if deemed necessary.
+
+====
+BACH, J. S. _Toccata and Fugue in D minor, BWV 565._ In: BACH, J. S. Organ works complete. [Sound disc]. George RITCHIE (organ). Richmond, VA: Raven, 2006.
+====
+
+====
+MOZART, W. A. _La ci darem la mano._ In: Don Giovanni, K, 527. [online]. Bryn Terfel, baritone, and Renée Fleming, soprano. Available from: YouTube (distributor), https://www.youtube.com/watch?v=xx1DLnPULUk[https://www.youtube.com/watch?v=xx1DLnPULUk]. [viewed 2018-04-12].
+====
+
+====
+GORDON, Dexter [ISNI 0000 0001 1948 6061]. Settin' the pace. In: _Long Tall Dexter, the Savoy sessions._ [Sound disc]. New York: Savoy, 1976. SIL2211, side B, track 5. Arista Records Inc., New York, NY (distributor). Originally released on Savoy MG 9003, 1947.
+====
+
+====
+BOWIE, David. TVC 15. In: _Station to station._ [Sound disc]. New York: RCA Records, 1976.
+====
+
+====
+M-FLO. Prism. In: _Prism_. [CD, Maxi-Single]. Track 1. RZCD-45022. Tokyo: Rhythm Zone, 2001-05-09.
+====
+
+In sheet music, if reference to a particular bar is required, the bar count before or after rehearsal marks should be used. Bar numbers should not be cited unless they are printed on the score.
+
+

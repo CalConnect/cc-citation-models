@@ -1,0 +1,155 @@
+
+[[patents]]
+=== Patents
+
+==== NEW
+
+
+=== Patents
+
+* Source: <<ISO690,clause 5.8>>
+
+Patents are encoded similarly to contributions within a serial
+(<<ISO690,clause 5.2>>), with the series designation for the
+patent preceded by the country name or code. The date of application
+is encoded as a date of type "issued".
+
+
+====
+Green, Martin Andrew. _Artificial amorphous semiconductors and applications to solar cells_. Australia, [Patent] application number 2005238988. Appl: 2005-04-29.
+
+[source,xml]
+--
+<bibitem type="patent">
+  <title>Artificial amorphous semiconductors and applications to solar cells</title>
+  <date type="issued"><on>2005-04-29</on></date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <surname>Green</surname>
+      <forename>Martin</forename>
+      <forename>Andrew</forename>
+    </person>
+  </contributor>
+  <series>
+    <title>Australia, [Patent] application number</title>
+    <number>2005238988</number>
+  </series>
+</bibitem>
+--
+====
+
+==== General
+
+There are two kinds of patent publications: patent applications and issued patents. In some countries only patent applications are published.
+
+==== Metadata elements
+
+<<table-elements-for-patents>> shows the elements, in order, to be included in references to patents.
+
+
+[[table-elements-for-patents]]
+.Metadata elements for patents
+[cols="<,<,^"]
+|===
+h| Elements (in order) h| Status h| Relevant clause(s)/ subclauses
+
+| *Patent applicant(s)* | Required | <<creator>>
+| *Patent application country* | Required | <<patent-parent>>
+| Standard identifiers of creators' public identities | Optional | <<creator>>
+| *Title of the item* | Required | <<form_of_title>>, <<translation_of_title>>
+| Subsidiary creator | Optional, if inventor is not applicant | <<patent-inventors>>, <<subsidiary_creator>>
+| *Date of application* | Required if present | <<patent-additional>>, <<date>>
+| *Date of issuance* | Required if present | <<patent-additional>>, <<date>>
+| *Patent number* | Required if present | <<patent-number>>
+| *Location and access (URI)* | Required for online information resources with no persistent identifier or archived copy | <<network_location>>
+| *Physical location* | Required for print information resources if a limited number of copies are known to exist | <<physical_location>>
+| *Relationships* | Required if available | <<relations>>
+| Other information may be added in whatever position is most appropriate | Optional | <<other_elements>>; <<web_specific>>
+
+|===
+
+The name of the proprietor or applicant creator (see <<creator_selection>>) should precede the title of the patent document. The country name or code (see <<organization_parent>>) and the official designation of the series within which the patent document is numbered (host document) should follow. The patent serial number should suffice as numeration. The patent number should be presented as in the original patent application / publication.
+
+NOTE: The order of elements in a reference to a patent is, with the exception of the date, the same as for a reference to a component part within a serial (see <<metadata-serial>>).
+
+
+==== Data elements and guidance specific to type
+
+[[patent-type]]
+===== Type
+
+If it is not already clear in the reference, the fact that an item is a patent should be stated.
+
+[[patent-parent]]
+===== Parent body
+
+For patents, the <<ISO3166_1>> country code or the World Intellectual Property Organization (WIPO) ST3 code <<wipo-st3>> may be used to replace the name of the country of origin or originating office.
+
+====
+GB [for United Kingdom].
+====
+
+[[patent-inventors]]
+===== Patent inventors
+
+Inventors of the patent may be shown in the reference as subsidiary creators with the role "`inventor`".
+This is unnecessary if the patent application was filed by the same individual.
+
+====
+Reginald John ENGLAND (inventor).
+====
+
+====
+Mihal LAZARIDIS and David Paul YACH (inventors).
+====
+
+[[patent-additional]]
+===== Additional information
+
+Additional information may be given between the title and the official designation, such as:
+
+* any classification symbols, and
+* the dates of application and/or issuance.
+
+====
+PHILIP MORRIS INC. _Optical perforating apparatus and system_. European patent application 0021165 A1. 1981-01-07.
+====
+
+====
+CARL ZEISS JENA, VEB. _Anordnung zur lichtelektrischen Erfassung der Mitte eines Lichtfeldes_. Switzerland, Patentschrift 608626. 1979-01-15.
+====
+
+[[patent-number]]
+===== Patent number
+
+Relevant patent numbers should be provided in the reference, such as the patent application number, and the patent issuance number.
+
+====
+GB Patent Specification 1060631.
+====
+
+====
+U.S.A. patent application US201615059466 20160303.
+====
+
+==== Patent applications
+
+The date of patent application submission may be provided preceded by "`Application date:`" or its abbreviation "`Appl:`".
+
+====
+WINGET LTD. _Detachable bulldozer attachment for dumper vehicles_. Reginald John ENGLAND (inventor). 8 March 1967. Appl: 10 June 1963. Int.CI: E02F 3/76. GB CI: E1F 12. GB Patent Specification 1060631.
+====
+
+====
+BLACKBERRY LTD (CA). _Method and handheld electronic device having a graphical user interface which arranges icons dynamically_. Inventors: Mihal LAZARIDIS and David Paul YACH. U.S.A. patent application US201615059466 20160303. Appl. 2016‑06-30. US Patent Office. Available from: https://worldwide.espacenet.com/[https://worldwide.espacenet.com/]. [viewed 2017-05-12].
+====
+
+==== Issued patents
+
+The date of patent issuance may be provided preceded by "`Issuance date:`" or its abbreviation "`Iss:`".
+
+====
+CHRISTENSEN, G. K. _Toy building set_. Appl: 1968-11-18. Iss: 1971-08-10. US Patent 3,597,875.
+====
+

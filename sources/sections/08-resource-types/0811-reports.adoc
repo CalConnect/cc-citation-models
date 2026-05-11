@@ -1,0 +1,256 @@
+
+=== Reports in series and similar information resources
+
+==== General
+
+Reports and similar information resources issued in series by research bodies, standards bodies and similar organizations are often identified by the series title and number.
+In references to such resources, the series title and number are essential elements.
+
+
+==== Metadata elements
+
+<<table-elements-for-reports>> shows the elements, in order, to be included in references to reports.
+
+[[table-elements-for-reports]]
+.Metadata elements for reports
+[cols="<,<,^"]
+|===
+h| Elements (in order) h| Status h| Relevant clause(s)/ subclauses
+
+| *Name of creator(s)* | Required | <<creator>>
+| Standard identifiers of creators' public identities | Optional | <<creator>>
+| *Title of component part* | Required | <<form_of_title>>, <<translation_of_title>>, <<series_title_number>>, <<component_parts>>
+| Additional information for component part | Optional | <<other_elements>>
+| In: | Optional | <<reports-series-title>>, <<component_parts>>
+| *Title of the host serial* | Required | <<form_of_title>>, <<translation_of_title>>, <<series_title_number>>
+| *Medium designation* | Required if the item is not in print | <<medium>>, <<web_specific>>
+| Subsidiary titles | Optional | <<additional_titles>> to <<no_title>>, <<component_parts>>
+| *Edition and version* | Required if edition exists | <<reports-edition>>, <<edition_and_version>>
+| *Place and publisher* | Required | <<place>>, <<publisher>>
+| *Date of publication* | Required | <<date-publication>>
+| Rights metadata | Optional | <<rights_metadata>>
+| *Numeration* (of volume, etc., containing the component part) | Required | <<numeration>>
+| *Page number range* (of the component part) | Required | <<numeration_part_cited>>
+| *Standard identifier* | Required if available | <<international_standard_identifiers>>
+| *Distributor or online host* | Required for electronic resources if available | <<distributor_host>>
+| *Persistent identifier* | Required if available | <<persistent_identifiers>>
+| *Network location and access* | Required for online information resources with no persistent identifier or archive copy | <<network_location>>
+| *Physical location* | Required for print information resources if a limited number of copies are known to exist | <<physical_location>>
+| *Relationships* | Required if available | <<relations>>
+| *Date of citation* | Required for dynamic online information resources | <<date-citation>>
+| Other information may be added in whatever position is most appropriate | Optional | <<other_elements>>; <<web_specific>>
+
+|===
+
+
+
+
+==== Data elements and guidance specific to type
+
+[[reports-series-title]]
+===== Series title
+
+Series title may be abbreviated in a generally recognized form, e.g., "`RFC`" for the "`Internet Engineering Task Force's Request for Comment series`". Additional information may be provided as appropriate; for instance, there are several categories of RFC's, and citations may specify the category.
+
+[[reports-edition]]
+===== Edition
+
+If a specific edition and/or part of the information resource is cited, the edition and/or part should be indicated as in the original resource (with e.g., the version number or year).
+
+If the edition is not given, the citation refers to the latest edition of the information resource.
+
+[[standards-section]]
+==== Standards
+
+===== General
+
+The name of the standardisation organization should be provided as specified in <<serial_title_qualifier>>.
+
+====
+INTERNATIONAL ORGANIZATION FOR STANDARDIZATION (ISO). _ISO 690:2010 Information and documentation – Guidelines for bibliographic references and citations to information resources._
+====
+
+====
+INTERNATIONAL TELECOMMUNICATIONS UNION (ITU). _Recommendation ITU-T E.119 – Requirements for safety confirmation and broadcast message service for disaster relief._
+====
+
+====
+INTERNET ENGINEERING TASK FORCE (IETF). _RFC 3979: Intellectual Property Rights in IETF Technology_ [online]. Best Current Practice. S. BRADNER (ed.). 2005. Available from: http://www.ietf.org/rfc/rfc3979.txt[http://www.ietf.org/rfc/rfc3979.txt]. [viewed 2012-06-18].
+====
+
+====
+CALCONNECT. _CC 18012:2019 Date and time — General recurrence representation_ [online]. 2018. Available from: CalConnect Document Registry, https://standards.calconnect.org/csd/cc-18012.html[https://standards.calconnect.org/csd/cc-18012.html]. [viewed 2019-09-06].
+====
+
+====
+NATIONAL INFORMATION STANDARDS ORGANIZATION. ANSI/NISO Z39.53-2001, _Codes for the representation of languages for information interchange_. [online]. Bethesda, Maryland: NISO Press, 2001. National Information Standards series. ISSN 1041-5653. Available from: http://groups.niso.org/apps/group_public/document.php?document_id=6540[http://groups.niso.org/apps/group_public/document.php?document_id=6540]. [viewed 2018-05-11].
+====
+
+Standards may be cited in an undated reference, by omitting the edition in the citation. An undated reference covers the latest edition with published amendments and corrigenda that apply. However, if there has been a major change with the latest edition of the standard, such as if the standard is split into two or more parts, the citation no longer covers that edition.
+
+====
+INTERNATIONAL ORGANIZATION FOR STANDARDIZATION (ISO). _ISO 8601-1 Date and time – Representations for information interchange – Part 1: Basic rules._
+====
+
+A dated reference of a standard specifies a particular edition. Such reference only covers the stated edition; neither future modifications of that edition (corrigenda and amendments) nor future editions of the standard will be included.
+
+====
+INTERNATIONAL ORGANIZATION FOR STANDARDIZATION (ISO). _ISO 14001:2004 Environmental management systems — Requirements with guidance for use._
+====
+
+In a dated reference, all published corrigenda and amendments may be included by adding a phrase equivalent to "`(inclusive)`" after the edition, in the language of citation.
+
+====
+INTERNATIONAL ORGANIZATION FOR STANDARDIZATION (ISO). _ISO 14001:2004 (inclusive) Environmental management systems — Requirements with guidance for use._
+====
+
+NOTE: While unlikely, it is possible that corrigenda or amendment changes precisely the content that has been cited, which can lead to confusion and misunderstanding.
+
+If a standard has more than one active identifier from the standardisation organization, both identifiers should be shown
+
+===== Jointly published standards
+
+If the standard is a joint publication by two or more standards bodies, one of them may be selected as the primary publisher.
+
+====
+INTERNATIONAL ORGANIZATION FOR STANDARDIZATION (ISO). ISO/IEC TS 31035-2:2014. _Information technology – Digital publishing – EPUB3 – Part 2: Publications_. Available from: https://www.iso.org/standard/63567.html[https://www.iso.org/standard/63567.html]. [paywall].
+====
+
+A joint publication may be assigned different publication identifiers by different standardisation organizations. In this case, these identifiers should be displayed for clarity, separated by a "|" symbol.
+
+====
+INTERNATIONAL ORGANIZATION FOR STANDARDIZATION (ISO). _ISO/IEC 13818-1:2007 | Recommendation ITU-T H.222.0 (2006), Information technology - Generic coding of moving pictures and associated audio information: Systems_.
+====
+
+
+===== Dual-published standards
+
+If the same standard has been published by two or more standards bodies, the standard used should be cited, except if it has access limitations and the other standard does not. In that case, both versions may be listed.
+
+[[epub_1]]
+====
+INTERNATIONAL DIGITAL PUBLISHING FORUM. _EPUB Publications 3.0_. Recommended specification 11 October 2011. [online]. Available from: http://www.idpf.org/epub/30/spec/epub30-publications-20111011.html[http://www.idpf.org/epub/30/spec/epub30-publications-20111011.html]. [viewed 2019-04-14].
+====
+
+[[epub_2]]
+====
+INTERNATIONAL ORGANIZATION FOR STANDARDIZATION (ISO). ISO/IEC TS 31035-2:2014. _Information technology – Digital publishing – EPUB3 – Part 2: Publications_. Available from: https://www.iso.org/standard/63567.html[https://www.iso.org/standard/63567.html]. [paywall]. Also published as: INTERNATIONAL DIGITAL PUBLISHING FORUM. EPUB Publications 3.0. Recommended specification 11 October 2011. Available from: http://www.idpf.org/epub/30/spec/epub30-publications-20111011.html[http://www.idpf.org/epub/30/spec/epub30-publications-20111011.html]. [viewed 2019-04-14].
+====
+
+NOTE: The standard in <<epub_1>> has the same content as the standard in <<epub_2>>.
+
+
+===== Draft standards
+
+Citation guidelines published by the standards body shall be followed. For instance, according to the ISO guidelines on citing standards and their draft editions (see <<editions>>), citing International Standards, Final Draft International Standards (ISO/FDIS) and Draft International Standards (ISO/DIS) is allowed, but earlier versions shall not be cited.
+
+An ISO/DIS or even an ISO/FDIS specification may still change significantly before it is published as an International Standard. Therefore it is recommended to only refer to final published ISO deliverables, such as International Standards, Technical Specifications and Technical Reports.
+
+It is acceptable to cite ISO and IEC deliverables under preparation, according to ISO/IEC Directives Part 2, once they have reached the enquiry or approval stages of the International Harmonized Stage Codes. DIS (Draft International Standard) stage. WDs (Working Drafts) and CDs (Committee Drafts) shall not be cited.
+
+Once an international standard has been published, its DIS and FDIS versions published during the preparation of the standard shall no longer be cited.
+
+====
+INTERNATIONAL ORGANIZATION FOR STANDARDIZATION. _ISO/DIS 690, Information and documentation — Guidelines for bibliographic references and citations to information resources._
+====
+
+ITU draft Recommendations may be cited as "`Draft new Recommendation`" with its provisional name.
+
+====
+INTERNATIONAL TELECOMMUNICATIONS UNION. _Draft new Recommendation ITU-R BT.[COLOURDIFF] – Objective metric for the assessment of the potential visibility of colour differences in television._
+====
+
+IETF (Internet Engineering Task Force) Internet-Drafts (working documents) may be cited as "`work in progress`".  The edition of the draft shall be included after the title as additional information. If the draft is an individual contribution, the author or authors shall be the primary creators.
+
+====
+KUNZE, J. and E. BERMES. _The ARK Identifier Scheme (draft-kunze-ark-22)_. Internet-Draft [work in progress]. Internet Engineering Task Force, June 22, 2019.
+====
+
+NOTE: Edition number of an Internet-Draft does not tell anything about the maturity level of the draft.
+
+If a national or international standards body does not have published guidelines on how to cite their draft specifications, maturity level of each draft has to be estimated separately, on the basis of e.g. voting results and the number and nature of comments. If there is a possibility that the standard will not be approved, its draft versions should only be cited if necessary.
+
+////
+According to ISO guidance, ISO Committee Drafts (ISO/CD) should not be referenced, but Draft International Standards (ISO/DIS) may be cited.
+
+Since an ISO/DIS specification may change before it is published as an International Standard, it is recommended to only refer to published ISO deliverables, such as International Standards, Technical Specifications and Technical Reports.
+
+====
+INTERNET ENGINEERING TASK FORCE (IETF). _draft-kunze-ark-22: The ARK Identifier Scheme_. [online]. Internet Draft. J. KUNZE and E. BERMES (eds.). June 2019. Available from: https://datatracker.ietf.org/doc/draft-kunze-ark/. [viewed 2019-07-12].
+====
+
+NOTE: Some standards bodies do not have published guidelines on how to cite their draft specifications.
+
+NOTE: In some standards bodies, sometimes draft standards and draft specifications may not get published as standards -- these documents have to be cited cautiously. If there is no better alternative at hand and if the draft will be available indefinitely, it is relatively safe to cite the resource.
+
+===== National standards
+
+There are national or regional versions (translations) of ISO standards which can differ slightly from the original document. If a national translation has been used, it should be cited instead of the original ISO specification.
+
+====
+STANDARDISOIMISLIITTO (SFS). SFS-ISO 2108:2018 _Tieto ja dokumentointi._ _Kirjan kansainvälinen standarditunnus (ISBN)._ Helsinki: SFS, 2018.
+====
+////
+
+
+===== Adopted standards
+
+National standardization bodies publish adoptions or translations of International Standards as national standards. These specifications can differ slightly from the original document.
+
+If an adopted or translated International Standard has been referenced, the national standard shall be cited instead of the original International Standard.
+
+====
+STANDARDISOIMISLIITTO (SFS). SFS-ISO 2108:2018 _Tieto ja dokumentointi. Kirjan kansainvälinen standarditunnus (ISBN)_. Helsinki: SFS, 2018.
+====
+
+===== Multi-part standards and standard series
+
+Some standards are published in multiple parts, forming a standard series. Each of these parts are potentially published at different times. A citation to the standard series itself is considered to include all amendments and corrigenda of all cited parts.
+
+It is possible to cite multiple parts of a standard series using an explicit reference. These parts may be indicated in the standard series’ document identifier, and all part titles should be omitted from the citation.
+
+====
+INTERNATIONAL ORGANIZATION FOR STANDARDIZATION (ISO). _ISO 8601-{1,2} Date and time – Representations for information interchange._
+====
+
+In cases where part numbers are not contiguous, or where a citation wishes to cite multiple parts but not all parts of a standard series, the parts cited may be explicitly described in the document identifier.
+
+====
+INTERNATIONAL ORGANIZATION FOR STANDARDIZATION (ISO). _ISO 22745-{1–2,13–14} Industrial automation systems and integration – Open technical dictionaries and their application to master data._
+====
+
+It is possible to make a blanket reference which covers all parts of a standard series. Such reference should be indicated by a phrase equivalent to "`(all parts)`", in the language of citation, placed after the standard series’ document identifier, while omitting all part numbers and titles. 
+
+====
+INTERNATIONAL ORGANIZATION FOR STANDARDIZATION (ISO). _ISO 8601 (all parts) Date and time – Representations for information interchange._
+====
+
+====
+STANDARDISOIMISLIITTO (SFS). _SFS-EN ISO 7263 (kaikki osat) Corrugating medium. Determination of the flat crush resistance after laboratory fluting_. Helsinki: SFS, 2018.
+====
+
+Some multi-part standards do not have consistent document identifiers. For instance, ISO 19157:2013 and ISO 19157-2:2016 both belong to the same standards series, but the former does not have a part number of 1, as it was originally intended to be a standalone standard until part 2 was developed.
+
+When the document identifiers differ within the same standard series, the standards should be cited explicitly to maximize clarity. The "`(all parts)`" syntax should not be used to refer to the standard series.
+
+====
+INTERNATIONAL ORGANIZATION FOR STANDARDIZATION (ISO). _ISO 19157:2013 Geographic information — Data quality._
+
+INTERNATIONAL ORGANIZATION FOR STANDARDIZATION (ISO). _ISO/TS 19157-2:2016 Geographic information — Data quality — Part 2: XML schema implementation._
+====
+
+An undated reference with a standard series that contain different identifiers only covers the last edition which was not yet published in two parts.
+
+====
+INTERNATIONAL ORGANIZATION FOR STANDARDIZATION (ISO). _ISO 19157 Geographic information — Data quality._
+====
+
+Some standardization organizations organize their standards documents in series and sub-series. References to them can be made by utilizing the standard series (or sub-series) identifier.
+
+====
+INTERNATIONAL TELECOMMUNICATIONS UNION (ITU). _Recommendation ITU-T M.3016.x-series (2005), Security for the management plane_. 
+====
+
+====
+INTERNATIONAL TELECOMMUNICATIONS UNION (ITU). _Recommendations ITU-T Q.4xx-series (1988), Specifications of Signalling System R2_.
+====

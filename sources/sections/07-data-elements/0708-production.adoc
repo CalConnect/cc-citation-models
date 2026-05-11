@@ -4,7 +4,7 @@
 
 === General
 
-* Source: <<iso690,clause 4.6>>
+* Source: <<ISO690,clause 4.6>>
 * Serialisation: `bibitem/place, bibitem/contributor[role@type = "publisher"], bibitem/date`
 
 
@@ -64,7 +64,7 @@ London (Ontario)
 
 === Publisher
 
-The publisher is a subclass of creator (<<creator>>). <<iso690,clause 4.1>>
+The publisher is a subclass of creator (<<creator>>). <<ISO690,clause 4.1>>
 differentiates between
 "publisher, online information provider, production company" and
 "distributor, online host".
@@ -73,7 +73,7 @@ Of the classes of creator that can be used as the publisher,
 `bibitem/contributor/role@type = "publisher"`;
 "distributor or issuing body" and "sponsoring body" have
 `bibitem/contributor/role@type = "distributor"`.
-<<iso690,clause 4.6>> allows that distributors, issuers and sponsors 
+<<ISO690,clause 4.6>> allows that distributors, issuers and sponsors 
 can be named in addition to publishers.
 
 Any restrictions on access to a resource imposed by an online host
@@ -88,7 +88,7 @@ the `date/to` element is left out.
 
 The date for `date/on`, `date/from` and `date/to` is by default given as a
 Gregorian date/time, following the conventions
-of <<iso8601>>; in an XML serialisation, they would be expected to follow
+of <<ISO8601-1>>; in an XML serialisation, they would be expected to follow
 the XML Schema `xs:datetime` representation (<<xmlschema>>). However bibliographic
 dates often contain information that cannot be restricted to an ISO 8601 date
 (dates in other calendars, date corrections; other subdivisions of the year;
@@ -247,7 +247,7 @@ Normal bibliographic dates:
 created:: Date a resource was created.
 published:: Date a resource was published.
 accessed:: Date a resource was last accessed by the bibliographer; routinely used
-for online publications. (Unlike in <<iso690>>, no distinction is made between
+for online publications. (Unlike in <<ISO690>>, no distinction is made between
 "viewed" and "accessed" based on whether the resource is human-readable or
 machine-readable.)
 updated:: Date a resource was updated and republished. Used for new editions.

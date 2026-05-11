@@ -4,7 +4,7 @@
 
 === General
 
-* Source: <<iso690,clause 4.8>>, <<iso690,clause 5.2>>
+* Source: <<ISO690,clause 4.8>>, <<ISO690,clause 5.2>>
 * Serialisation: `bibitem/series`
 
 
@@ -12,11 +12,11 @@
 
 Articles have their journal title modelled as the series title of the article item.
 However, the journal volume and issue should be modelled as part of the article
-item extent <<numeration>>, rather than as part of the series (<<iso690,clause 4.7>>).
+item extent <<numeration>>, rather than as part of the series (<<ISO690,clause 4.7>>).
 
 === Standards
 
-Standards body identifiers for standards (<<iso690,clause 5.9>>) are modelled as series numbers.
+Standards body identifiers for standards (<<ISO690,clause 5.9>>) are modelled as series numbers.
 
 ====
 ISO 690, _Information and documentation -- Guidelines for bibliographic references and citations to information resources_.

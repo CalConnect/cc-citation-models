@@ -2,18 +2,6 @@
 [[contributor-models]]
 == Contribution and contributor models
 
-.Contribution model
-====
-image::relaton-models/images/RelBib_Contribution.png[]
-====
-
-ContributionInfo/role:: A description of the role of the contributor in the production of the bibliographic item.
-
-ContributionInfo/role/type:: The broad class of role of the contributor. The breakdown used in <<iso690>> is recommended as such a classification: author, performer, editor, adapter, translator, publisher, distributor.
-
-ContributionInfo/role/description:: A more detailed description of the role of the contributor.
-
-ContributionInfo/entity:: The contributor involved in the production of the bibliographic item; may be either a person or an organization.
 
 .Contributor model
 ====

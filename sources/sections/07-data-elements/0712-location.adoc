@@ -2,7 +2,7 @@
 [[location]]
 == Location
 
-* Source: <<iso690,clause 4.10>>, <<iso690,clause 5.10>>
+* Source: <<ISO690,clause 4.10>>, <<ISO690,clause 5.10>>
 * Serialisation: `bibitem/accessLocation`, `bibitem/uri`
 
 Unpublished items with a limited number of copies that are held at a repository

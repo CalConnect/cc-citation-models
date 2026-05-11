@@ -1,0 +1,129 @@
+
+[[monographs]]
+=== Monographs
+
+==== Metadata elements
+
+<<table-metadata-elements>> shows the elements, in order, to be included in references to books and other separately issued monographs.
+
+
+[[table-metadata-elements]]
+.Metadata elements for a monograph
+[cols="<,<,^"]
+|===
+h| Elements (in order) h| Status h| Relevant clause(s)/ subclauses
+
+| *Name of creator(s)* (of the cited resource) | Required | <<creator>>
+| Standard identifiers of creators' public identities | Optional | <<creator>>
+| *Title of the item* | Required | <<form_of_title>>, <<translation_of_title>>
+| *Medium designation* | Required if the item is not in print | <<medium>>
+| Subsidiary titles | Optional | <<additional_titles>> to <<no_title>>
+| *Edition and version* | Required if the item is not the first edition | <<edition_and_version>>
+| Subsidiary creator | Optional | <<subsidiary_creator>>
+| *Series title and number* | Required if the item is likely to be identified as part of a series | <<form_of_title>>, <<series_title_number>>
+| *Place and publisher* | Required | <<place>>, <<publisher>>
+| *Date of publication* | Required | <<date-publication>>
+| Rights metadata | Optional | <<rights_metadata>>
+| *Date of update/revision* | Required, if available, for online information resources | <<web_specific>>
+| *Standard identifier* _(ISBN, etc.)_ | Required if available | <<international_standard_identifiers>>
+| *Distributor or online host* | Required for electronic resources if available | <<distributor_host>>
+| *Persistent identifier* | Required if available | <<persistent_identifiers>>
+| *Location and access (URI)* | Required for online information resources with no persistent identifier or archived copy | <<network_location>>
+| *Physical location* | Required for print information resources if a limited number of copies are known to exist | <<physical_location>>
+| *Relationships* | Required if available | <<relations>>
+| *Date of citation* | Required for dynamic online information resources | <<date-citation>>
+| Other information may be added in whatever position is most appropriate | Optional | <<other_elements>>; <<web_specific>>
+
+|===
+
+
+==== Simple monographs
+
+A printed monograph, such as a book, may be referenced using typical monographic citation rules.
+
+====
+FARRAR, Frederic William. _Eric, or Little by Little: a tale of Roslyn School_. London: Hamilton, 1971.
+====
+
+====
+FOWLER, H. W [ISNI 0000 0001 2101 5357]. _Fowler's dictionary of modern English usage_. 4th ed. Revised by Jeremy BUTTERFIELD. ISBN 978-0-19-966135-0. Oxford: Oxford University Press, 2015.
+====
+
+====
+HAMILTON, Alastair, Sjouke VOOLSTRA, and Piet VISSER (eds.), _From martyr to muppy (Mennonite urban professionals): a historical introduction to cultural assimilation processes of a religious minority in the Netherlands, the Mennonites_. Amsterdam: Amsterdam University Press, 1994.
+====
+
+
+A digital copy of a monograph should be referred to with an online link, if the book is available in the Internet.
+
+====
+GEHERIN, David. _Small towns in recent American crime fiction_ [online]. Jefferson, NC: McFarland & Co., 2015. ISBN 978-1-47661918-7. Available from: EBSCOhost. [paywall].
+====
+
+====
+HOMER. _The Iliad of Homer_. Translated from the Greek. Alexander POPE (trans.). London: Printed for J. Walker, 1813. Available from: Google Books (distributor), https://books.google.fi/books?id=8UN9Z9FYQFkC[https://books.google.fi/books?id=8UN9Z9FYQFkC].
+====
+
+
+==== Composed of multiple volumes
+
+Monographs that are composed of multiple volumes may be indicated so.
+
+====
+PARKER, T. J. and W. A. HASWELL. _A text book of zoology_. 6th ed. Vol. 1 revised by Otto LOWENSTEIN; Vol. 2 revised by C. FORSTER-COOPER. London: Macmillan, 1940.
+====
+
+
+[[e_books]]
+==== E-books
+
+Edition, carrier type, media type and/or file format of the cited e-book should be specified, but in a form that does not become obsolete quickly. For instance, giving the precise version of the e-book format or reading device used should be avoided unless it is relevant from the usage point of view.
+
+====
+PLOKHY, Serhii. _Chernobyl. The History of a Nuclear Catastrophe._ Kindle edition. New York: Basic Books, 2018.
+====
+
+
+If the cited e-book does not have page numbers, in-text citation may use any of the following:
+
+* a paragraph number from the beginning of the book, if provided
+* a paragraph number within a chapter
+* a heading or an abbreviated version of it in quotation marks
+
+If the cited e-book has numbered chapters, sections, and paragraphs, they may be used.
+
+====
+One of the author's main points is that "people don't rise from nothing" (Gladwell, 2008, Chapter 1, Section 2, paragraph 5).
+====
+
+
+[[audiobooks]]
+==== Audiobooks
+
+The narrator of the cited information resource should be included if mentioned in the publication. Duration of the audiobook may be specified either in <<ISO8601-1,ISO 8601>> format or in a more human readable form.
+
+====
+PLOKHY, Serhii. _Chernobyl. The History of a Nuclear Catastrophe_. [audiobook]. Ralph LISTER (narrator). Audible & Hachette Audio (distributor), 2018.
+====
+
+====
+_BEOWULF_ [abridged, duration 133 min.].
+====
+
+====
+_BEOWULF_ [abridged, duration P2H13M]. Translated from Old English. Seamus HEANEY (translator and narrator). [audiobook]. Highbridge audio, 2006. Available from: Audible (distributor),  http://www.audible.com/pd/Classics/Beowulf-Audiobook/B002V5CVPY[www.audible.com/pd/Classics/Beowulf-Audiobook/B002V5CVPY] [viewed 2019-07-04].
+====
+
+====
+BAUM, L. Frank. _The Wonderful Land of Oz_ [online]. Etext no. 17426. Roy TRUMBULL (narrator). Project Gutenberg, 2005 [audio file]. [MP3]. Available from: http://www.gutenberg.org/files/17426/17426-readme.htm[http://www.gutenberg.org/files/17426/17426-readme.htm]. [viewed 2017-06-22].
+====
+
+In-text citation for an audiobook should specify the relevant section.
+
+====
+(Beowulf, 01:12:17/01:15:42)
+====
+
+
+
+

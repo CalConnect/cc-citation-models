@@ -1,6 +1,31 @@
 
-:sectnums:
 == Scope
 
-This document provides a reference model and serialisation for <<iso690>>.
+This document provides information models in support of guidelines specified in <<ISO690>>, including models for:
 
+* citation of information resources;
+
+* bibliographic references to information resources;
+
+* bibliographic reference lists.
+
+
+These information models are intended to facilitate, but are not limited to, the following cases:
+
+* data encoding of citation and bibliographic information suitable for usage according to <<ISO690>>;
+
+* interchange of citation and bibliographic information suitable for usage according to <<ISO690>>;
+
+* machine-readable bibliographic references and citations enabling improved data reuse;
+
+* generation of bibliographic reference lists (<<ISO690,clause="Annex A">>).
+
+
+
+The following topics are out of scope of this document:
+
+* information models for legal citations, such as for references to cases, statutes or treatises;
+
+* recommendations on citing particular types of information resources; and
+
+* preference of bibliographic reference and citation styles.

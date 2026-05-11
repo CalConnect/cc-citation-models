@@ -1,0 +1,43 @@
+A + B => C merge
+A - B => C extracted
+
+A is part of B
+A is a collection of B, C, ...
+A is from the series of B
+A is an instance of B
+A is an expression of B
+A == B
+content(A) == content(B)
+
+A, B, C is split from D
+
+derivation:
+* translate
+* annotate
+* comment
+
+transformation:
+
+[transform](A) => B
+
+* arrange
+* adapt
+* review
+
+* cites
+* abridge
+* abstract
+
+* source
+
+* adopt
+
+
+source(A) = B
+
+document stages
+
+* draft
+* precedes
+* succeeds
+* complements

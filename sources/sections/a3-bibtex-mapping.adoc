@@ -1,6 +1,6 @@
 
 [[AnnexB]]
-[appendix,subtype=informative]
+[appendix,obligation=informative]
 == Mapping to BibTeX
 
 This listing includes the BibTeX fields presented as part of the LaTeX <<latex>> package,
@@ -8,7 +8,7 @@ and (asterisked) the additional BibTeX fields in citavi <<citavi>>.
 
 === Categories of information resource
 
-From <<bibtype>>.
+From <<resource-types>>.
 
 |===
 |BibTeX | Relaton

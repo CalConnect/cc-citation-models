@@ -1,0 +1,281 @@
+
+[[graphic-material]]
+=== Art and graphic material
+
+==== NEW
+
+=== Graphic Works
+
+* Source: <<ISO690,clause 5.6>>
+
+
+The fuller description of a contributors role under `bibitem/contributor/role`
+allows for Latin role descriptions such as _pinxit_ and _sculpsit_.
+
+====
+_[Tent of Darius]_ C. Le Brun pinxit. S. Gribelin sculpsit.
+[painting]. 1702. At: Musée du Louvre, Inv. 2896.
+
+[source,xml]
+--
+<bibitem type="graphical work">
+  <title>[Tent of Darius]</title>
+  <date type="created"><on>1702</on></date>
+  <contributor>
+    <role type="author">pinxit</role>
+    <person><name><completeName>C. Le Brun</completeName></name></person>
+  </contributor>
+  <contributor>
+    <role type="author">sculpsit</role>
+    <person><name><completeName>S. Gribelin</completeName></name></person>
+  </contributor>
+  <medium>
+    <form>painting</form>
+  </medium>
+  <accessLocation>Musée du Louvre, Inv. 2896.</accessLocation>
+</bibitem>
+--
+====
+
+
+==== General
+
+Graphic materials are documents in the form of pictures, photographs, drawings, watercolours, prints, and other forms of two-dimensional pictorial representations.
+
+These guidelines apply in citing all works of art in addition to graphic material, such as sculptures.
+
+
+==== Metadata elements
+
+<<table-art-and-graphic-material>> shows the elements, in order, to be included in references to art and graphic material.
+
+
+[[table-art-and-graphic-material]]
+.Metadata elements for art and graphic material
+[cols="<,<,^"]
+|===
+h| Elements (in order) h| Status h| Relevant clause(s)/ subclauses
+
+| *Name of creator(s)* (of the cited resource) | Required | <<creator>>, <<art-roles>>
+| Standard identifiers of creators' public identities | Optional | <<creator>>
+| *Title of the item* | Required | <<art-title>>, <<form_of_title>>, <<translation_of_title>>
+| *Medium designation* | Required if available | <<medium>>
+| *Size* | Required if available | <<element-size>>, <<art-size>>
+| Subsidiary titles | Optional | <<additional_titles>> to <<no_title>>
+| *Edition and version* | Required if the item is not the first edition | <<edition_and_version>>
+| Subsidiary creator | Optional | <<subsidiary_creator>>
+| *Series title and number* | Required if the item is likely to be identified as part of a series | <<form_of_title>>, <<series_title_number>>
+| *Physical location* | Required for print information resources if a limited number of copies are known to exist | <<art-location>>, <<physical_location>>
+| *Place and publisher* | Required | <<place>>, <<publisher>>
+| *Date of publication* | Required | <<date-publication>>
+| Rights metadata | Optional | <<rights_metadata>>
+| *Date of update/revision* | Required, if available, for online information resources | <<web_specific>>
+| *Catalogue and catalogue number* | Optional | <<art-catalog>>
+| *Standard identifier* | Required if available | <<international_standard_identifiers>>
+| *Distributor or online host* | Required for electronic resources if available | <<distributor_host>>
+| *Persistent identifier* | Required if available | <<persistent_identifiers>>
+| *Location and access (URI)* | Required for online information resources with no persistent identifier or archived copy | <<network_location>>
+| *Relationships* | Required if available | <<relations>>
+| *Date of citation* | Required for dynamic online information resources | <<date-citation>>
+| Other information may be added in whatever position is most appropriate | Optional | <<other_elements>>; <<web_specific>>
+
+|===
+
+
+
+==== Data elements and guidance specific to type
+
+[[art-title]]
+===== Title
+
+The form of title used for graphic material should be one of the following, listed in order of preference (in preference to <<form_of_title>>, <<title-alt>>):
+
+. a title forming part of the original design;
+. a handwritten title on the cited information resource, or custodian's description;
+. a popular or traditional title, e.g., Mona Lisa;
+. a title in embedded metadata; and
+. a title elsewhere; including external metadata sources.
+
+If there is no clear title, in addition to the possible titles provided in <<no_title>>,
+the title can describe the object depicted (e.g., the person, building, location).
+
+
+====
+STARKEY, Hannah. [_Judo fighters_] [photograph]. In: Moments in the modern world: photographic works by Hannah Starkey 1997–2000.
+====
+
+The subject matter and print process should also be supplied, if available.
+
+====
+PELHAM, Henry, del. [_Quin Abbey, Co. Clare. General view_] [engraving].
+====
+
+
+
+[[art-roles]]
+===== Roles
+
+Several individuals may be concerned in the production of graphic material. If their names are recorded on the item, they should be included with an indication of their roles.
+
+====
+DANIELL, William (fecit). _Benj. West, R. A._ [lithograph, b&w]. George DANCE (delineavit). London: 1809.
+
+In this example, "delineavit" indicates identity of the draughtsman, and "fecit" indicates identity of the creator.
+====
+
+====
+_Flora dispensing her favours on the earth_ [engraving]. R. A. COSWAY (pinxit), and T. WOOLNOTH (sculpsit)."
+
+In this example, "pinxit" indicates identity of the painter, and "sculpsit" indicates identity of the sculptor.
+====
+
+
+Abbreviations of roles, such as for print addresses, are allowed. For instance:
+
+* The person who printed the lithograph may be indicated by abbreviations such as "lith.", "lith. impr.", "litho.", "lithog.".
+
+* The person who created the original art may be indicated by abbreviations such as "invt." or "inv." (for "invenit").
+
+* The person who commissioned the work may be indicated by abbreviations such as "f.f." (for "fieri fecit").
+
+
+
+[[art-location]]
+===== Location
+
+If the location of a graphic work in a museum or repository is essential to its identification, physical location should be included.
+
+====
+GOSSE, Sylvia (1881–1968). _The Garden, Rowlandson House_ [etching and aquatint, 1912]. At: British Museum, Department of Prints and Drawings, London. Register number 1915-27-41.
+====
+
+
+[[art-size]]
+===== Size
+
+The size of a graphic work may be specified as the height followed by the width, in millimetres, measured between the neat lines. Other dimensions, such as sheet size, may be given, if necessary.
+
+====
+DÜRER, Albrecht. _A hare_ [watercolour, 1502]. 25 cm &times; 23 cm. At: Albertina, Vienna, Austria.
+====
+
+
+[[art-catalog]]
+===== Catalogue and catalogue number
+
+Collected graphic and art material are often listed in catalogues. The catalogue may be specified as additional information after the title, prefixed with the phrase "`Catalogued in:`" or its equivalent.
+
+Since there is a relation between the cited graphic work and the catalogue or catalogues in which the work is described, rules in <<relations>> apply.
+
+====
+Catalogued in: WHITE, Christopher and Karel G. BOON. _Rembrandt's Etchings_, Vol. 1, Amsterdam: Van Gendt & Co., 1969.
+====
+
+====
+Catalogued in: FELDMAN, F. and J. SCHELLMANN. _Andy Warhol Prints: A Catalogue Raisonné 1962 – 1987_, 4th Ed. New York: Distributed Art Publishers, Inc., 2003.
+====
+
+
+The catalogue number, called the "`catalogue raisonné`" ("`reasoned catalogue`" in English), is used to identify a specific item within a catalogue. It should be given after the catalogue in order to facilitate location.
+
+====
+Catalogued in: WHITE, Christopher and Karel G. BOON. _Rembrandt's Etchings_, Vol. 1, Amsterdam: Van Gendt & Co., 1969. Listed catalogue raisonné no. B 348.
+====
+
+====
+Catalogued in: FELDMAN, F. and SCHELLMANN, J. _Andy Warhol Prints: A Catalogue Raisonné 1962 – 1987,_ 4th Ed. New York: Distributed Art Publishers, Inc., 2003. Listed and illustrated as catalogue raisonné no. II. 52.
+====
+
+
+==== Individual works
+
+A graphic or artwork may be individually referenced using data elements described in this document.
+
+====
+WARHOL, Andy. _Consomme, from the Campbell's Soup I Portfolio_. In: Campbell's Soup, 1968. Catalogued in: FELDMAN, F. and SCHELLMANN. J. _Andy Warhol Prints: A Catalogue Raisonné 1962 – 1987_, 4th Ed. New York: Distributed Art Publishers, Inc., 2003. Listed and illustrated as catalogue raisonné no. II. 52.
+====
+
+====
+DANIELL, William (fecit). _Benj. West, R. A._ [lithograph, b&w]. George DANCE (delineavit). London: 1809.
+====
+
+====
+GOSSE, Sylvia (1881–1968). _The Garden, Rowlandson House_ [etching and aquatint, 1912]. At: British Museum, Department of Prints and Drawings, London. Register number 1915-27-41.
+====
+
+====
+PELHAM, Henry, del. [_Quin Abbey, Co. Clare. General view_] [engraving]. Sparrow (sculpsit), 1794.
+====
+
+
+Digital surrogate information can also be provided as online access locations.
+
+====
+TOPICAL PRESS. [_Chamberlain returns from Munich_] [photograph]. London: BBC Hulton Picture Library, 1938, No. P36339. Digital surrogate available from: Getty Images, http://www.gettyimages.fi/photos/neville-chamberlain[http://www.gettyimages.fi/photos/neville-chamberlain]. [viewed 2017-02-21].
+====
+
+====
+REMBRANDT, Harmensz. van Rijn. The artist's mother seated, in an oriental headdress: half-length [etching, 1631]. At: British Museum, Department of Prints and Drawings, London. Catalogued in: WHITE, Christopher and Karel G. BOON. _Rembrandt's Etchings_, Vol. 1, Amsterdam: Van Gendt & Co., 1969. Listed catalogue raisonné no. B 348.
+Digital surrogate available from: https://www.artsy.net/artwork/rembrandt-harmensz-van-rijn-the-artists-mother-seated-in-an-oriental-headdress-half-length[https://www.artsy.net/artwork/rembrandt-harmensz-van-rijn-the-artists-mother-seated-in-an-oriental-headdress-half-length]. [viewed 2017-06-16].
+====
+
+// TODO: This example contains additional
+
+====
+CHAGALL, Marc. _Paris Through the Window_. 1913 [still image]. At: Solomon R. Guggenheim Museum, New York. New York: Artists Rights Society (ARS); Paris: ADAGP, 2005.
+Digital surrogate available from: Solomon R. Guggenheim Founding Collection, https://www.guggenheim.org/artwork/793[https://www.guggenheim.org/artwork/793]
+Digital surrogate available from: Wikiart, http://www.wikiart.org/en/marc-chagall/paris-through-the-window-1913[http://www.wikiart.org/en/marc-chagall/paris-through-the-window-1913]
+Archived copy available from: Internet Archive (distributor), {chagall_archive}. [viewed 2017-07-04].
+====
+
+////
+TODO: THIS IS ASSOCIATED INFORMATION WITH CHAGALL, NOT THE PAINTING ITSELF
+Available from: YouTube, https://www.youtube.com/watch?v=e6qopSmlsyU[https://www.youtube.com/watch?v=e6qopSmlsyU].
+[viewed 2017-06-21].
+////
+
+==== As a component part
+
+If a graphic work has been removed or reproduced from a known book or other information resource, it should be cited as part of that information resource.
+
+====
+_Rembrandt's Etchings_. Amsterdam: van Gendt & Co. and London: A. Zwemmer Ltd, 1969, vol. I, Text, p. 154.
+====
+
+====
+SPY [pseud. of (Sir) Leslie WARD]. Convocation, caricature of the Very Revd Edward Bickersteth, Dean of Lichfield. In: JEHU, Junior [pseud. of Thomas Gibson BOWLES]. _Vanity Fair Album_. London: 1884, vol. 16, Men of the Day, no. 321.
+====
+
+====
+DÜRER, Albrecht. A hare [watercolour, 1502]. In: SCHILLING, E. _Albrecht Dürer Drawings and Watercolours_. London: Zwemmer, 1949, frontispiece.
+====
+
+====
+_North by Northwest_ [film still]. HITCHCOCK, Alfred (director). MGM, 1959.  Available from: H. W. Wilson Cinema Image Gallery.
+====
+
+
+
+====
+COSWAY, R.A. (pinxit) and T. WOOLNOTH (sculpsit). _Flora dispensing her favours on the earth_ [engraving]. In: THORNTON, Robert J. New illustration of the sexual system of Carolus von Linnaeus. London: 1799–1810, frontispiece. Use or reproduction copyright restrictions of image available from the Sterling Morton Library, The Morton Arboretum.
+====
+
+If the component part and the host resource have the same creator, it is not necessary to repeat the name.
+
+====
+STARKEY, Hannah. [_Judo fighters_] [photograph]. In: Moments in the modern world: photographic works by Hannah Starkey 1997–2000. Irish Museum of Modern Art, 2000. ISBN 1-873654-90-1.
+====
+
+
+==== Temporary or destroyed work
+
+It is possible to cite surrogates of installations and other works of art which were temporary (or have been destroyed) and no longer exist.
+
+====
+CREED, M. _Work 227: The lights going on and off_ [installation, 2000]. At: Museum of Modern Art, New York, NY. Available from: https://www.moma.org/collection/works/101549.
+====
+
+====
+KLIMT, G. _Philosophy_ (University of Vienna Ceiling Paintings) [oil painting, 1897–1907] At: Great Hall, University of Vienna. Available from: FLEIDL, G. _Gustav Klimt 1862–1918 The World in Female Form_, p. 77, Cologne: Taschen, 1994.
+====
+

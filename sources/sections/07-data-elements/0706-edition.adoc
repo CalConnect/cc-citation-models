@@ -2,7 +2,7 @@
 [[edition]]
 == Edition
 
-* Source: <<iso690,clause 4.5>>
+* Source: <<ISO690,clause 4.5>>
 * Serialisation: `bibitem/edition, bibitem/version, bibitem/date`
 
 Editions are modelled as free text, given the variety of ways they can be represented.

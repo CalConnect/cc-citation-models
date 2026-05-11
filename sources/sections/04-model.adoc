@@ -1,17 +1,42 @@
 
 [[refmodel]]
-== Reference model
+== Common information models
 
-This document provides a number of data models that collectively
-provide the necessary data elements for the ISO 690 citation style.
+=== General
 
-In this document, the model is discussed with reference to <<iso690>>, with the
-rendered
-bibliographic references of each clause in <<iso690>> serialised according to
-<<serialisation>>.
+This clause provides common information models that are used by the
+citation and bibliographic information models provided in this document.
 
-Each aspect of the model is given with a cross-reference to <<iso690>>; a
-listing of the
-relevant model components; and a listing of the corresponding components of
-<<bibtex>>.
 
+[[data-types]]
+=== Data elements
+
+[[figure-data-types]]
+.Common data elements in UML
+image::relaton-models/images/RelBib_DataTypes.png[]
+
+Uri:: Container for URIs, as defined by <<RFC3986>>.
+
+Iso8601Date:: Gregorian date, as specified in <<ISO8601-1>> and <<ISO8601-2>>.
+
+Iso8601DateTime:: Gregorian date and time, as specified in <<ISO8601-1>>.
+
+Iso639Code:: Code for language or language family, as specified in the <<ISO639>> series.
+Both <<ISO639>> two-letter and three-letter codes may be used.
+
+Iso4217Code:: Code for currency, as specified in <<ISO4217>>.
+
+Iso15924Code:: Code to specify the written script, as specified in <<ISO15924>>.
+
+Iso24229Code:: Code to specify the script conversion system, as specified in <<ISO24229>>.
+
+DateTime:: Type which allows date and time to be specified as either a Gregorian
+date and time, as specified in <<ISO8601-1>>, as text, or as both.
+
+TypedUri:: URI associated with a type. The types of URI are open-ended, but include
+the IANA link relations specified in <<RFC8288>>.
+
+FormattedString:: String which is formatted according to conventions specified
+in a named MIME type specified in <<RFC2046>>.
+
+LocalizedString:: FormattedString with optionally specified language, script and writing system.

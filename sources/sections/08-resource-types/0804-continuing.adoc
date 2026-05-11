@@ -1,0 +1,245 @@
+
+[[continuing-resources]]
+=== Serials and their component parts
+
+==== General
+
+Continuing resources include serials and ongoing integrating resources such as web sites. Examples of their component parts include journal articles and web pages.
+
+Serials have traditionally been published in successive issues which had numerical and/or chronological designations. Publication patterns of digital journals may differ from this; for instance, there may still be volumes and articles but not issues. Citation guidelines must take this diversity into account. 
+
+==== Metadata elements
+
+[[metadata-serial]]
+===== Referencing an entire serial or entire issue of a serial
+
+<<table-metadata-entire-serial>> shows the metadata elements, in order, to be included in references to serials.
+
+
+[[table-metadata-entire-serial]]
+.Metadata elements for an entire serial or entire issue of a serial
+[cols="<,<,^"]
+|===
+h| Elements (in order) h| Status h| Relevant clause(s)/ subclauses
+
+| *Title of the serial* | Required | <<form_of_title>>, <<translation_of_title>>, <<series_title_number>>
+| *Medium designation* | Required if the item is not in print | <<medium>>, <<web_specific>>
+| Subsidiary titles | Optional <.<a| <<additional_titles>> to <<no_title>>; +
+<<serial_title_qualifier>> to <<key_title>>
+| *Edition and version* | Required if edition exists | <<edition_and_version>>
+| *Place and publisher* | Required | <<place>>, <<publisher>>
+| *Date of publication* | Required | <<date-publication>>
+| *Numeration* | Required if not citing the entire serial in general | <<numeration>>
+| *Rights metadata* | Optional | <<rights_metadata>>
+| *Standard identifier* (ISSN) | Required if available | <<international_standard_identifiers>>
+| *Distributor or online host* | Required for electronic resources if available | <<distributor_host>>
+| *Persistent identifier* | Required if available | <<persistent_identifiers>>
+| *Network location and access* | Required for online information resources with no persistent identifier or archived copy | <<network_location>>
+| *Physical location* | Required for print information resources if a limited number of copies are known to exist | <<physical_location>>
+| *Relationships* | Required if available | <<relations>>
+| *Date of citation* | Required for dynamic online information resources | <<date-citation>>
+| Other information may be added in whatever position is most appropriate | Optional | <<other_elements>>, <<web_specific>>
+
+|===
+
+===== Referencing a component part within a serial
+
+<<table-metadata-within-serial>> shows the elements, in order, to be included in references to articles or other component parts within a serial.
+
+
+[[table-metadata-within-serial]]
+.Metadata elements for a component part within a serial
+[cols="<,<,^"]
+|===
+h| Elements (in order) h| Status h| Relevant clause(s)/ subclauses
+
+| *Name of creator(s)* (of the cited component part) | Required | <<creator>>
+| Standard identifiers of creators' public identities | Optional | <<creator>>
+| *Title of component part* | Required | <<form_of_title>>, <<translation_of_title>>, <<series_title_number>>, <<component_parts>>
+| Additional information for component part | Optional | <<other_elements>>
+| *Title (key title, abbreviated key title) of the host serial* | Required | <<form_of_title>>, <<translation_of_title>>, <<series_title_number>>
+| *Medium designation* | Required if the item is not in print | <<medium>>, <<web_specific>>
+| Subsidiary titles | Optional | <<additional_titles>> to <<no_title>>, <<component_parts>>
+| *Edition and version* | Required if edition exists | <<edition_and_version>>
+| *Place and publisher* | Required | <<place>>, <<publisher>>
+| *Date of publication* | Required | <<date-publication>>
+| *Numeration* (of volume, etc., containing the component part) | Required, if volumes and issues exist | <<numeration>>
+| *Page number range* (of the component part) | Required, if pages are numbered | <<numeration_part_cited>>
+| Rights metadata | Optional | <<rights_metadata>>
+| *Date of citation* | Required for dynamic online information resources | <<date-citation>>
+| *Standard identifier* (ISSN, etc.) | Required if available | <<international_standard_identifiers>>
+| *Distributor or online host* | Required for electronic resources if available | <<distributor_host>>
+| *Persistent identifier* (DOI, etc.) | Required if available; should be expressed as HTTP URI | <<persistent_identifiers>>
+| *Network location and access* | Required for online information resources with no persistent identifier or archive copy | <<network_location>>
+| *Physical location* | Required for print information resources if a limited number of copies are known to exist | <<physical_location>>
+| *Relationships* | Required if available | <<relations>>
+| Other information may be added in whatever position is most appropriate | Optional | <<other_elements>>; <<web_specific>>
+
+|===
+
+
+[[series_abbreviation]]
+==== Printed serials
+
+A printed serial may be referred to by the title. The key title and / or ISSN should be used when the title proper is not unique. Other information (publisher, dates of publication) may be provided if appropriate.
+
+====
+_Bulletin trimestriel de l’Institut archéologique du Luxembourg Arlon_. 1925-. ISSN 0020-2177.
+====
+
+====
+_Bulletin (Sydney)_. Sydney: Australian Consolidated Press, 1880–2008.
+====
+
+====
+_Argus (Melbourne, Vic. Print)_. ISSN 2200-8225.
+====
+
+////
+A printed serial may be referred to by the series' title.
+
+====
+_Bulletin trimestriel._ Arlon: Institut archéologique du Luxembourg. 1925– . ISSN 0020-2177.
+====
+
+Magazines and newspapers may be referred to by the title.
+
+====
+_The Bulletin_. Sydney: Australian Consolidated Press. 1880–2008.
+====
+
+====
+_The Argus_. Melbourne. 1848–1957.
+====
+
+
+Online serial citations shall contain online access information.
+
+====
+_Acta Zoologica_ [online]. [PDF]. Hoboken, NJ.: Wiley, 1920–. Wiley Online Library (distributor). ISSN 1463-6395. Available from: https://onlinelibrary.wiley.com/journal/14636395[https://onlinelibrary.wiley.com/journal/14636395]. [paywall]. [viewed 2018-07-23].
+====
+
+====
+_AJET: Australasian Journal of Educational Technology_ [online]. [HTML]. Tugun, QLD: ASCILITE, 1985–. ISSN 1449-5554. Winter 2000, vol. 16, no. 2. Available from: https://ajet.org.au/index.php/AJET/issue/view/67[https://ajet.org.au/index.php/AJET/issue/view/67]. [viewed 2018-02-12].
+====
+////
+
+==== Non-printed serials
+
+Online serial citations shall contain online access information. If the key title indicates that the resource is available on line, there is no need to repeat this information.
+
+====
+_Acta Zoologica (Oxford. Online)_. [PDF]. Hoboken, NJ.: Wiley, 1920–. Wiley Online Library (distributor). ISSN 1463-6395. Available from: https://onlinelibrary.wiley.com/journal/14636395[https://onlinelibrary.wiley.com/journal/14636395]. [paywall]. [viewed 2018-07-23].
+====
+
+====
+_Australasian Journal of Educational Technology (Online)_. [HTML]. Tugun, QLD: ASCILITE, 1985–. ISSN 1449-5554. Winter 2000, vol. 16, no. 2. Available from: https://ajet.org.au/index.php/AJET/issue/view/67[https://ajet.org.au/index.php/AJET/issue/view/67]. [viewed 2018-02-12].
+====
+
+Untraditional numbering schemes of online serials should be recorded as such. Metadata provided in the article (e.g., the publication date and license) may be used in the citation as deemed appropriate.
+
+// TODO: Example citations throughout this document are inconsistent in italicisation of container/container items, in boldfacing of issues, and in use of en-dash for page ranges.
+
+====
+STONE, Richard A., Alice M. McGLINN, Ranjay CHAKRABORTY and others. _Altered ocular parameters from circadian clock gene disruptions_. PLoS ONE 14(6): e0217111. Published: June 18, 2019. License: CC BY 4.0 EN. Available from: https://doi.org/10.1371/journal.pone.0217111[https://doi.org/10.1371/journal.pone.0217111] [viewed 2019-06-24].
+====
+
+
+[[monograph-series]]
+==== Monograph series
+
+If a component part of monograph series (such as an article or a book) is cited, the series title and number shall be included when present. The monograph series title shall be placed right after the monograph title, indicating that the monograph belongs to a monograph series. Context delimiters such as parentheses should be used to separate the series' title and the monograph's title.
+
+====
+AYMARD, M. (ed.), _Dutch capitalism and world capitalism_. (Studies in Modern Capitalism). New York: Cambridge University Press, 1982, pp. 78–96.
+====
+
+
+A report number, if available, should also be included.
+
+====
+FONTENOT, Kayla, Jessica SEMEGA, Melissa KOLLAR and U.S. Census Bureau. _Income and poverty in the United States: 2017_. [online]. Washington, DC.: U. S. Government Printing Office (distributor), 2018. Current Population Reports, P60. (Report no. P60-263). Available from: https://www.census.gov/content/census/en/library/publications/2018/demo/p60-263.html[https://www.census.gov/content/census/en/library/publications/2018/demo/p60-263.html]. [viewed 2019-07-01].
+====
+
+====
+CHINNADURAI, S, K. SNYDER K, N. SATHE [et al]. _Diagnosis and Management of Infantile Hemangioma_. [online]. Rockville (MD): Agency for Healthcare Research and Quality (US), 2016. Comparative Effectiveness Reviews, No. 168. (AHRQ Report No. 16-EHC002-EF). Available from: https://www.ncbi.nlm.nih.gov/books/NBK344065/[https://www.ncbi.nlm.nih.gov/books/NBK344065/]
+====
+
+
+For demonstration purposes, in accordance with <<numeration_omission>>, the following examples are shown without the use of the volume or pagination labels.
+
+====
+AMAJOR, L. C. The Cenomanian hiatus in the Southern Benue Trough, Nigeria. _Geological Magazine_. 1985, *122*(1), 39–50. ISSN 0016-7568.
+====
+
+====
+ANDREWS, M., et al. Growth of Chara Lispida II. Shack adaptation. _Journal of Ecology (Print)_. 1984, *72*(3), 885–895. ISSN 0022-0477.
+====
+
+====
+QUINTANA-ASCENSIO, P. F., et al. _Predicting landscape-level distribution and abundance: Integrating demography, fire, elevation and landscape habitat configuration_. [online]. [paywall]. Journal of Ecology (Online). 02 April 2018. Available from: https://doi.org/10.1111/1365-2745.12985. [viewed 2019-12-06].
+====
+
+////
+====
+BRY, I. and L. AFFLERBACH. _In search of an organizing principle for behavioural science literature_. Community Mental Health Journal. 1968, *4*(1), 75–84. ISSN 0010-3853.
+====
+////
+
+====
+STIEG, M. F. _The information needs of historians_. College and Research Libraries. 1981, *42*(6), 549–560. ISSN 0010-0870.
+====
+
+A serial component part may be available not only as the final published version, but also in unfinished forms, such as preprint.
+
+Since the content and layout of the published resource and  its unfinished version may differ, information with which it is possible to identify the edition used  shall be included in the citation.
+
+====
+Compare between:
+
+BLOSS C. S., N. E. WINEINGER, M. PETERS [et al.]. _A prospective randomized trial examining health care utilization in individuals using multiple smartphone-enabled biosensors_. Preprint. bioRxiv, 2015-10-28. Available from: https://doi.org/10.1101/029983[https://doi.org/10.1101/029983] [viewed 2018-07-12].
+
+BLOSS C. S., N. E. WINEINGER, M. PETERS [et al.]. _A prospective randomized trial examining health care utilization in individuals using multiple smartphone-enabled biosensors_. PeerJ 2016-01-14. Available from: https://doi.org/10.7717/peerj.1554 [viewed 2019-07-01].
+====
+
+If a component part of an online serial is referred to, PID-based link should be used whenever possible. URI may be used if the resource does not have a persistent identifier, but a link should be provided to an archive copy of the resource as well.
+
+====
+STRINGER, John A., et al. _Reduction of RF-induced sample heating with a scroll coil resonator structure for solid-state NMR probes_ [online]. Journal of Magnetic Resonance. Elsevier. March 2005, vol. *173*(1), 40–48. Available from: https://doi.org/10.1016/j.jmr.2004.11.015[https://doi.org/10.1016/j.jmr.2004.11.015]. [viewed 2016-06-06].
+====
+
+====
+MYERS, Michael P., Jay YANG, and Per STAMPE. _Visualization and functional analysis of a maxi-K channel (mSlo) fused to green fluorescent protein (GFP)_ [online]. EJB: Electronic Journal of Biotechnology. Valparaiso (Chile): Universidad Catolica de Valparaiso, 15 December 1999, vol. 2, no. 3. ISSN 0717-3458. Available from: http://www.ejbiotechnology.info/content/vol2/issue3/full/3/3.pdf[http://www.ejbiotechnology.info/content/vol2/issue3/full/3/3.pdf]. [viewed 2016-06-28]. Archived copy available from: Internet Archive (distributor), https://web.archive.org/web/20170810170554/http://www.ejbiotechnology.info/content/vol2/issue3/full/3/3.pdf[https://web.archive.org/web/20170810170554/http://www.ejbiotechnology.info/content/vol2/issue3/full/3/3.pdf] [viewed 2016-10-13].
+====
+
+
+==== Periodical articles
+
+For newspaper articles, publishing date should replace volume and issue.
+
+====
+MADDOX, Brenda. _DNA's double helix: 60 years since life's deep molecular secrets was discovered_. [online]. The Guardian, 2013-02-22. ISSN 1756-3224. London: Guardian Media Group, 1959–. Available from: https://www.theguardian.com/science/2013/feb/22/watson-crick-dna-60th-anniversary-double-helix[https://www.theguardian.com/science/2013/feb/22/watson-crick-dna-60th-anniversary-double-helix]. [viewed 2017-05-13].
+====
+
+====
+[ANONYMOUS]. _I Am Part of the Resistance Inside the Trump Administration_. [online]. The New York Times, 2018-09-05. ISSN 2574-5328. New York: The New York Times Company, 1851–. Available from: https://www.nytimes.com/2018/09/05/opinion/trump-white-house-anonymous-resistance.html[https://www.nytimes.com/2018/09/05/opinion/trump-white-house-anonymous-resistance.html]. [viewed 2019-08-08].
+====
+
+====
+PLUNKETT, John. _Sorrell accuses Murdoch of panic buying._ [online]. The Guardian, 2005-10-27. ISSN 1756-3224. London: Guardian Media Group, 1959. Available from: https://www.theguardian.com/technology/2005/oct/27/news.rupertmurdoch[https://www.theguardian.com/technology/2005/oct/27/news.rupertmurdoch].
+====
+
+Digital surrogate of a printed article should be cited as an online resource.
+
+====
+_Railway Fatality_. Argus (Melbourne, Vic. Online). 1910-01-12, p.5.ISSN 1833-9719. Available from: https://trove.nla.gov.au/newspaper/article/10826947. [viewed 2019-08-09]
+====
+
+Magazines should be cited either by date or by volume and issue, depending on the publishing pattern.
+
+Newsletters should also be treated like magazines.
+
+====
+Chile under Marxism: Does it work? _Newsweek_, 1971-11-15. ISSN 0028-9604.
+====
+

@@ -1,16 +1,91 @@
 
 [[creator]]
-== Creator
+=== Creator
 
-=== General
+[[creator_general]]
+==== Data models
 
-* Source: <<iso690,clause 4.1>>
+This clause provides data models that satisfy the guidelines stated in <<ISO690,clause 7.1>>.
+
+===== Contribution information
+
+.Contribution model
+====
+image::relaton-models/images/contribution.png[]
+====
+
+ContributionInfo/role:: A description of the role of the contributor in the production of the bibliographic item.
+
+ContributionInfo/role/type:: The broad class of role of the contributor. The breakdown used in <<ISO690>> is recommended as such a classification: author, performer, editor, adapter, translator, publisher, distributor.
+
+ContributionInfo/role/description:: A more detailed description of the role of the contributor.
+
+ContributionInfo/entity:: The contributor involved in the production of the bibliographic item; may be either a person or an organization.
+
+
+===== 
+
+image::relaton-models/images/contributor.png[]
+
+image::relaton-models/images/identifier.png[]
+
+
+[[creator_roles]]
+==== Roles
+
+
 * Serialisation: `bibitem/contributor`, `Person, Organization, Affiliation`
 
-[[creator-selection]]
-=== Selection
 
-<<iso690,clause 4.1>> classifies the various possible roles a creator can have
+
+[[creator_selection]]
+==== Selection
+
+[[personal_names]]
+==== Personal names
+
+===== General
+
+[[variant_names]]
+===== Variant forms
+
+===== Additions
+
+[[organization_names]]
+==== Organization or group names
+
+===== Form of name
+
+===== Disambiguation of names
+
+===== Subordinate body
+
+
+[[organization_parent]]
+===== Parent body
+
+[[multiple_creators]]
+==== Multiple creators
+
+[[title_first]]
+===== Title first
+
+===== Conferences
+
+[[subsidiary_creator]]
+===== Subsidiary creator
+
+===== Originators of multiple editions
+
+===== Derivative work creator
+
+==== Pseudonyms
+
+[[anonymous_works]]
+==== Anonymous works
+
+
+<<ISO690,clause 4.1>> classifies the various possible roles a creator can have
 with regard to a resource into six broad categories in order of priority,
 with more refined classifications typically named for the creator. These
 classifications
@@ -43,15 +118,15 @@ each with its own distinct editor as contributor. (For example, the later editio
 as the main item, and the earlier edition related through a "updatedBy" relation.)
 
 NOTE: Although both composer and librettist are included as authors under
-<<iso690,clause 4.1>>, 
-the two roles are clearly differentiated in <<iso690,clause 5.7>>, with the
+<<ISO690,clause 4.1>>,
+the two roles are clearly differentiated in <<ISO690,clause 5.7>>, with the
 composer given priority over the librettist.
 
 NOTE: Inventor and patentee are atypical of the "performer" roles,
 and could arguably be regarded as author roles instead.
 
 NOTE: Sponsoring organisations are conventionally included as distributors,
-following practice in <<iso690>>.
+following practice in <<ISO690>>.
 
 ====
 Ramsey, J. K., & McGrew, W. C. (2005). Object play in great apes: Studies in nature and captivity.
@@ -251,10 +326,15 @@ WINSBACHER KNABENCHOR. All' Lust und Freud'. Frankfurt: Bellaphon, 1983.
 
 === Personal names
 
+image::relaton-models/images/contributor_person.png[]
+
+image::relaton-models/images/identifier_person.png[]
+
+
 Names may be modelled either broken up into their constituent components
 (prefix, forename, initials, surname, addition), or as a complete name string.
 The latter is useful if
-(contrary to the recommendation of <<iso690,clause 4.1>>)
+(contrary to the recommendation of <<ISO690,clause 4.1>>)
 language-specific conventions for ordering of name components are to be
 observed; e.g. "James CLARK, John COWAN, MURATA Makoto".
 
@@ -346,11 +426,16 @@ STEWART, John H.
 [[organisation]]
 === Organisations
 
+image::relaton-models/images/contributor_organization.png[]
+
+image::relaton-models/images/identifier_org.png[]
+
+
 The model caters for both full names and abbreviations of organisations.
 Subordinate body names are modelled separately from the parent body name; the
 choice of whether
 to model parent + subordinate or a single name depends on the degree of
-independence of the subordinate body, as outlined in <<iso690,clause 4.1>>.
+independence of the subordinate body, as outlined in <<ISO690,clause 4.1>>.
 
 ====
 St. Thomas University [Florida].
@@ -385,6 +470,7 @@ ACADEMY OF ATHENS. Research Centre for Modern Greek Dialects.
 </organization>
 --
 ====
+
 
 [[variantnames]]
 === Pseudonyms and Variant Names

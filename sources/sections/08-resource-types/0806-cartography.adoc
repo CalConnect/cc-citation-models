@@ -1,0 +1,345 @@
+
+[[cartographic_specific]]
+=== Cartographic material
+
+==== General
+
+Examples of cartographic material include maps, atlases, cartographic archival resources and datasets.
+
+==== FROM 6900
+
+* Source: <<ISO690,clause 5.4>>
+
+
+The projection, prime meridian, orientation, and reference systems (such as
+grids and navigational lattices) are given as notes.
+The spectral characteristics of the sensor, details of the satellite systems,
+and the amount of cloud cover are also given as notes.
+Details of the creator's role are given in `bibitem/contributor/role`.
+
+
+====
+Berner, L.T., P.S.A. Beck, M.M. Loranty, H.D. Alexander, M.C. Mack, and S.J. Goetz.
+_Siberian Boreal Forest Aboveground Biomass and Fire Scar Maps, Russia, 1969-2007_.
+ORNL DAAC, Oak Ridge, Tennessee, USA. 2016. http://dx.doi.org/10.3334/ORNLDAAC/1321
+
+[source,xml]
+--
+<bibitem type="map">
+  <title>Siberian Boreal Forest Aboveground Biomass and Fire Scar Maps, Russia, 1969-2007</title>
+  <date type="published"><on>2016</on></date>
+  <docidentifier type="DOI">10.3334/ORNLDAAC/1321</docidentifier>
+  <uri>https://daac.ornl.gov/VEGETATION/guides/Siberian_Biomass_Wildfire.html</uri>
+  <contributor>
+    <role type="author">
+    <person><name><completeName>Berner, L.T.</completeName></name></person>
+  </contributor>
+  <contributor>
+    <role type="author">
+    <person><name><completeName>Beck, P.S.A.</completeName></name></person>
+  </contributor>
+  <contributor>
+    <role type="author">
+    <person><name><completeName>Loranty, H.D.</completeName></name></person>
+  </contributor>
+  <contributor>
+    <role type="author">
+    <person><name><completeName>Mack, M.C.</completeName></name></person>
+  </contributor>
+  <contributor>
+    <role type="author">
+    <person><name><completeName>Goetz, S.J.</completeName></name></person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>Oak Ridge National Laboratory</name>
+      <subdivision>Distributed Active Archive Center</subdivision>
+      <abbreviation>ORNL DAAC</abbreviation>
+    </organization>
+  </contributor>
+  <medium>
+    <form>map</form>
+    <size>col. 68 x 69 cm. fold. in envelope 30 x 24 cm.</size>
+    <scale>1:62500</scale>
+  </medium>
+  <note>Type: Projected
+Projection: Albers_Conic_Equal_Area
+Geographic Coordinate Reference:  WGS 1984
+Prime Meridian: Greenwich
+Extent: North: 69.8980555555556 South: 64.4575 West: 155.931944444444 East: 166.474444444444</note>
+<note>Satellites:
+Biomass Mapping: WorldView-1 (WV-1), Landsat 5 TM
+Fire Scar Mapping: Landsat 7 ETM+, Landsat 5 TM, Landsat 1–3 MSS</note>
+  <place>Oak Ridge, Tennessee, USA</place>
+</bibitem>
+--
+====
+
+
+
+
+==== Metadata elements
+
+<<table-cartographic-information-resources>> shows the elements, in order, to be included in references to cartographic information resources.
+
+[[table-cartographic-information-resources]]
+.Metadata elements for cartographic information resources
+[cols="<,<,^"]
+|===
+h| Elements (in order) h| Status h| Relevant clause(s)/ subclauses
+
+| *Name of creator(s)* (of the cited resource) | Required | <<creator>>, <<cartographic-roles>>
+| Standard identifiers of creators' public identities | Optional | <<creator>>
+| *Title of the item* | Required | <<cartographic-title>>, <<form_of_title>>, <<translation_of_title>>
+| Subsidiary titles | Optional | <<additional_titles>> to <<no_title>>
+| *Map series designation* | Required for maps only | <<cartographic-series>>
+| *Subject area* | Required for maps only | <<cartographic-subject>>
+| *Scale* | Required for maps, plans, etc., only | <<cartographic-scale>>
+| *Edition and version* | Required if the item is not the first edition | <<edition_and_version>>
+| Subsidiary creator | Optional | <<subsidiary_creator>>
+| *Series title and number* | Required if the item is likely to be identified as part of a series | <<form_of_title>>, <<series_title_number>>
+| *Place and publisher* | Required | <<place>>, <<publisher>>
+| *Date of publication* | Required | <<date-publication>>
+| *Size* | Required for maps, plans, etc., only | <<element-size>>, <<cartographic-size>>
+| Projection | Optional | <<cartographic-additional>>
+| Prime meridian | Optional | <<cartographic-additional>>
+| Reference systems (grids and navigational lattices) | Optional | <<cartographic-additional>>
+| Spectral characteristics | Optional | <<cartographic-spectral>>
+| Terrain (relief) and colours | Optional | <<cartographic-additional>>
+| Rights metadata | Optional | <<rights_metadata>>
+| *Date of update/revision* | Required, if available, for online information resources | <<web_specific>>
+| *Standard identifier* _(ISBN, etc.)_ | Required if available | <<international_standard_identifiers>>
+| *Distributor or online host* | Required for electronic resources if available | <<distributor_host>>
+| *Persistent identifier* | Required if available | <<persistent_identifiers>>
+| *Location and access (URI)* | Required for online information resources with no persistent identifier or archived copy | <<network_location>>
+| *Physical location* | Required for print information resources if a limited number of copies are known to exist | <<physical_location>>
+| *Date of citation* | Required for dynamic online information resources | <<date-citation>>
+| *Relationships* | Required if available | <<relations>>
+| Other information may be added in whatever position is most appropriate | Optional | <<other_elements>>; <<web_specific>>
+
+|===
+
+
+==== Data elements and guidance specific to type
+
+[[cartographic-title]]
+===== Title
+
+The form of title used for cartographic material should be one of the following, listed in order of preference (in preference to <<form_of_title>>, <<title-alt>>):
+
+. an overprinted title;
+. a title in the title panel;
+. a title in embedded metadata;
+. a title within the grid or other border which encloses the detail of a map; and
+. a title elsewhere; including external metadata sources.
+
+If there is no clear title in the cited cartographic resource (e.g., atlas or single-sheet map), in addition to the possible titles provided in <<no_title>>, a title describing the area covered by the resource may be chosen.
+
+For a map series, the scale and series designation should be supplied, if they are necessary to distinguish the series from others of the same area.
+
+====
+[Western Australia forestry series. 1:63,360].
+====
+
+====
+[Hong Kong. 1:1,000. Series HP1C].
+====
+
+[[cartographic-subject]]
+===== Subject and area covered
+
+For cartographic material, the special subject and area covered should be supplied if not given in the title.
+
+====
+_National topographic map series_. 1:100,000. [Queensland index map].
+====
+
+====
+_Gull's eye view_ [of Hugh Town, St Mary's, Isles of Scilly].
+====
+
+The supplied name of a geographical area should be the name of the area as conceived of by the cartographer, whether in their contemporary frame of reference or in a historical sense, rather than as a present-day equivalent.
+
+====
+Cartographic material on "Ancient Mesopotamia" is not be labeled as "Iraq".
+====
+
+====
+Cartographic material on "Yugoslavia" is not be labeled as "Serbia, Croatia, Montenegro, Bosnia, Slovenia, North Macedonia".
+====
+
+
+
+[[cartographic-roles]]
+===== Roles
+
+For cartographic material, the creator's role may be indicated on the map by terms such as "by", "cartographer", "compiled", "corrected", "dedicated", "edited", "designed", "drawn", "copied", "made", "engraved", "revised", or "updated".
+
+====
+Wording on map: Surveyed by Isaac Taylor. +
+Originator cited: TAYLOR, Isaac [ISNI 0000 0000 8172 5695].
+====
+
+====
+Wording on map: Lake District: tourist map. Ordnance Survey. +
+Originator cited: ORDNANCE SURVEY [ISNI 0000 0004 0599 9271].
+====
+
+====
+Wording on map: Karttatiedot cop. 2016 Google +
+Originator cited: GOOGLE.
+====
+
+Attributions may be given in the creator element or in the additional information (see <<other_elements>>). The name of an individual who is known to be the major contributor to the creation of a map should be included, even if the name is not prominently displayed.
+
+If both printer and publisher are shown on a map, only the publisher's name should be given.
+
+[[cartographic-series]]
+===== Series designation
+
+The map series designation, if any, should be given in the form in which it appears in the cited information resource, preceded, if appropriate, by the term "`series`".
+
+====
+A.D. Maps. A.M. no. 677/2.
+====
+
+====
+M726.
+====
+
+====
+Series 1106.
+====
+
+[[cartographic-scale]]
+===== Scale
+
+The scale should be given, if applicable, normally as a ratio (calculated if necessary), e.g., "1:50,000", or, if given otherwise on the map, it may be cited as it appears. "Scale not shown" or "scale indeterminable" may be used if the scale is missing and it cannot be determined.
+
+====
+On the map: "one-inch-to-one-mile". +
+Reference: "1:63,360" or "one-inch-to-one-mile".
+====
+
+If the scale appears in graphic terms, e.g., a scale bar, it may be calculated as a ratio, e.g., "1:63,360" or given in the form on the map, e.g., "scale of miles, 10 [= 60 mm]".
+
+[[cartographic-size]]
+===== Size
+
+The size of some cartographic resources including printed maps, charts and plans should be given as the height followed by the width, in millimetres, measured between the neat lines. Other dimensions, such as sheet size, may be given, if necessary.
+
+====
+250 mm &times; 350 mm, sheet 600 mm &times; 800 mm.
+====
+
+For three-dimensional items, height, width and depth should be given.
+
+====
+Model map: 450 mm &times; 350 mm &times; 20 mm.
+====
+
+For circular maps and globes, the diameter should be given.
+
+====
+Circular map: 500 mm diameter, on sheet 610 mm &times; 550 mm.
+====
+
+====
+Globe: 70 mm diameter.
+====
+
+[[cartographic-spectral]]
+===== Spectral characteristics
+
+For remotely sensed cartographic images, the spectral characteristics of the sensor should be given, together with details of the satellite system, if not given elsewhere in the citation. Information about the amount of cloud cover should be given, if appropriate.
+
+====
+Bands 5, 6, 7, Landsat 2.
+====
+
+====
+RBV, Landsat 3; 40% cloud cover.
+====
+
+====
+Infra-red, Meteosat.
+====
+
+[[cartographic-additional]]
+===== Additional information
+
+The projection, prime meridian, orientation and reference systems such as grids and navigational lattices may be given if considered important. Sometimes it may be necessary to specify terrain (relief) and colours to distinguish similar cartographic resources from one another.
+
+
+==== Separately issued cartographic resources
+
+Separately issued cartographic resources may be referred to using the data elements described in this document.
+
+====
+CROWN LANDS AND SURVEY OFFICE [HK]. _Hong Kong_. [1:1,000]. Series HP1C. Hong Kong: Crown Lands and Survey Office, 1973. With contours and spot heights.
+====
+
+====
+_Etheldreda's Isle: a pictorial map of the Isle of Ely to commemorate the 1300th anniversary of the founding of Ely's conventual church_. No scale. March (Cambs): T. A. Bevis, 1973. 400 mm × 490 mm. British Library Map Library *1640*(42).
+====
+
+====
+_Germania_: _cum priuilegio_. [ca. 1: 3,000,000.] Antwerp: s.n., 1579. 360 mm x 480 mm. University of Berne, the Ryhiner Map Collection Ryh 4301 7. Available from: http://biblio.unibe.ch/web-apps/maps/zoomify.php?col=ryh&pic=Ryh_4301_7[http://biblio.unibe.ch/web-apps/maps/zoomify.php?col=ryh&pic=Ryh_4301_7]. [viewed 2017-06-10].
+====
+
+====
+WAR OFFICE [UK]. _Vladivostock_. In: USSR in Asia Maritime Provinces, sheet VI-8. GSGS4219. 1:420,000. First ed. War Office (photolithographer and printer), 1941. Copied from a Russian Map.
+====
+
+====
+[_Wildlife sanctuaries of Trinidad_.] [1:320,000.] Survey's litho printer (printer) [1967]. Publisher's number 139/67 T101.
+====
+
+====
+WYLD, James. _Map of the countries lying between Turkey and Birmah_. 1:8,000,000. London: James Wyld, 1839.
+====
+
+
+==== As a component part
+
+If a cartographic resource has been issued as a component part within another information resource, it should be cited as part of that information resource. This also applies to the case where the
+cartographic resource is removed or reproduced from another
+information resource.
+
+====
+_Relative magnitudes of planets_ [online]. In: MATTISON, H. and E. H. BURRITT. Atlas designed to illustrate Burritt's Geography of the heavens (…). New York: Sheldon, [1856?]. Available from: http://hdl.loc.gov/loc.gmd/g3180m.gct00292[http://hdl.loc.gov/loc.gmd/g3180m.gct00292]. Path: image 2/10.
+====
+
+====
+_National topographic map series_. [Queensland index map]. 1:100,000. In: Australia. Division of National Mapping. Statement of activities, 1 July 1984 – 30 June 1985. Annex A.1. ISSN 0811-9600.
+====
+
+
+==== Electronic cartographic resources
+
+If the cited cartographic resource is available in the Internet, its URI should be provided.
+
+====
+Google Maps map covering York, UK.
+
+GOOGLE. _York_ [UK]. Google Maps, 2019. Available from: https://goo.gl/maps/YTh1ggY4g64ziwS99[https://goo.gl/maps/YTh1ggY4g64ziwS99]. [viewed 2019-09-05].
+====
+
+====
+Google Maps URI which includes GPS coordinates and scale.
+
+GOOGLE. [_York, UK_]. Google Maps, 2019. Available from: https://www.google.com/maps/@53.9586419,-1.1156109,12z[https://www.google.com/maps/@53.9586419,-1.1156109,12z]. [viewed 2019-09-05].
+====
+
+
+NOTE: The syntax of the URI in the Google examples differs from the generic URI syntax in order to accommodate specific requirements of cartographic information.
+
+References of digital surrogates should contain the relevant metadata elements pertaining to the original printed version.
+
+====
+Pitäjänkartta 1:20000 : 4022 06, Viipuri. 58 x 62 cm. Maastokartta. Piirtänyt E. Björklund v. 1939. [Lahti]: [Maanmittauslaitos], [2001]. Dgital surrogate available at: http://vanhatpainetutkartat.maanmittauslaitos.fi/karjalankartat/[http://vanhatpainetutkartat.maanmittauslaitos.fi/karjalankartat/], Pitäjänkartta_2000, 402206_Viipuri.
+====
+
+
+
