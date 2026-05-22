@@ -1,5 +1,0 @@
-# .metanorma/channels.yml — cc-citation-models
-
-channels:
-  - name: public/standards
-    description: "CalConnect documents from cc-citation-models"
