@@ -13,7 +13,7 @@ citation and bibliographic information models provided in this document.
 
 [[figure-data-types]]
 .Common data elements in UML
-image::relaton-models/images/RelBib_DataTypes.png[]
+image::relaton-models/relaton/images/RelBib_DataTypes.png[]
 
 Uri:: Container for URIs, as defined by <<RFC3986>>.
 

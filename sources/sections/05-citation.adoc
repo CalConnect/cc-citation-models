@@ -4,7 +4,7 @@
 
 [[citation_uml]]
 .Reference Model, ISO 690 Citations
-image::relaton-models/images/RelBib_Citation.png[]
+image::relaton-models/relaton/images/RelBib_Citation.png[]
 
 A citation in Relaton consists of the following components:
 
