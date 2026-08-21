@@ -6,26 +6,26 @@ Common data types used within this document are provided below.
 
 image::relaton-models/relaton/images/RelBib_DataTypes.png[]
 
-Uri:: Container for URIs, as defined by <<rfc3986>>.
+Uri:: Container for URIs, as defined by <<RFC3986>>.
 
 Iso8601Date:: Gregorian date, as specified in <<iso8601>>.
 
 Iso8601DateTime:: Gregorian date and time, as specified in <<iso8601>>.
 
-Iso639Code:: Code for language or language family, as specified in <<iso639>>.
+Iso639Code:: Code for language or language family, as specified in <<ISO639>>.
 The specification is open as to whether the two-letter code or the three-letter
 code for languages is used.
 
-Iso15924Code:: Code for scripts (writing scripts), as specified in <<iso15924>>.
+Iso15924Code:: Code for scripts (writing scripts), as specified in <<ISO15924>>.
 
 DateTime:: Type which allows date and time to be specified as either a Gregorian
 date and time, as specified in <<iso8601>>, as text, or as both.
 
 TypedUri:: URI associated with a type. The types of URI are open-ended, but include
-the IANA link relations specified in <<rfc8288>>.
+the IANA link relations specified in <<RFC8288>>.
 
 FormattedString:: String which is formatted according to conventions specified
-in a named MIME type (<<rfc2046>>).
+in a named MIME type (<<RFC2046>>).
 
 LocalizedString:: FormattedString which optionally specifies its language and/or script.
 Multiple variants of the same string can be stored, tagged with `variant` for each

@@ -101,7 +101,7 @@ h| Elements (in order) h| Status h| Relevant clause(s)/ subclauses
 | Location and access (URI) | Optional if the persistent identifier is given; otherwise required | <<social-network-location>>, <<network_location>>
 | *Relationships* | Required if available | <<relations>>
 | *Date / time viewed* | Required | <<date-citation>>, <<season_month_day_time>>
-| Other information may be added in whatever position is most appropriate | Optional | <<other_elements>>; <<web_specific>>
+| Other information may be added in whatever position is most appropriate | Optional | <<additional-info>>; <<web_specific>>
 
 |===
 

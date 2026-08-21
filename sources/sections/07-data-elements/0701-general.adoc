@@ -1,5 +1,5 @@
 
-[[data-types]]
+[[data-elements-general]]
 == Data elements
 
 Common data elements used within this document are provided below.

@@ -116,7 +116,7 @@ h| Elements (in order) h| Status h| Relevant clause(s)/ subclauses
 | *Physical location* | Required for print information resources if a limited number of copies are known to exist | <<physical_location>>
 | *Date of citation* | Required for dynamic online information resources | <<date-citation>>
 | *Relationships* | Required if available | <<relations>>
-| Other information may be added in whatever position is most appropriate | Optional | <<other_elements>>; <<web_specific>>
+| Other information may be added in whatever position is most appropriate | Optional | <<additional-info>>; <<web_specific>>
 
 |===
 
@@ -191,7 +191,7 @@ Wording on map: Karttatiedot cop. 2016 Google +
 Originator cited: GOOGLE.
 ====
 
-Attributions may be given in the creator element or in the additional information (see <<other_elements>>). The name of an individual who is known to be the major contributor to the creation of a map should be included, even if the name is not prominently displayed.
+Attributions may be given in the creator element or in the additional information (see <<additional-info>>). The name of an individual who is known to be the major contributor to the creation of a map should be included, even if the name is not prominently displayed.
 
 If both printer and publisher are shown on a map, only the publisher's name should be given.
 

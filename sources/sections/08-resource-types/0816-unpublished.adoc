@@ -30,7 +30,7 @@ h| Elements (in order) h| Status h| Relevant clause(s)/ subclauses
 | *Location and access (URI)* | Required for online information resources with no persistent identifier or archived copy | <<network_location>>
 | *Date of citation* | Required for dynamic online information resources | <<date-citation>>
 | *Relationships* | Required if available | <<relations>>
-| Other information may be added in whatever position is most appropriate | Optional | <<other_elements>>; <<web_specific>>
+| Other information may be added in whatever position is most appropriate | Optional | <<additional-info>>; <<web_specific>>
 
 |===
 

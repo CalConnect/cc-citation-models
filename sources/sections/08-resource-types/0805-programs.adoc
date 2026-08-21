@@ -13,7 +13,7 @@ less commonly expressed now for software than they were in the 1990s and 2000s.)
 URLs should not be broken at the end of a line: that
 is a rendering requirement, not an information modelling requirement.
 
-As discussed in <<resource-types>>, where possible, a more specific category
+As discussed in <<resource_types>>, where possible, a more specific category
 should be used than "electronic resource",
 which is properly a description of a medium and not a resource type; monographs and
 journals are now routinely published online.
@@ -98,7 +98,7 @@ h| Elements (in order) h| Status h| Relevant clause(s)/ subclauses
 | *File size*           | Required for large files  | <<element-filesize>>, <<datasets-size>>
 | *Date of citation* | Required for dynamic online information resources | <<date-citation>>
 | *Relationships* | Required if available | <<relations>>
-| Other information may be added in whatever position is most appropriate | Optional | <<other_elements>>; <<web_specific>>
+| Other information may be added in whatever position is most appropriate | Optional | <<additional-info>>; <<web_specific>>
 
 |===
 

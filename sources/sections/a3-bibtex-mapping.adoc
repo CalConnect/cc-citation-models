@@ -8,7 +8,7 @@ and (asterisked) the additional BibTeX fields in citavi <<citavi>>.
 
 === Categories of information resource
 
-From <<resource-types>>.
+From <<resource_types>>.
 
 |===
 |BibTeX | Relaton
@@ -61,7 +61,7 @@ From <<title>>.
 
 === Document relations
 
-From <<docrelations>>.
+From <<doc-relations>>.
 
 |===
 |BibTeX | Relaton
