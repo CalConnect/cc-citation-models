@@ -4,7 +4,7 @@
 
 .DocumentRelation and related models
 ====
-image::relaton-models/images/RelBib_DocumentRelation.png[]
+image::relaton-models/relaton/images/RelBib_DocumentRelation.png[]
 ====
 
 DocumentRelation/type:: The type of document relation described. Different resource types have differnet relations between documents;

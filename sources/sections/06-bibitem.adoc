@@ -30,7 +30,7 @@ The reference model for citations is provided in <<citationmodel>>.
 
 .BibliographicItem model
 ====
-image::relaton-models/images/RelBib_BibliographicItem.png[]
+image::relaton-models/relaton/images/RelBib_BibliographicItem.png[]
 ====
 
 BibliographicItem/type:: The type of the bibliographic item.
@@ -190,7 +190,7 @@ Serialization of `ValidityInfo` is demonstrated below.
 
 .BibliographicSeries model
 ====
-image::relaton-models/images/RelBib_Series.png[]
+image::relaton-models/relaton/images/RelBib_Series.png[]
 ====
 
 SeriesType/type:: The type of series description expressed in this container.
@@ -222,7 +222,7 @@ Series/partnumber:: The part-number of the bibliographic item within the series.
 
 .BibliographicDate model
 ====
-image::relaton-models/images/RelBib_Date.png[]
+image::relaton-models/relaton/images/RelBib_Date.png[]
 ====
 
 BibliographicDate:: Date associated with the production of or access to a bibliographic item.
@@ -240,7 +240,7 @@ BibliographicDate/on:: The point date described (mutually exclusive with date ra
 
 .BibliographicItemTypes
 ====
-image::relaton-models/images/RelBib_BibItemType.png[]
+image::relaton-models/relaton/images/RelBib_BibItemType.png[]
 ====
 
 BibItemType:: The range of possible bibliographic items covered by this model. Note that

@@ -5,7 +5,7 @@
 
 .Contributor model
 ====
-image::relaton-models/images/RelBib_Contributor.png[]
+image::relaton-models/relaton/images/RelBib_Contributor.png[]
 ====
 
 

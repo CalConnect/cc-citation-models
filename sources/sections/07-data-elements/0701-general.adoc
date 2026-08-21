@@ -5,7 +5,7 @@
 Common data elements used within this document are provided below.
 
 .TypedUri
-image::relaton-models/images/typed_uri.png[]
+image::relaton-models/relaton/images/RelBib_DataTypes.png[]
 
 Uri:: Container for URIs, as defined by <<RFC3986>>.
 
@@ -14,7 +14,7 @@ the IANA link relations specified in <<RFC8288>>.
 
 
 .DateTime
-image::relaton-models/images/datetime.png[]
+image::relaton-models/relaton/images/RelBib_Date.png[]
 
 DateTime:: Type which allows date and time to be specified as either a Gregorian
 date and time, as specified in <<ISO8601-1>>, as text, or as both.
@@ -25,7 +25,7 @@ Iso8601DateTime:: Gregorian date and time, as specified in <<ISO8601-1>>.
 
 
 .LocalizedString
-image::relaton-models/images/localized_string.png[]
+image::relaton-models/relaton/images/RelBib_DataTypes.png[]
 
 Iso639Code:: Code for language or language family, as specified in <<ISO639>>.
 The specification is open as to whether the two-letter code or the three-letter

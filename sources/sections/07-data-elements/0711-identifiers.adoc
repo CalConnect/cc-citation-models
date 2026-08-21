@@ -7,7 +7,7 @@
 * Source: <<ISO690,clause 4.9>>
 * Serialisation: `bibitem/docidentifier`
 
-image::relaton-models/images/document_identifier.png[]
+image::relaton-models/relaton/images/RelBib_BibliographicItem.png[]
 
 <<ISO690,clause 4.9>> states that unique international standard identifiers
 must be included in the bibliography. In practice, identifiers are included

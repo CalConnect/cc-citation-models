@@ -11,7 +11,7 @@ This clause provides data models that satisfy the guidelines stated in <<ISO690,
 
 .Contribution model
 ====
-image::relaton-models/images/contribution.png[]
+image::relaton-models/relaton/images/RelBib_Contribution.png[]
 ====
 
 ContributionInfo/role:: A description of the role of the contributor in the production of the bibliographic item.
@@ -25,9 +25,9 @@ ContributionInfo/entity:: The contributor involved in the production of the bibl
 
 ===== 
 
-image::relaton-models/images/contributor.png[]
+image::relaton-models/relaton/images/RelBib_Contributor.png[]
 
-image::relaton-models/images/identifier.png[]
+image::relaton-models/relaton/images/RelBib_BibliographicItem.png[]
 
 
 [[creator_roles]]
@@ -326,9 +326,9 @@ WINSBACHER KNABENCHOR. All' Lust und Freud'. Frankfurt: Bellaphon, 1983.
 
 === Personal names
 
-image::relaton-models/images/contributor_person.png[]
+image::relaton-models/relaton/images/RelBib_Contributor.png[]
 
-image::relaton-models/images/identifier_person.png[]
+image::relaton-models/relaton/images/RelBib_Contributor.png[]
 
 
 Names may be modelled either broken up into their constituent components
@@ -426,9 +426,9 @@ STEWART, John H.
 [[organisation]]
 === Organisations
 
-image::relaton-models/images/contributor_organization.png[]
+image::relaton-models/relaton/images/RelBib_Contributor.png[]
 
-image::relaton-models/images/identifier_org.png[]
+image::relaton-models/relaton/images/RelBib_Contributor.png[]
 
 
 The model caters for both full names and abbreviations of organisations.
