@@ -84,7 +84,7 @@ h| Elements (in order) h| Status h| Relevant clause(s)/ subclauses
 | *Persistent identifier* | Required if available | <<persistent_identifiers>>
 | *Network location and access* | Required for electronic archive sources | <<network_location>>
 | *Relationships* | Required if available | <<relations>>
-| Other information may be added in whatever position is most appropriate | Optional | <<other_elements>>, <<web_specific>>
+| Other information may be added in whatever position is most appropriate | Optional | <<additional-info>>, <<web_specific>>
 
 |===
 

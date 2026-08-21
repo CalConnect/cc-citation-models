@@ -134,7 +134,7 @@ h| Elements (in order) h| Status h| Relevant clause(s)/ subclauses
 | *Physical location* | Required for print information resources if a limited number of copies are known to exist | <<physical_location>>
 | *Relationships* | Required if available | <<relations>>
 | *Date of citation* | Required for dynamic online information resources | <<date-citation>>
-| Other information may be added in whatever position is most appropriate | Optional | <<other_elements>>; <<web_specific>>
+| Other information may be added in whatever position is most appropriate | Optional | <<additional-info>>; <<web_specific>>
 
 |===
 

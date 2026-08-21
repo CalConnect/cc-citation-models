@@ -8,7 +8,7 @@ This clause provides common information models that are used by the
 citation and bibliographic information models provided in this document.
 
 
-[[data-types]]
+[[model-data-elements]]
 === Data elements
 
 [[figure-data-types]]

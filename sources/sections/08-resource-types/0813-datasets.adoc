@@ -143,7 +143,7 @@ h| Elements (in order) h| Status h| Relevant clause(s)/ subclauses
 | Provenance | Optional | <<datasets-provenance>>
 | Location and access (URI) | Optional (since the persistent identifier is required) | <<network_location>>
 | *File size* | Required if available | <<element-filesize>>, <<datasets-size>>
-| Other information may be added in whatever position is most appropriate | Optional | <<other_elements>>; <<web_specific>>
+| Other information may be added in whatever position is most appropriate | Optional | <<additional-info>>; <<web_specific>>
 
 |===
 

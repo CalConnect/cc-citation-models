@@ -140,7 +140,7 @@ h| Elements (in order) h| Status h| Relevant clause(s)/ subclauses
 | Playback requirements | Optional | <<av-playback>>
 | *Relationships* | Required if available | <<relations>>
 | *Date of citation* | Required for online information resources | <<date-citation>>
-| Other information may be added in whatever position is most appropriate | Optional | <<other_elements>>; <<web_specific>>
+| Other information may be added in whatever position is most appropriate | Optional | <<additional-info>>; <<web_specific>>
 
 |===
 
