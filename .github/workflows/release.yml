@@ -13,6 +13,7 @@ jobs:
   release:
     uses: actions-mn/.github/.github/workflows/metanorma-release.yml@main
     with:
+      submodules: true
       default-visibility: private
     secrets: inherit
 
