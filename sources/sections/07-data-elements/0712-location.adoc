@@ -1,8 +1,11 @@
 
-[[location]]
-== Location
+[[availability-location]]
+=== Availability and location
 
-* Source: <<ISO690,clause 4.10>>, <<ISO690,clause 5.10>>
+[[location]]
+==== Model
+
+* Source: <<ISO690,clause 4.10>>; <<ISO690,clause 5.10>>; <<ISO690,clause 7.12>>
 * Serialisation: `bibitem/accessLocation`, `bibitem/uri`
 
 Unpublished items with a limited number of copies that are held at a repository
@@ -11,7 +14,7 @@ which gives the repository that the cited copy is held in, and the
 locator used by the repository.
 The repository and locator are not differentiated, and are treated as a single
 string. The `bibitem/accessLocation` element is also used for online locations
-of digital resources, where a single URL (`bibitem/uri`) is not sufficient, 
+of digital resources, where a single URL (`bibitem/uri`) is not sufficient,
 and either a navigation path, or an in-document object identifier is used.
 
 An archival URI can be differentiated from an original URI for a resource,
@@ -23,6 +26,28 @@ Persistent identifiers and other identifiers expressed as actionable URIs
 should still be represented as `bibitem/docidentifier` rather than `bibitem/uri`,
 so long as they are managed in a distinct namespace. That applies to such
 identifiers as DOI, ARK, Handle, ISSN, etc.
+
+[[physical_location]]
+==== Physical location
+
+===== General
+
+If only a single or a limited number of copies of an information resource such as artwork or archival material are known to exist, or if a specific item is referenced, the place name shall be provided in a citation.
+
+===== Place and repository
+
+"`At:`" or an equivalent phrase in the language of the publication should be given before the place name.
+
+The method of representation is given below, where `{placeName}` is the name of the place.
+
+[%unnumbered]
+----
+At: {placeName}
+----
+
+====
+At: New York
+====
 
 ====
 P.Vind.Tand.25a = HGV P.Vindob. Tandem 25 a = Trismegistos 26540. At: P.Vindob.Gr. Inv. Nr. 12424 + 24718 + 28384.
@@ -84,32 +109,148 @@ P.Vind.Tand.25a = HGV P.Vindob. Tandem 25 a = Trismegistos 26540. At: P.Vindob.G
 --
 ====
 
-// TODO: The document relation is actually "publishedIn", but I think that's overkill.
+====
+At: Hong Kong
+====
 
+The language of the information resource shall be used in representing the place name.
 
 ====
-Australian Government Bureau of Meteorology. _Latest Weather Observations for Dumont D'Urville_. http://www.bom.gov.au. Path: Antarctica: Antarctic Observations: Latest observations: Dumont D'Urville: JavaScript Object Notation format (JSON) in row-major order. Viewed 2018-03-10.
+Im: Wien
+====
 
-[source,xml]
---
-<bibitem type="dataset">
-  <title>Latest Weather Observations for Dumont D'Urville</title>
-  <uri>http://www.bom.gov.au/fwo/IDT60803/IDT60803.89642.json</uri>
-  <date type="accessed"><on>2018-03-10</on></date>
-  <contributor>
-    <role type="publisher"/>
-    <organization>
-      <name>Australian Government</name>
-      <subdivision>Bureau of Meteorology</subdivision>
-    </organization>
-  </contributor>
-  <accessLocation>http://www.bom.gov.au. Path: Antarctica: Antarctic Observations: Latest observations: Dumont D'Urville: JavaScript Object Notation format (JSON) in row-major order</accessLocation>
-</bibitem>
---
+The place name should be qualified if necessary (see <<place_general>>).
+
+====
+At: Washington, D.C.
 ====
 
 ====
-British Library Web site February 1997 [online]. archive.org [distributor]. Available from: https://web.archive.org/web/19970218190613/http://www.bl.uk/. [archived 1997-02-18] [viewed 2019-02-28]. 
+At: Newport, CA.
+====
+
+If the cited resource is held within a repository (within for instance, an item or a collection), the name of the repository that it belongs to and its locator (such as the call number, locator or identifier) in the form used by the repository.
+
+
+====
+Im: Albertina, Wien.
+====
+
+====
+Sijainti: Ateneumin taidemuseo, Helsinki.
+====
+
+====
+At: British Museum, Department of Prints and Drawings, London. Register number 1915-27-41.
+====
+
+====
+At: Special Collections and Archives, Oviatt Library, California State University, Northridge, Los Angeles, CA.
+====
+
+
+It is possible to cite surrogates of information resources that no longer exist, such as temporary or destroyed work.
+
+====
+At: Museum of Modern Art, New York, NY. Available from: https://www.moma.org/collection/works/101549.
+====
+
+====
+At: Great Hall, University of Vienna, Vienna. Available from: FLEIDL, G. _Gustav Klimt 1862-1918 The World in Female Form_, p. 77, Cologne: Taschen, 1994.
+====
+
+
+Examples of full references are provided below.
+
+====
+DÜRER, Albrecht. _Feldhase_ [aquarell, 1502]. Im: Albertina, Wien.
+====
+
+====
+SCHJERFBECK, Helene (1862–1946). _Mustataustainen omakuva_ [Self-Portrait, Black Background] [öljyväri ja kangas]. 1915. Sijainti: Ateneumin taidemuseo, Helsinki.
+====
+
+====
+GOSSE, Sylvia (1881–1968). _The Garden, Rowlandson House_ [etching and aquatint, 1912]. At: British Museum, Department of Prints and Drawings, London. Register number 1915-27-41.
+====
+
+====
+SELL, John M. _John M. Sell Civil War Collection_. At: Special Collections and Archives, Oviatt Library, California State University, Northridge, Los Angeles, CA.
+====
+
+
+[[network_location]]
+==== Network location and access
+
+===== General
+
+If the cited information resource is available in the Internet, a hyperlink such as HTTP URI, shall be provided to allow retrieval of the resource.
+
+Internet addresses are often unreliable and therefore, URLs should be used with caution. Recommended practice is to use URIs based on persistent identifiers (PIDs), permalinks or a URI of an archived copy of the resource. If these approaches are not possible or practical, URL may be used, but with caution (see <<location-url-only>> below).
+
+The elements of URI as specified in <<RFC3986>>, _URI Generic syntax_ (e.g., scheme, authority, path, query and fragment) should be transcribed with the same punctuation, upper-case and lower-case letters as given in the cited information resource.
+
+In URIs, the scheme and host are case-insensitive and normally provided in lower case; all other URI components may be case-sensitive and should be treated as such. The name of the service may be added before the URI. Some services (for instance, Google Maps) apply internal URI syntaxes which differ from the URI syntax defined in <<RFC3986>>. In such case, the syntax of the service may be used.
+
+
+
+===== Network access
+
+To indicate network access location of the cited information resource, a phrase equivalent to "`Available from:`", in the language of the publication, should be given before the URI.
+
+The following indicates the method of representation, where {URI} indicates expression of the URI:
+
+[%unnumbered]
+----
+Available from: {URI}
+----
+
+====
+Available from: http://www.collectionscanada.ca/moodie-traill/index-e.html[http://www.collectionscanada.ca/moodie-traill/index-e.html].
+====
+
+Name of the service (for instance, an institutional repository) holding the cited resource may be included. Below {URI} indicates expression of the URI and {service-name} the name of the service:
+
+[%unnumbered]
+----
+Available from {service-name}: {URI}
+----
+
+====
+Available from: Helda: http://urn.fi/URN:ISBN:978-951-51-4424-9.
+====
+
+
+Specific features of the cited information resource should be provided, if they have an impact on its use:
+
+[%unnumbered]
+----
+{type} available from: {URI}
+----
+
+====
+A legal deposit copy available from: http://verkkoarkisto.kansalliskirjasto.fi:8080/20060916080210/http://www.verkkosanomat.fi/ [access only in the premises of the National Library and other deposit libraries].
+====
+
+[[location-see-also]]
+===== Related locations
+
+If the cited information resource is for instance a program, it may be useful to include in the citation a link to additional information about the resource. A phrase "`See also:`" or equivalent in the language of the publication should be prefixed to a URI.
+
+====
+Available from: https://www.mozilla.org/en-US/firefox/new/. See also: https://en.wikipedia.org/wiki/Firefox.
+====
+
+
+===== Archival access
+
+Web archives make it possible to cite Web sites or individual pages that have been lost, and past versions of resources which are still available but in an edited form.
+
+A link to an archived copy of the cited information resource may be added to the citation even if the cited information resource is static and there is a reason to believe that it will be available on the Web for a long term.
+
+
+====
+British Library Web site February 1997 [online]. archive.org [distributor]. Available from: https://web.archive.org/web/19970218190613/http://www.bl.uk/. [archived 1997-02-18] [viewed 2019-02-28].
 
 [source,xml]
 --
@@ -143,7 +284,7 @@ British Library Web site February 1997 [online]. archive.org [distributor]. Avai
     <role type="author"/>
     <organization>
       <name>British Library</name>
-    </organization> 
+    </organization>
   </contributor>
   <relation type="instance">
     <bibitem type="website">
@@ -163,3 +304,171 @@ British Library Web site February 1997 [online]. archive.org [distributor]. Avai
 
 ====
 
+====
+Archived copy available from: Internet archive (distributor), https://web.archive.org/web/20160420143942/http://www.w3.org/Provider/Style/URI.html[https://web.archive.org/web/20160420143942/http://www.w3.org/Provider/Style/URI.html] [archived 2016-04-20 14:39:42Z].
+====
+
+
+====
+Berners-Lee, T.: Cool URIs don't change. W3C, 1998. Available from: https://www.w3.org/Provider/Style/URI[https://www.w3.org/Provider/Style/URI]. Archived copy available from: Internet archive (distributor), https://web.archive.org/web/20160420143942/http://www.w3.org/Provider/Style/URI.html[https://web.archive.org/web/20160420143942/http://www.w3.org/Provider/Style/URI.html] [archived 2016-04-20 14:39:42Z]. [viewed 2018-02-04].
+====
+
+
+===== Specific versions
+
+If the cited Web page is dynamic and a specific version is used, an archived version of the resource shall be cited. If an accurate archived copy of the page does not exist, one shall be made using an archiving facility if possible, e.g. The Internet Archive.
+
+The citation shall contain the name of the cited resource and the dates it has been used and archived.
+
+====
+ISO home page. [2016-01-03]. Geneve: International Organization for Standardization, 2016. Archived copy available from: Internet archive (distributor), https://web.archive.org/web/20160103090843/http://www.iso.org/iso/home.html. [archived 2016-01-03T09:08:43Z]. [viewed 2019-02-28].
+====
+
+====
+_Transliteration_ [online]. In: Wikipedia. Wikimedia foundation, 2018-07-23T01:33:00Z. Archived copy available from: Internet Archive (distributor), https://web.archive.org/web/20180710182934/https://en.wikipedia.org/wiki/Transliteration [viewed 2019-02-28].
+====
+
+
+===== Nonspecific versions
+
+A link to an archived copy is not required if the cited information resource is dynamic, but no specific version of the resource is cited.
+
+====
+_Transliteration_ [online]. In: Wikipedia (distributor). Wikimedia foundation. Available from: Wikipedia, https://en.wikipedia.org/wiki/Transliteration. [viewed 2018-08-23].
+====
+
+
+===== Representing lengthy locations
+
+If the location information needs to be broken at the end of a line, the break should be made after a single or double solidus or a hyphen, but before other punctuation marks.
+
+[[location-url-only]]
+====
+https://web.archive.org/web/20151024212842/http://www.ukoln.ac.uk/services/elib/papers/other/pinfield-elib/elibreport.pdf.
+// https://web.archive.org/web/20151024212842/ http://www.ukoln.ac.uk/services/elib/papers/other/pinfield-elib/elibreport.pdf.
+====
+
+===== Providing navigation path instead of URI
+
+If the cited information resource has long and/or complex location information, the navigation path to the resource may be provided instead of the full URI.
+
+====
+Available from: http://finto.fi/en/[http://finto.fi/en/]. Path: General Finnish Ontology.
+====
+
+Navigation path may have 1-n levels, indicated in an appropriate manner.
+
+====
+Available from: http://finto.fi/en/. Path: General Finnish Ontology. C. Citation analysis.
+====
+
+====
+Australian Government Bureau of Meteorology. _Latest Weather Observations for Dumont D'Urville_. http://www.bom.gov.au. Path: Antarctica: Antarctic Observations: Latest observations: Dumont D'Urville: JavaScript Object Notation format (JSON) in row-major order. Viewed 2018-03-10.
+
+[source,xml]
+--
+<bibitem type="dataset">
+  <title>Latest Weather Observations for Dumont D'Urville</title>
+  <uri>http://www.bom.gov.au/fwo/IDT60803/IDT60803.89642.json</uri>
+  <date type="accessed"><on>2018-03-10</on></date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>Australian Government</name>
+      <subdivision>Bureau of Meteorology</subdivision>
+    </organization>
+  </contributor>
+  <accessLocation>http://www.bom.gov.au. Path: Antarctica: Antarctic Observations: Latest observations: Dumont D'Urville: JavaScript Object Notation format (JSON) in row-major order</accessLocation>
+</bibitem>
+--
+====
+
+===== Providing PID
+
+HTTP URI based on the actionable persistent identifier (PID) assigned to the cited information resource shall be provided instead of the actual location (URL) of the resource. If the location changes, it may not be redirected to the new URL, whereas the PID will most likely be resolved to the new location or locations.
+
+====
+The DOI name of an article is 10.1371/journal.pone.0115253. The URL of the article, to which the DOI name resolves, is http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0115253[http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0115253]. Reference contains only the following information: Available from: https://doi.org/10.1371/journal.pone.0115253[https://doi.org/10.1371/journal.pone.0115253].
+====
+
+
+===== Outdated location information
+
+Due to HTTP redirection, outdated URLs may still provide access to the cited information resource.  However, all URLs should be up to date by the time citations are made, since URLs that require redirection are likely to be more short-lived than the current ones.
+
+If the cited information resource has already disappeared from the Web or if the current version has already changed by the time the citation is written, the original URL and the retrieval date of the cited resource should be included, alongside the URI of the Web archive copy of the resource.
+
+Non-operational URLs shall be preceded by a phrase "Originally available from:", "Previously available from:" or equivalent phrases in the language of the publication.
+
+If there is no Web archive copy of the cited Web resource, or if the existing copy or copies are not identical to the cited information resource, the Web resource shall not be used for reference, even if the author has a local copy of the resource. Proving the authenticity of such a copy may prove difficult.
+
+====
+The Guardian 2019-09-12T05:46:39Z. Originally available from: https://www.theguardian.com/us. Available from: Internet Archive (distributor). https://web.archive.org/web/20190912032815/https://www.theguardian.com/us [viewed 2019-09-12].
+====
+////
+For provenance reasons, it can be necessary to indicate in the reference also the original or previous network location of the resource.
+
+Such (non-operational) URLs shall be preceded by a phrase "Originally available from:", "Previously available from:" or equivalent phrases in the language of the publication.
+////
+
+==== Permanent links
+
+Permanent link systems support issuing of URIs "intended to remain unchanged for many years into the future" (<<WPPermalink>>). They work by issue of persistent URL or pattern for persistent URLs, which redirects to the URL of the requested web resource. Widely used permanent link systems include PURL (Persistent Uniform Resource Locator, see <<WPPURL>>) and <<PermaCC>>.
+
+URL shorteners (<<WPURLShortening>>) (providing URL shortening and redirection services), which may be seen as permanent link systems, should not be used for referencing, because:
+
+* it is not possible to know how long a specific short URL will be supported.
+* short URLs do not have a persistence related component unlike for example PURLs. The only role short URLs do have is to make URLs shorter in order to simplify their usage.
+* as a rule, short URLs do not function in Web archives, which makes it almost impossible to find the cited content after the short URL has stopped working.
+
+Functionality supported by these systems is simpler than in PID systems and unlike PIDs, permanent links are usually technology (HTTP) dependent.footnote:[PIDs are expressed as HTTP URIs with resolver URL, but at least URNs could be actionable as such.]
+
+Permanent links may be used if:
+
+* The resource has a registered permanent link (and it is known).
+* There is a reason to believe that the assigned permanent link will be managed. However, it may be difficult to find out the referent's commitment to administer the permanent link in the long term.
+* The permanent link system itself is well managed and sustainable.
+
+====
+ALTHAUS, Scott & Kalev Leetaru, _Airbrushing History, American Style._ Cline Center for Democracy, 2008. Available from: http://perma.cc/G8PW-798L. [viewed 2019-02-28].
+====
+
+If the permanent link system is discontinued due to, e.g., technical or financial issues, all URIs based on the system may fail at once. Therefore, references should contain also a link to an archived copy of the page if one exists, and the date/time the cited resource has been viewed.
+
+It can be difficult to find out if the cited information resource does have a permanent link. It is usually not embedded in the resource itself, and the permalink is not be part of the URL to which the permalink is redirected.
+
+
+
+==== Access restrictions
+
+The cited information resource may be located behind a paywall or there may be legal restrictions that significantly restrict access the use of the resource. Such restrictions should be specified after the URI, with the date the restriction will end (if applicable). The name of the commercial access provider may be given before the URI.
+
+====
+Available from: ScienceDirect, https://doi.org/10.1016/j.jtemb.2017.11.012[https://doi.org/10.1016/j.jtemb.2017.11.012] [paywall].
+====
+
+====
+Available from: https://doi.org/10.1080/03615260903206861[https://doi.org/10.1080/03615260903206861] [paywall].
+====
+
+====
+Available from: http://example.org/example.html [Personal Data Privacy and Security Act of 2009]. [2034].
+====
+
+A note on the access limitation may be given after the URI.
+
+====
+A legal deposit copy available from: http://verkkoarkisto.kansalliskirjasto.fi:8080/20060916080210/http://www.verkkosanomat.fi/[http://verkkoarkisto.kansalliskirjasto.fi:8080/20060916080210/http://www.verkkosanomat.fi/]. [access only in the premises of the National Library and other deposit libraries].
+====
+
+If the cited information resource is no longer available online and there is no appropriate Web archive URL to refer to (e.g. due to changing archive interface tools), the reference may be made to the archival metadata including the name of the archive, archiving date and the archive URL.
+
+====
+Archived copy available from: Netarkivet (distributor), http://www.litlive.dk/. [archived 2015-11-18T11:33:19Z]. [webpage]. [viewed 2019-02-28]. [access only if permission is granted via netarkivet.dk].
+====
+
+A full reference example provided below.
+
+====
+CARLSON, Amy & Barbara M. POPE. _The "Big Deal": A Survey of How Libraries Are Responding and What the Alternatives Are_. [online]. The Serials Librarian, *57* (2009):4, pp. 380–398. Available from: https://doi.org/10.1080/03615260903206861[https://doi.org/10.1080/03615260903206861] [paywall]. [viewed 2019-02-13].
+====

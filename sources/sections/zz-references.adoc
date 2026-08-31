@@ -29,3 +29,25 @@ _Web Linking_. October 2017.  https://tools.ietf.org/html/rfc8288
 
 * [[[xmlschema, 7]]], W3C. XML Schema Part 2: Datatypes Second Edition. W3C Recommendation. 2004-10-28. https://www.w3.org/TR/xmlschema-2/
 
+
+* [[[WPURLShortening,Wikipedia: URL Shortening]]], _URL Shortening_. Wikipedia, 2019-08-08. Archived copy available from: Internet Archive [distributor], https://web.archive.org/web/20190808113523/https://en.wikipedia.org/wiki/URL_shortening [viewed 2019-08-13].
+
+* [[[WPPURL,Wikipedia: PURL]]], _PURL, Persistent Uniform Resource Locator_ [online]. Wikipedia, 2019-08-08. Archived copy available from: Internet Archive [distributor], https://web.archive.org/web/20190808081234/https://en.wikipedia.org/wiki/Persistent_uniform_resource_locator [viewed 2019-08-13].
+
+* [[[WPPermalink,Wikipedia: Permalink]]], _Permalink_ [online]. Wikipedia, 2019-08-12. Archived copy available from: Internet Archive [distributor], https://web.archive.org/web/20190812201402/https://en.wikipedia.org/wiki/Permalink [viewed 2019-08-13].
+
+* [[[PermaCC,Perma.CC]]], _Perma.CC_ homepage [online]. Available from: https://perma.cc/ [viewed 2019-08-13].
+
+* [[[FIPS202,NIST FIPS 202]]], FIPS 202, _Federal Information Processing Standard 202, SHA-3 Standard: Permutation-Based Hash and Extendable-Output Functions_. Gaithersburg: Department of Commerce, USA. August 2015. Available from: https://doi.org/10.6028/NIST.FIPS.202
+
+* [[[NSCUSocial,Social media data research and use]]], _Social media data research and use_. [online]. NCSU Libraries, [s. a]. Available from: https://www.lib.ncsu.edu/social-media-archives-toolkit/research-and-use/research [viewed 2019-08-13].
+
+* [[[IANAMediaTypes,IANA Media Types]]], _IANA Media Types_. Internet Assigned Names Authority. Available from: https://www.iana.org/assignments/media-types/media-types.xhtml [viewed 2019-08-13].
+
+* [[[PRONOM,PRONOM]]], _PRONOM_. National Archives, UK. Available from: http://www.nationalarchives.gov.uk/PRONOM/Default.aspx. [viewed 2019-08-13].
+
+* [[[dcc-cite-datasets,1]]] BALL, A. & M. Duke, (2015). _'How to Cite Datasets and Link to Publications'._ _DCC How-to Guides_ [online]. Edinburgh: Digital Curation Centre. Available from: http://www.dcc.ac.uk/resources/how-guides[http://www.dcc.ac.uk/documents/how-guides] [viewed 2016-07-08].
+
+* [[[apa-social-media,9]]] LEE, Chelsea: How to Cite Social Media in APA Style (Twitter, Facebook, and Google+ [online]. American Psychological Association, 2013. Available from: http://blog.apastyle.org/apastyle/2013/10/how-to-cite-social-media-in-apa-style.html[http://blog.apastyle.org/apastyle/2013/10/how-to-cite-social-media-in-apa-style.html] [viewed 2016-07-07].
+
+* [[[wipo-st3,11]]] _Recommended standard on two-letter codes for the representation of states, other entities and intergovernmental organizations_. Revision adopted by the SCIT Standards and Documentation Working Group at its eighth session on 22 March 2007. (WIPOStandardST3). In: WIPO Handbook on Industrial Property Information and Documentation [online]. Geneva: World Intellectual Property Organization April 2007. Available from: http://www.wipo.int/standards/en/part_03_standards.htm [viewed 2019-02-07].

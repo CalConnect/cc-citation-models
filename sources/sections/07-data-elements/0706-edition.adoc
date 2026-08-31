@@ -1,21 +1,43 @@
 
-[[edition]]
-== Edition
+[[edition_and_version]]
+=== Edition and version
 
-* Source: <<ISO690,clause 4.5>>
-* Serialisation: `bibitem/edition, bibitem/version, bibitem/date`
+[[editions]]
+==== Editions
+
+* Source: <<ISO690,clause 4.5>>; <<ISO690,clause 7.6>>
+* Serialisation: `bibitem/edition`, `bibitem/version`, `bibitem/date`
+
+Editions are used to differentiate significant content revisions, including draft stages.
 
 Editions are modelled as free text, given the variety of ways they can be represented.
 For that reason, the full word "edition" needs to appear after any ordinal.
 The optional `number` attribute can be used to provide a numeric equivalent.
 
-As described in <<datetypes>>,
-dates when a resource was last accessed are modelled as `date[@type = "accessed"]`;
-dates when a resource was last updated are modelled as `date[@type = "updated"]`.
+An edition number shall be provided if the information resource is of a second edition or higher. The edition should be specified in the terms, including symbols, used in the cited information resource. The word for "`edition`" or equivalent term in the language of the cited information resource may be abbreviated.
 
-The `version` element can be used to give more detailed information about resource versions,
-including version numbers (drafts) and version dates (which are differentiated from
-`date`, since they are often used as version identifiers).
+If there is a reasonable expectation of forthcoming editions, an edition number should be provided even when the cited information resource is a first edition.
+
+If a program or research dataset cited is updated often, edition (or version) should be included only if necessary, since the information provided becomes outdated very quickly, and locating and/or running the indicated version is likely to be difficult. An edition number is required if other (earlier or later) editions of the program or research dataset are not applicable.
+
+If an edition (or version) number is provided for programs and research datasets, a first edition is not an exception. The first official release of a program may not be the first version that has been available for the public. Edition is also important since hardware and software requirements are dependent on version information.
+
+
+====
+3rd ed., rev.
+====
+
+====
+`2.` laitos.
+====
+
+====
+ORACLE. _MySQL_® [program]. Enterprise edition. Redwood City: Oracle, 2015.
+====
+
+====
+_Digital Preservation Handbook_ [online]. 2^nd^ revised edition. Digital Preservation Coalition, 2015.
+====
 
 ====
 Anon [Thomas Robert MALTHUS]. _An Essay on the Principle of Population_. 1st edition.
@@ -69,6 +91,71 @@ New York: New York University Press, 2015.
 --
 ====
 
+Some information resources may be appropriately cited prior to formal publication. For instance, it is possible to cite a preprint of a scientific article before it is published, or a standard when it is still under preparation (see <<standards-section>>).
+
+Citing an unfinished information resource shall follow the guidelines provided either within the information resource or by the publisher. Draft stage indication (such as "`Preprint`" or "`work in progress`" shall be incorporated into the reference according to such guidance.
+
+====
+BLOSS C. S., N. E. WINEINGER, M. PETERS [et al.]. _A prospective randomized trial examining health care utilization in individuals using multiple smartphone-enabled biosensors_. Preprint.
+====
+
+Reprints should also be specified as such, with the phrase "`Reprint`" or equivalent after the title.
+
+====
+ANONYMOUS. _Diary of an Oxygen Thief_. Reprint. New York: Gallery Books, 2016.
+====
+
+==== Audience differentiated content
+
+If an information resource is published in different languages in different countries, the country of publication should be given after the title in the language used in the source and separated from the main title with a colon.
+
+====
+National Geographic: Sverige.
+====
+
+If the edition of the cited resource shown to a user depends on his or her geographical location, a note indicating the edition used should be provided. If the content of a resource can be personified with e.g., cookies or some other technique, citation should be based on a non-personified basic version of the page.
+
+====
+[Swedish edition].
+====
+
+
+==== Version
+
+If the cited information resources has been updated or expanded, it usually has a version statement. The number and other designation for the version should be recorded in the terms given in the cited information resource.
+
+NOTE: Words such as "`version`", "`level`", "`update`", as well as phrases such as "`revised`", "`third update`" or "`training level`" are often used to indicate version changes.
+
+The `version` element can be used to give more detailed information about resource versions,
+including version numbers (drafts) and version dates (which are differentiated from
+`date`, since they are often used as version identifiers).
+
+As described in <<datetypes>>,
+dates when a resource was last accessed are modelled as `date[@type = "accessed"]`;
+dates when a resource was last updated are modelled as `date[@type = "updated"]`.
+
+If a change in a file format version has an impact on the usage (for instance, different tool is needed to render the resource), the version information should be provided.
+
+====
+EPUB 2 and EPUB 3 are different formats and may require different rendering tools. Therefore, EPUB is included in citations with the version number.
+====
+
+Personified Web resources should not be used for referencing, since other users may not be able to verify whether the resource does contain or did contain the cited information.
+
+If a specific version of an information resource is cited, the version should be indicated by giving the name and/or number of the release, update or equivalent, and, if necessary, the year, with (if necessary) month, day and time (see <<season_month_day_time>>), when that version was created or updated. It is also possible to specify the date when the information resource was viewed or accessed.
+
+====
+1.0 Rev A.
+====
+
+====
+APPLE. _Mac OS X El Capitan_. Version 10.11 [program]. [viewed 2016-06-25].
+====
+
+====
+MOZILLA FOUNDATION. _Mozilla Firefox_. Version 60.4.0 ESR [program]. Available from: https://www.mozilla.org/[https://www.mozilla.org/]. [viewed 2019-01-11].
+====
+
 ====
 When did the sounds of 'w' and 'v' change in High German?
 _Stack Exchange: Linguistics Beta_.
@@ -116,5 +203,4 @@ MOZILLA FOUNDATION. Mozilla Firefox version 60.4.0 ESR [computer program]. Avail
 --
 ====
 
-
-
+Guidelines for citing versions of Web pages and their component parts are described in detail in <<network_location>>.

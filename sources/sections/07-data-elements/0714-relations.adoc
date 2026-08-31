@@ -1,6 +1,67 @@
 
+[[relations]]
+=== Relationship
+
+==== General
+
+* Source: <<ISO690,clause 7.14>>
+* Serialisation: `bibitem/relation/@type`, `bibitem/relation/bibitem`, `relation/locality`
+
+A cited information resource is often related with other information resources.
+
+For derivative works, the original information resource should be referenced within the reference to the derivative work.
+
+The original work, if available, should be provided as an embedded reference before the date of citation in the following form, where `relationLabel` is the relation label of the relationship,  and `originalWorkReference` is the reference to the original work.
+
+[%unnumbered]
+----
+{relationLabel}: {originalWorkReference}.
+----
+
+In order to minimize confusion, relations are considered the second type
+of data elements in <<elements-types>>,
+so they can be placed accordingly.
+
+====
+{author}. {originalTitle}. {relationLabel}: {originalWorkReference}.
+====
+
+====
+王弼 [WANG Bi]. 老子注 [_Commentaries on Laozi_]. Commentary on: LAOZI. Tao Te Ching.
+====
+
+====
+GARDNER, Martin (ed.). _The Annotated Alice: The Definitive Edition_. (Annotation on: CARROL, Lewis. Alice in Wonderland). New York: W. W. Norton & Company, 1999.
+====
+
+An embedded reference to the original work is serialised as `relation` with the target item in `relation/bibitem`, the kind of relationship in `relation/@type` (the vocabulary of <<docrelation-types>>), and, for a part-whole relationship, the extent in `relation/locality`.
+
+====
+GARDNER, Martin (ed.). _The Annotated Alice: The Definitive Edition_. (Annotation on: CARROL, Lewis. Alice in Wonderland). New York: W. W. Norton & Company, 1999.
+
+[source,xml]
+--
+<bibitem type="book">
+  <title>The Annotated Alice: The Definitive Edition</title>
+  <contributor>
+    <role type="editor"/>
+    <person><name><completename>Martin Gardner</completename></name></person>
+  </contributor>
+  <relation type="annotationOf">
+    <bibitem type="book">
+      <title>Alice in Wonderland</title>
+      <contributor>
+        <role type="author"/>
+        <person><name><completename>Lewis Carroll</completename></name></person>
+      </contributor>
+    </bibitem>
+  </relation>
+</bibitem>
+--
+====
+
 [[doc-relations]]
-== Bibliographic Document Relations
+==== Model
 
 .DocumentRelation and related models
 ====
@@ -15,3 +76,222 @@ DocumentRelation/bibItem:: The bibliographic item to which this bibliographic it
 DocumentRelation/bibLocality:: The extent of the this bibliographic item which is related to the other bibliographic item
 as expressed in this instance, provided that it is not the entire bibliographic item that is so related.
 
+The vocabulary of relation types is given in <<docrelation-types>>.
+
+[[relation-translation]]
+==== Translation
+
+Translations are expressions of the original (translated) work, and are usually indexed under the original author's name. The translator should be considered a subsidiary creator with the role of "`translator`" or its abbreviation (see <<creator_roles>>).
+
+If the translated information resource is an exact counterpart of the original information resource, the source and destination languages shall be included if the original and translated title do not clearly indicate them.
+
+The phrase "`Translated from ... to ...`" or its equivalent in the language of the publication should be shown as an attribute of the cited information resource (see <<elements-types>>).
+
+====
+Translated from Dutch to English. George STUYCK (trans.).
+====
+
+====
+Translated from Chinese to English. W.J.F. JENNER (trans.).
+====
+
+====
+Translated from Serbo-Croatian to French. Georges LUCIANI (trans.).
+====
+
+If the cited information resource has been translated to the language of the publication, the destination language may be omitted.
+
+====
+Translated from German. H.T. LOWE-PORTER (trans.).
+====
+
+Both the source and destination language may be omitted if the titles indicate them.
+
+====
+DOSTOEVSKY, F. _The Brothers Karamazov_ [_Братья Карамазовы_]. C. GARNETT [trans.].
+====
+
+A reference to the original work should be included in the citation reference as a data element if the translation has been made via an intermediate language. The phrase "Translation of:" or equivalent in the language of the publication should be used as the relation label to the translated expression. The phrase "Original work:" should be used to indicate the source.
+
+
+====
+JANSSON, Tove. [ตูเว, ยานซอน]. บันทึกมูมิน [_Banthưk mūnin_]. Translated from English into Thai. Thānphāyu TOWIRA (trans.). [Translation of: Moominpappa’s memoirs. Original work: Muminpappans bravader.]. Bangkok: Amarin Printing & Publishing Plc.
+====
+
+
+Information about the original work or the manifestation used as the source may be included even if there is no intermediate language.
+
+====
+WU, Cheng'en. _Journey to the West_. Paperback. Translated from Chinese into English. W.J.F. JENNER (trans.). [Translation of: 西遊記.].
+====
+
+====
+GORKI, Maxim. _The Artamonovs_ [Delo Artamonovykh]. Translated from Russian. Alec BROWN (trans.). [Translation of: Максим ГОРЬКИЙ. Дело Артамоновых. Berlin: Kniga, 1925.]. London: Folio Society, 1955.
+====
+
+====
+ANDRIĆ, Ivo. _Il est un pont sur la Drina: chronique de Višegrad_. Translated from Serbo-Croatian to French. Georges LUCIANI (trans.). [Translation of: Ivo ANDRIĆ. Na Drini ćuprija: višegradska hronika. Sarajevo: Svjetlost, 1946.]. Paris: Plon, © 1961.
+====
+
+====
+HOMER. _The Iliad of Homer_. Translated from Greek. Alexander POPE (trans.). [Translation of: Όμηρος. Ιλιάδα.]. London: Printed for J. Walker, 1813. Available from: Google Books (distributor), https://books.google.fi/books?id=8UN9Z9FYQFkC[https://books.google.fi/books?id=8UN9Z9FYQFkC].
+====
+
+If it is uncertain on what original work, expression or manifestation the translation is based on, the source shall not be mentioned in the reference.
+
+====
+BAARD, H. P. _Frans Hals_. Translated from Dutch to English. George STUYCK (trans.). ISBN 9780500091500. London: Thames and Hudson, 1981.
+====
+
+A translation is serialised as `relation/@type = "translatedFrom"` with the original work as the target `bibitem`, and its inverse as `hasTranslation`.
+
+====
+DOSTOEVSKY, F. _The Brothers Karamazov_ [_Братья Карамазовы_]. C. GARNETT [trans.].
+
+[source,xml]
+--
+<bibitem type="book">
+  <title>The Brothers Karamazov</title>
+  <title type="original" language="ru" script="Cyrl">Братья Карамазовы</title>
+  <contributor>
+    <role type="author"/>
+    <person><name><completename>F. Dostoevsky</completename></name></person>
+  </contributor>
+  <contributor>
+    <role type="translator"/>
+    <person><name><completename>C. Garnett</completename></name></person>
+  </contributor>
+  <relation type="translatedFrom">
+    <bibitem type="book">
+      <title language="ru" script="Cyrl">Братья Карамазовы</title>
+    </bibitem>
+  </relation>
+</bibitem>
+--
+====
+
+==== Commentary
+
+Commentaries are considered expressions instead of new work. They should be indexed under the original author's name.
+
+A reference to the original work, if available,
+should be inserted to the citation reference (see <<elements-types>>)
+with the relation label "`Commentary on:`" or equivalent.
+
+====
+王弼 [WANG Bi]. 老子注 [_Commentaries on Laozi_]. Commentary on: LAOZI. Tao Te Ching.
+====
+
+==== Annotations
+
+Annotations are considered expressions instead of new works. They are usually marketed under the original author's name.
+
+A reference to the original work, if available,
+should be inserted to the citation reference (see <<elements-types>>)
+with the relation label "`Annotation on:`" or equivalent.
+
+====
+GARDNER, Martin (ed.). _The Annotated Alice: The Definitive Edition_. [Annotation on: CARROL, Lewis. Alice in Wonderland]. New York: W. W. Norton & Company, 1999.
+====
+
+==== Arranger
+
+Arrangements are considered expression instead of new work, similar to translation. They are usually marketed under the original author's name.
+
+The reference should indicate the arranger and purpose of arrangement.
+
+The arranger should be considered a subsidiary creator with the role of "`arranger`" or its abbreviation (see <<creator_roles>>).
+
+The phrase "`Arranged for {purpose}`" (where "`purpose`" is the purpose of arrangement) or its equivalent should be shown as an attribute of the cited information resource (see <<elements-types>>).
+
+====
+HANDEL, G. F. _Trio Sonata No. 1_. Arranged for 2 alto saxophones. Himie VOXMAN and Richard HERVIG (arrangers). San Antonio, TX: Southern Music, 1989.
+====
+
+====
+BACH, J.S. _Air (Mvt. 2) from Orchestral Suite No. 3 in D major, BWV 1068. [Air on a G String]._ Arranged for orchestra. Leopold STOKOWSKI (arranger). New York: Broude Brothers, 1923.
+====
+
+
+==== Abridgement
+
+Abridgements are treated as expressions and not original works. They are usually marketed under the original author's name.
+
+The person who made the abridgement should be considered a subsidiary creator with the role of "`adapter`" or its abbreviation (see <<creator_roles>>).
+
+If a reference to the original work is available,
+it should be inserted in the citation reference as a data element,
+with the original reference considered as
+a relation with the current (see <<elements-types>>).
+
+The phrase "`Abridgement of:`" or equivalent should be used
+as the relation label.
+
+====
+BAUM L. Frank. _The Wizard of Oz (A Stepping Stone Book)_. W.W. Denslow (illustrator), Daisy ALBERTO (adapter). Random House Books for Young Readers, 2012. [Abridgement of: The Wonderful Wizard of Oz.]. Chicago; New York: George M. Hill Co., 1900.
+====
+
+Otherwise, the label "`abridgement`" should be provided immediately after the title to indicate it is an abridgement of the original.
+
+====
+SWIFT, Jonathan. _Gulliver's Travels._ [abridgement] FORDYCE, W. Dingwall (adapter). New York: Sully and Kleinteich, 1915.
+====
+
+Translations may be abridged as well. If such translation is cited, the reference should specify differences using the terminology of the cited information resource, translated to the language of the publication.
+
+====
+HUGO, Victor. Kurjat. [abridgement]. Translated from French to Finnish. J. V. LEHTONEN and Eino VOIONMAA (trans.), abridged by Reino Rauanheimo. [Abridgement of Les Misérables]. Helsinki: WSOY, 2013.
+====
+
+==== Reviews and critiques
+
+Reviews are new works, indexed under the reviewer's name.
+
+The phrase "`Review of:`" or its equivalent may be used to reference the work reviewed.
+
+====
+Review of: VERBEKE, S. Alignment and Ergativity in New Indo-Aryan Languages.
+====
+
+====
+Review of: NINTENDO. _Mario Kart 8 Deluxe for Nintendo Switch_ [game]. Nintendo Switch edition. Kyoto: Nintendo, 2017.
+====
+
+====
+Review of: NOLAN, Christopher (director). Inception [film]. Burbank: Warner Bros.; Burbank: Legendary Entertainment; London: Syncopy, 2010.
+====
+
+The reviewer is considered the most prominent creator for a review.
+The original reference should also be given if available
+as a relation (see <<elements-types>>).
+
+The phrase "`Review of:`" or equivalent should be used
+as the relation label.
+
+====
+PLAGGE, Kallie. _Mario Kart 8 Deluxe review on Nintendo Switch_ [online] [2017-04-20]. Review of: NINTENDO. Mario Kart 8 Deluxe for Nintendo Switch [game]. Nintendo Switch edition. Kyoto: Nintendo, 2017. Gamespot. Available from: https://www.gamespot.com/reviews/mario-kart-8-deluxe-review/1900-6416660/[https://www.gamespot.com/reviews/mario-kart-8-deluxe-review/1900-6416660/] [viewed 2019-09-02].
+====
+
+====
+TRAVERS, Peter. _Inception -- Rolling Stone_. [online]. New York: Rolling Stone. [2010-07-02]. Review of: NOLAN, Christopher [director]. Inception [film]. Burbank: Warner Bros.; Burbank: Legendary Entertainment; London: Syncopy, 2010. Available from: Rolling Stone, https://www.rollingstone.com/movies/movie-reviews/inception-248306/[https://www.rollingstone.com/movies/movie-reviews/inception-248306/]
+====
+
+In some cases, where the title already provides a reference to the original work,
+the embedded reference to the original work may be omitted.
+
+====
+PHILLIPS, M.P. 2014. Book review: Verbeke, Saartje. Alignment and Ergativity in New Indo-Aryan Languages.
+_Journal of South Asian Languages and Linguistics_ 1(1): 103-110.
+====
+
+
+NOTE: In some citation styles, the embedding of a relationship reference inside a reference can cause confusion on whether the metadata element applies to the cited information resource or to the embedded reference. In these cases, the author may want to cite only minimal source work information to prevent misunderstanding.
+
+
+////
+===== Performance
+===== Engraving
+////
+//casebooks, commentaries, and critiques
+// Editions, versions, summaries, abstracts, and digests
+//==== Catalogued in

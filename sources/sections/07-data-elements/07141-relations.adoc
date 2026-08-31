@@ -5,7 +5,7 @@
 
 The base class of relation types is taken from <<ISO690>>, and represents
 generic bibliographical requirements, particularly inclusion in a host item (<<host-item>>:
-includedIn, includes) and translation (<<translation>>: translatedFrom, hasTranslation).
+includedIn, includes) and translation (<<relation-translation>>: translatedFrom, hasTranslation).
 The class has been expanded substantially to deal with the requirements of standards
 documents.
 

@@ -66,7 +66,7 @@ From <<doc-relations>>.
 |===
 |BibTeX | Relaton
 
-|none |
+|none | –
 |===
 
 
@@ -77,13 +77,13 @@ From <<medium>>.
 |===
 |BibTeX | Relaton
 
-|none |
+|none | –
 |===
 
 
 === Edition
 
-From <<edition>>.
+From <<editions>>.
 
 
 |===
@@ -100,12 +100,12 @@ From <<production>>.
 |===
 |BibTeX | Relaton | Note
 
-|address |`bibitem/place`
-|howpublished |`bibitem/note`
+|address |`bibitem/place` | {blank}
+|howpublished |`bibitem/note` | {blank}
 |institution, school, organization |`bibitem/contributor[role/@type = 'distributor' and role = 'sponsor']/organization/name` | (The three never coocur in the same entry type)
-|month, year | `bibitem/date[@type = 'published']/on`, `bibitem/date[@type = 'created']/on`
-|publisher | `bibitem/contributor[role/@type = 'publisher']/organization/name`
-|urldate* | `bibitem/date[@type = 'accessed']/on`
+|month, year | `bibitem/date[@type = 'published']/on`, `bibitem/date[@type = 'created']/on` | {blank}
+|publisher | `bibitem/contributor[role/@type = 'publisher']/organization/name` | {blank}
+|urldate* | `bibitem/date[@type = 'accessed']/on` | {blank}
 |===
 
 
@@ -124,7 +124,7 @@ From <<numeration>>.
 
 === Series title and number
 
-From <<series>>.
+From <<series_title_number>>.
 
 |===
 |BibTeX | Relaton | Note
@@ -156,8 +156,8 @@ From <<location>>.
 |BibTeX | Relaton | Note
 
 |number, volume | `bibitem/extent[@type = 'volume']/referenceFrom` | (The two do not coocur in any entry type)
-|pages | `bibitem/extent[@type = 'page']/referenceFrom`, `bibitem/extent[@type = 'page']/referenceTo`
-|file2, url | `bibitem/uri`
+|pages | `bibitem/extent[@type = 'page']/referenceFrom`, `bibitem/extent[@type = 'page']/referenceTo` | {blank}
+|file2, url | `bibitem/uri` | {blank}
 |===
 
 

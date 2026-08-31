@@ -1,0 +1,163 @@
+
+[[component_parts]]
+=== Component parts
+
+[[host-item]]
+==== General
+
+* Source: <<ISO690,clause 7.4>>
+* Serialisation: `bibitem/relation[type=includedIn|includes]`, `bibitem/extent`, `relation/locality`
+
+Citable information resources can be component parts of host resources, other citable information resources.
+
+Component parts include articles in periodicals, newspapers and Web sites, individual tracks (and their lyrics) in LPs and CDs, poems and short stories published in books, episodes in TV series, conference presentations published in proceedings, and so on.
+
+A component part is serialised as a `relation` of the item within its host item (see <<doc-relations>>); the position of the component part within the host item is given in `relation/locality`, and its extent in `bibitem/extent`.
+
+====
+OWEN, W. _Strange meeting_. In: OWEN, W. Poems by Wilfred Owen. London: Chatto & Windus, 1920, p. 1–2
+
+[source,xml]
+--
+<bibitem type="poem">
+  <title>Strange meeting</title>
+  <contributor>
+    <role type="author"/>
+    <person><name><completename>W. Owen</completename></name></person>
+  </contributor>
+  <relation type="includedIn">
+    <bibitem type="book">
+      <title>Poems by Wilfred Owen</title>
+      <contributor>
+        <role type="author"/>
+        <person><name><completename>W. Owen</completename></name></person>
+      </contributor>
+      <contributor>
+        <role type="publisher"/>
+        <organization><name>Chatto &amp; Windus</name></organization>
+      </contributor>
+      <place>London</place>
+      <date type="published"><on>1920</on></date>
+    </bibitem>
+    <locality type="page">
+      <referenceFrom>1</referenceFrom>
+      <referenceTo>2</referenceTo>
+    </locality>
+  </relation>
+</bibitem>
+--
+====
+
+==== Representation
+
+===== General
+
+If the host information resource is not a serial, a connector phrase. "`In:`" or equivalent in the language of the publication should precede the title of the host item.
+
+NOTE: Serials include e.g. periodicals, journals, newspapers, annuals etc.
+
+The method of representation is given below, where `{hostItemTitle}` is the title of the host item.
+
+[%unnumbered]
+----
+In: {hostItemTitle}
+----
+
+====
+In: Wikipedia
+====
+
+====
+The Guardian.
+====
+
+It is also possible to provide a more complete description of the host resource, where `hostResourceReference` is the reference to the host item:
+
+[%unnumbered]
+----
+In: {hostResourceReference}
+----
+
+====
+In: OWEN, W. Poems by Wilfred Owen. London: Chatto & Windus, 1920.
+====
+
+
+Locality information within the host item may be provided, where `locality` is the location of the component part within the host item:
+
+----
+In: {hostItemReference}, {locality}
+----
+
+====
+OWEN, W. _Strange meeting_. In: OWEN, W. Poems by Wilfred Owen. London: Chatto & Windus, 1920, p. 1–2
+====
+
+===== Serials
+
+The use of the connector phrase is not needed for citations which are contributions from journals. It is optional for other types of serials.
+
+====
+SUHONEN, Pertti. _Suomalaiset arvot ja politiikka_. Aikamerkki. 1989, 62(1), 2–23.
+====
+
+
+===== Emphasis for locatability
+
+Reference should enable the users to locate the cited information resource, no matter how granular it is (for instance, a component part of a component part, such as an image in a journal article).
+
+* If the cited component part can be directly discoverable, emphasis should be placed on its title.
++
+--
+====
+_Belle de Jour_ [article] [online]. In: Wikipedia. Available from: Wikipedia (distributor), https://en.wikipedia.org/wiki/Belle_de_Jour_%28film%29[https://en.wikipedia.org/wiki/Belle_de_Jour_%28film%29]. [viewed 2018-08-24].
+====
+
+====
+CLARK, Carol. _On the threshold of a brave new world_. In: Blueprint of the body [online]. CNN.com, 2000 In-depth specials. Archived copy available from: Internet Archive (distributor), https://web.archive.org/web/20010223233730/http://www.cnn.com/SPECIALS/2000/genome/story/overview/[https://web.archive.org/web/20010223233730/http://www.cnn.com/SPECIALS/2000/genome/story/overview/] [viewed 2018-02-14].
+====
+
+====
+DÜRER, Albrecht. _Feldhase_ [still image] [online]. In: ART IN WORDS. Wien: ARTinWORDS, 2018. Available from: https://artinwords.de/albrecht-duerer-feldhase-1502/[https://artinwords.de/albrecht-duerer-feldhase-1502/]. [viewed 2018-07-23].
+====
+
+====
+AYMARD, M. (ed.), _Dutch capitalism and world capitalism_. (Studies in Modern Capitalism). New York: Cambridge University Press, 1982, pp. 78–96.
+====
+
+====
+MADDOX, Brenda. _DNA's double helix: 60 years since life’s deep molecular secrets was discovered_. [online]. The Guardian, 2013-02-22. ISSN 1756-3224.
+====
+--
+
+* If the cited component part cannot be retrieved but the host resource can be retrieved, emphasis should be placed on the host item's title.
++
+--
+
+
+====
+MADDOX, Brenda. DNA's double helix: 60 years since life’s deep molecular secrets was discovered. [online]. The Guardian, 2013-02-22. ISSN 0261-3077.
+====
+
+====
+MANN, T. _Letter to Hermann Hesse_, 1951-10-14. In: WINSTON, R. and C. WINSTON (ed.). The Letters of Thomas Mann, 1889–1955. Vol. II 1942–1955, p. 630–632. London: Secker & Warburg, 1970.
+====
+
+////
+====
+OWEN, Wilfred. Strange meeting. In: OWEN, W. _Poems by Wilfred Owen_, p. 1–2. London: Chatto & Windus, 1921.
+====
+////
+
+====
+COHEN, Leonard. _Suzanne_ [lyrics]. In: COHEN, Leonard. Songs of Leonard Cohen. [audio disc]. Columbia records, 1968.
+====
+
+====
+COHEN, Leonard. _Suzanne_ [lyrics]. [online]. Available from: https://www.azlyrics.com/lyrics/leonardcohen/suzanne.html. [viewed 2019-12-10].
+====
+--
+
+NOTE: When citing an article in a digital journal where the article can be found directly, the emphasis is placed on the article’s title, since the article is the most granular locatable resource.
+
+NOTE: When citing a newspaper article from a printed manifestation, the emphasis is placed on the newspaper’s title (the host item) since it facilitates location of the article (the cited resource).

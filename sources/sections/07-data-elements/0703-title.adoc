@@ -1,26 +1,45 @@
 
 [[title]]
-== Title
+=== Title
 
-=== General
+[[form_of_title]]
+==== Preferred form
 
-* Source: <<ISO690,clause 4.2>>
+* Source: <<ISO690,clause 4.2>>; <<ISO690,clause 7.3>>
 * Serialisation: `bibitem/title`
 
+The wording and spelling of the title should be given in the form in which it appears in the cited information resource (see <<reference_elements_general>>).
+
+A title is serialised as `bibitem/title`, with its type in `title/@type` and its language and script in the language attributes (see <<data-elements-general>>).
+
+====
+_Unknown soldier._
+====
+
+Additional information such as the format or date may be provided, if necessary.
+
+A work identifier (e.g., ISAN) may be added after the title, preceded by the identifier type. The identifier should be used if the title alone does not uniquely identify the cited resource.
+
+====
+_Unknown soldier._ [film]. 2017. [ISAN 0000-0005-007D-0000-Q-0000-0000-X].
+====
+
+[[title-alt]]
+==== Alternative forms
+
+If alternative forms of title are given in the cited information source, the most prominent should be used. If several forms are given equal prominence, the form used should be one of the following, listed in order of preference:
+
+. [[alt_title_a]] a title in the language and script mainly used in the cited information resource;
+. [[alt_title_b]] the title given prominence by the order of titles or the layout;
+. a title in the language of the main target audience; and
+. other forms of title.
+
+====
+_Eric, or Little by little: a tale of Roslyn School_.
+====
+
 [[alt-title]]
-=== Alternative titles
-
-A resource can have multiple titles, including alternative titles
-and subtitles. Titles are
-classified through `title@type`; the model allows for "alternative", "subtitle",
-"unofficial" (i.e.
-a title that has become prevalent but has never been the official/intended title
-of the resource),
-"original" (including the source language title of a translated resource),
-and "main" (for the proper title or titles of the resource). If a title type is
-not given, it is assumed to be a main title.
-
-"Untitled" can be treated as a main title.
+A resource can have multiple titles, including alternative titles and subtitles. Titles are classified through `title@type`; the model allows for "alternative", "subtitle", "unofficial" (i.e. a title that has become prevalent but has never been the official/intended title of the resource), "original" (including the source language title of a translated resource), and "main" (for the proper title or titles of the resource). If a title type is not given, it is assumed to be a main title.
 
 ====
 Lemuel Gulliver [pseud. of Jonathan Swift].
@@ -45,6 +64,24 @@ _Travels into Several Remote Nations of the World. In Four Parts_
   <place>London</place>
 </bibitem>
 --
+====
+
+==== Popular or original title
+
+If the information resource used is widely known by, or was originally issued under, a title different from that of the cited version, the alternative may also be given. The alternative title shall be placed in brackets immediately following the original title.
+
+A popular title is serialised as `title@type = "unofficial"`, and the source language title of a translated resource as `title@type = "original"`.
+
+====
+CENTRAL ADVISORY COUNCIL FOR EDUCATION (ENGLAND). _Children and their primary schools_ [Plowden Report].
+====
+
+====
+_Cutter's Way_ [Cutter and Bone] [film].
+====
+
+====
+GREAT BRITAIN. House of Commons. _Official Report. Parliamentary debates_ [Hansard].
 ====
 
 ====
@@ -73,6 +110,145 @@ Oxford: Oxford University Press, 1963.
   <place>Oxford</place>
 </bibitem>
 --
+====
+
+==== Long title
+
+A title that is inconveniently long may be shortened by the omission of some words, but initial words, other than the definite or indefinite article, should not be omitted, nor should the sense be altered. The omitted words, except for omitted articles, should be replaced by an ellipsis indicated by three dots (for abbreviation of periodical titles, see <<series_abbreviation>>).
+
+Even the truncated title should enable unique identification of the cited information resource. Generic titles, even if long, should not be truncated.
+
+NOTE: It is not possible to specify a generic logic or method for truncation, which diminishes the usefulness of title shortening.
+
+====
+On source: _Map of the countries lying between Turkey and Birmah, comprising Asia Minor, Persia, India, Egypt and Arabia and including the Black, Caspian and Red Seas_.
+
+Reference: _Map of the countries lying between Turkey and Birmah_.
+====
+
+====
+On source: _Alphabet juice: the energies, gists and spirits of letters, words and combinations thereof; their roots, bones, innards, piths, pips, and secret parts, tinctures, tonics, and essences; with examples of their usage foul and savory._
+
+Reference: _Alphabet juice: the energies, gists and spirits of letters, words and combinations thereof._
+
+or
+
+Reference: _Alphabet juice_
+====
+
+[[additional_titles]]
+==== Additional title parts
+
+Subtitles shall be included if they are required for the identification of the cited information resource (see <<ambiguous_title>>), otherwise they may be omitted. A subtitle is serialised as `title@type = "subtitle"`.
+
+If the cited information resource consists of two or more parts, the full title of the part used shall be included.
+
+====
+_Etheldreda's Isle: a pictorial map of the Isle of Ely to commemorate the 1300th anniversary of the founding of Ely's conventual church_.
+====
+
+====
+_Frankenstein; or, The Modern Prometheus_.
+====
+
+====
+_Ici, sous l'étoile polaire. 2. Les gardes rouges de Tampere_
+====
+
+
+[[ambiguous_title]]
+==== Ambiguous or incorrect title
+
+Elucidation of a title that is ambiguous or fails to indicate clearly the content of the cited information resource may be supplied in brackets after the title. If a title contains an obscure abbreviation, the full form, if known, may be supplied.
+
+====
+_Statistical digest of the war_. [1939–1945].
+====
+
+====
+_Two trio sonatas for two violins and basso continuo_. [Op. 5 no. 4, 5.].
+
+Can be described as:
+
+_Two trio sonatas for two violins and basso continuo_. [Opus 5 number 4, 5.].
+====
+
+
+[[no_title]]
+==== No title
+
+If there is no clear title in the cited information resource or in embedded / external metadata, a popular or traditional title may be given, if one exists. Otherwise, a title should be supplied in brackets, giving the following information:
+
+. the special subject matter; and
+. the nature of the item (e.g., pamphlet, map, plan, drawing, index, engraving, photograph, dataset).
+
+"Untitled" can be treated as a main title.
+
+====
+[_Wildlife sanctuaries of Trinidad_].
+====
+
+
+[[translation_of_title]]
+==== Translated title
+
+A translation of the title (and/or its Romanized form) of the cited information resource in the language of the publication may be supplied immediately after the original title.
+
+A translated title is serialised as an additional `bibitem/title` with its language and script attributes.
+
+====
+_Братья Карамазовы_ [_The Brothers Karamazov_].
+====
+
+====
+_Les parapluies de Cherbourg_ [_The Umbrellas of Cherbourg_].
+====
+
+====
+_Mustataustainen omakuva_ [_Self-Portrait, Black Background_]
+====
+
+If both translated title and its Romanized form are given, a semicolon may be used as a delimiter between them.
+
+====
+源氏物語 [_Genji monogatari_; _The Tale of Genji_].
+====
+
+
+==== Titles of translated works
+
+The original title of a work, or its translation or Romanized form, may be supplied immediately after the title used in the cited information resource.
+
+====
+_The Brothers Karamazov_ [_Братья Карамазовы_].
+====
+
+====
+_The Brothers Karamazov_ [_Brat'ya Karamazovy_].
+====
+
+====
+_The Umbrellas of Cherbourg_ [_Les parapluies de Cherbourg_].
+====
+
+==== Representation
+
+The title element can have a key role in enabling the users to locate the cited information resource. Therefore, the title may be emphasized.
+
+====
+_Frog and Toad are Friends_
+====
+
+For translated and Romanized titles placed in brackets, the emphasis should be used in order to differentiate between this title-derived information and other supplementary information also in brackets.
+
+====
+_Ranelot et Bufolet, une paire d'amis_ [_Frog and Toad are Friends_]
+====
+
+Titles in scripts that are not traditionally emphasized, should not be emphasized.
+
+====
+淮南子 [_Huainanzi_; _The Writings of the Huainan Masters_].
 ====
 
 ====
@@ -113,4 +289,3 @@ Mosfellsbær: Sundlaugin, 2002.
 </bibitem>
 --
 ====
-

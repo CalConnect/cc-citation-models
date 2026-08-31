@@ -1,8 +1,39 @@
 
 [[data-elements-general]]
-== Data elements
+=== General
 
-Common data elements used within this document are provided below.
+[[elements-types]]
+==== Types of data elements
+
+Generally, there are three types of data elements in a reference,
+ordered according to the following preferred manner:
+
+* Attributes of the cited information resource;
++
+====
+Creator, title, medium, date of publication.
+====
+
+* Relations of the cited information resource with other information resources;
++
+====
+Translated from, Catalogued in.
+====
+
+* Attributes of the citation.
++
+====
+Date of citation.
+====
+
+
+==== Common rules
+
+===== General
+
+This clause specifies common rules that apply to all data elements.
+
+Common data types used within this document are provided below.
 
 .TypedUri
 image::relaton-models/relaton/images/RelBib_DataTypes.png[]
@@ -39,3 +70,63 @@ FormattedString:: String which is formatted according to conventions specified
 in a named MIME type (<<RFC2046>>).
 
 LocalizedString:: FormattedString which optionally specifies its language and/or script.
+
+===== Adhere to language of publication
+
+Language of phrases such as "`In:`" or "`Available from:`" should be based on the language and script of the publication rather than the contents of the citation.
+
+[example]
+In an article written in Finnish, it is better to use phrases "`Julkaisussa`" ("`In`" in Finnish) and "`Saatavissa`" ("`Available from`" in Finnish) instead of "`In`" and "`Available from`".
+
+NOTE: The language and script of the publication refers to the language and script of the publication containing the references. It is not the language of the cited information resource.
+
+
+[[transliteration]]
+===== Transliteration and transcription
+
+References made in a publication should adhere to the language and script of the publication. This enables the reader of the publication to understand the references.
+
+All data elements that are not in the language and script of publication should be converted to the (main) language and script used in the publication, and presented as associated information to the cited data element, in accordance with the appropriate international or national standard or other technical specification
+on transliteration or transcription.
+
+The script of a data element, and the script conversion system used, are serialised in the script attributes of localized strings (see <<data-elements-general>>).
+
+[example]
+For a publication written in Latin script, any data element in a non-Roman alphabet in the cited information resource is Romanized, with the Romanized portion appended to the data element as associated information.
+
+[example]
+For a publication not written in Latin script, any data element in a Roman alphabet in the cited information resource is transliterated or transcribed to the script used, with the converted portion appended to the data element as associated information.
+
+NOTE: Recommending specific transliteration, transcription or Romanization systems is outside the scope of this document. There can be multiple choices (for instance, ISO 3602, ISO 3602 Strict, Hepburn, JSL, ALA-LC and Wapuro are Romanization systems for Japanese) and publishers can ask the authors to use any of them.
+
+
+===== Abbreviation
+
+Generally accepted bibliographic terms should be abbreviated in accordance with the rules established in <<ISO832>>.
+
+Additional abbreviation rules are available for
+specific resource types are provided in <<resource_types>>, as well as in
+<<series_abbreviation>> for series titles.
+
+Other abbreviations should be avoided unless specified in this document.
+
+
+===== Punctuation and typography
+
+A consistent system of punctuation and typography should be used throughout a list of references and between data elements.
+Each data element within a reference should be clearly separated from subsequent elements by punctuation or change of typeface.
+
+NOTE: In order to emphasize the importance of consistency, a uniform scheme of punctuation is used in the examples in this document. The scheme is purely illustrative and does not form part of the recommendations.
+
+
+===== Associated information
+
+Associated information of a data element includes:
+
+* optional information defined in <<data_elements>> for each data element,
+* optional information defined in <<resource_types>> specifically for resource types,
+* additional information supplied by the citer.
+
+Associated information is usually represented within square brackets: "[" and "]".
+
+In cases where square brackets may cause confusion, a separate sentence may be added to the reference to express the associated data (such as in <<patent-inventors>>).
