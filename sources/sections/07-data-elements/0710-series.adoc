@@ -1,22 +1,17 @@
 
-[[series]]
-== Series title and number
+[[series_title_number]]
+=== Series title and number
 
-=== General
+==== General
 
-* Source: <<ISO690,clause 4.8>>, <<ISO690,clause 5.2>>
+* Source: <<ISO690,clause 4.8>>; <<ISO690,clause 5.2>>; <<ISO690,clause 7.10>>
 * Serialisation: `bibitem/series`
-
-
-=== Journals
 
 Articles have their journal title modelled as the series title of the article item.
 However, the journal volume and issue should be modelled as part of the article
-item extent <<numeration>>, rather than as part of the series (<<ISO690,clause 4.7>>).
+item extent <<numeration>>, rather than as part of the series.
 
-=== Standards
-
-Standards body identifiers for standards (<<ISO690,clause 5.9>>) are modelled as series numbers.
+Standards body identifiers for standards are modelled as series numbers.
 
 ====
 ISO 690, _Information and documentation -- Guidelines for bibliographic references and citations to information resources_.
@@ -39,16 +34,29 @@ ISO 690, _Information and documentation -- Guidelines for bibliographic referenc
 --
 ====
 
-=== Archival materials
-
 The collection or fonds of archival material is modelled as a series.
 
-=== Qualifiers
+[[serial_title_qualifier]]
+==== Qualifiers for titles
+
+If the title of a serial issued by a society or similar organization is insufficient to identify the cited information resource and the key title is not known, the organization’s name should be added as specified in <<organization_names>>.
 
 Organization and Place of Publication can be added to series titles for disambiguation.
 Organization in this instance is only modelled as a strings, rather than as a detailed
 object (cf. <<organisation>>). The formattedTitle element is used to enforce the formatting
 of the series title and its qualifiers.
+
+====
+_Bulletin trimestriel_. Institut archéologique du Luxembourg.
+====
+
+The title may also by qualified by the place of publication or ISSN in order to support the identification of the serial.
+
+////
+====
+_Natura_ (Amsterdam).
+====
+////
 
 ====
 _Life_. MDPI. +
@@ -77,12 +85,69 @@ _Life_. (New York). (https://en.wikipedia.org/wiki/Life_(magazine))
 --
 ====
 
-=== Earlier and later titles
+====
+_Natura_ (Bucharest).
+====
+
+====
+_Natura_ (Salvador, Brasil).
+====
+
+====
+_Guardian_. ISSN 1197-2386.
+====
+
+====
+_Guardian_. ISSN 1170-0475.
+====
+
+[[key_title]]
+==== Key title and the abbreviated key title
+
+Serials with the same title should be distinguished from each other with the key title. These titles are available from the ISSN Portal footnote:[https://portal.issn.org/].
+
+====
+_Bulletin trimestriel de l’Institut archéologique du Luxembourg._
+====
+
+====
+Natura (Amsterdam).
+====
+
+====
+Natura (Bucureşti. 1905).
+====
+
+Abbreviated key title is a specific title established by the ISSN network by replacing each significant word of a key title with the corresponding abbreviation from the _List of Title Word Abbreviations_ footnote:[https://www.issn.org/services/online-services/access-to-the-ltwa/] managed by the ISO 3297 for ISO 4. Abbreviations are based on ISO 4, Documentation\--Rules for the Abbreviation of Title Words and Titles of Publications and in accordance with the specific rules spelled out in the _ISSN Manual_.
+
+The abbreviated key title should be used when it appears in the cited information resource (see <<reference_elements_general>>). The ISSN should be included with the abbreviated title (see <<international_standard_identifiers>>).
+
+If there is any risk of ambiguity, the title shall be given in full.
+
+====
+_European Physical Journal Plus_. (full title)
+
+_Eur. Phys. J._ Plus. ISSN 2190-5444. (abbreviated key title with ISSN)
+====
+
+==== Earlier titles
+
+If the title of a cited serial has changed, earlier title of the serial should be given with the years when the title was in use.
 
 The current title of a series is given with `series@type` as "main" (which is the default);
 alternate titles, including
 historical titles, are given with `series@type` as "alt". Different time spans for historical
 titles are given with `series/dateFrom` and `series/dateTo`.
+
+====
+_British Journal of Physical Education_. 1983–1999. ISSN 0954-6693.
+
+_British Journal of Physical Education_. 1970–1979. ISSN 0007-120X.
+
+_Journal of Physical Education_. 1945–1954.
+
+_Physical Education_. 1955–1959.
+====
 
 ====
 _New Scientist_. 1956-1971. +
@@ -108,7 +173,50 @@ _New Scientist_. 1971-.
 --
 ====
 
-=== Series runs
+
+==== Regular conferences
+
+If regular conferences are held with the same title, the date and place of the conference should be added, in the format used in the cited information resource.
+
+====
+_ICIP 2005: International Conference on Image Processing_. Genova, 11–14 September 2005.
+====
+
+
+==== Carried title
+
+If the cited information resource also carries the title of a series of which it forms a numbered or unnumbered component, the series title and the numeration within that series may be included in the reference. The series title and number should be recorded as they appear on the cited resource.
+
+====
+Oceanographic report series, 99–12.
+====
+
+====
+_Handbook of motivation and cognition_. The interpersonal context, vol. 3.
+====
+
+====
+_Diagnosis and Management of Infantile Hemangioma_. Comparative Effectiveness Review No. 168. (AHRQ publication 16-EHC002-EF).
+====
+
+The ISSN of the series may be a part of the citation.
+
+====
+Tampereen yliopiston opettajankoulutuslaitoksen julkaisuja: A. ISSN 1238-3279.
+====
+
+A report number should be included.
+
+====
+Current Population Reports, P60-263.
+====
+
+NOTE: In this example, "`P60`" identifies a report series, "`P60-263`" is the report number.
+
+
+==== New series
+
+Journals may re-start their series number without changing the journal title. Then it is necessary to differentiate the "`old series`" and the "`new series`", using "`new series`" or "`n.s.`" as appropriate.
 
 If a series restarts numbering its volumes, that is typically indicated in citations
 by giving an ordinal number for the series run, given after the series name:
@@ -133,8 +241,18 @@ change name between the two runs (from "Anthropological Institute of Great Brita
 and the series run is preferred to differentiate the two runs.
 
 ====
+_Vizantiiskii Vremmenik_. vol. 1–25 (1894–1927), vol. 1– (1944-) [n. s].
+====
+
+====
+_Journal of the Royal Anthropological Institute_. vol. 18 (2012) [n. s.], pp. 197–241. ISSN 1359-0987.
+====
+
+====
 J. A. Barnes. 1966. Durkheim's Division of Labour in Society. _Man_ (n.s.) 1(2): 158-175.
 
+[source,xml]
+--
 <bibitem type="article">
   <title lang="en">Durkheim's Division of Labour in Society</title>
   <date type="published"><on>1966</on></date>
@@ -158,6 +276,17 @@ J. A. Barnes. 1966. Durkheim's Division of Labour in Society. _Man_ (n.s.) 1(2):
     <referenceTo>175</referenceTo>
   </extent>
 </bibitem>
-
+--
 ====
 
+Subsequent re-starts followed by "`new series`" would be indicated by the ordinal number of the series preceded by the letters "`ser.`", starting from "`3rd ser.`"
+
+====
+_Transactions of the Royal Historical Society_, vol. vii. (1913) [3rd ser.].
+====
+
+The series number should be recorded as it appears on the cited resource.
+
+====
+_American Journal of Science._ Series 5. 15(88): 287-296. https://doi.org/10.2475/ajs.s5-15.88.287
+====

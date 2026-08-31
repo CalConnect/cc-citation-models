@@ -2,6 +2,8 @@
 [[bibitem]]
 == Bibliographic Item Model
 
+[[reference_elements_general]]
+
 This clause provides information models that collectively
 provide the necessary data elements for creation of citations and bibliographic references in accordance with <<ISO690>>.
 

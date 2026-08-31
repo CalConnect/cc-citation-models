@@ -1,19 +1,183 @@
 
 [[production]]
-== Production
+=== Production information
 
-=== General
+* Source: <<ISO690,clause 4.6>>; <<ISO690,clause 7.8>>
+* Serialisation: `bibitem/place`, `bibitem/contributor[role@type = "publisher"]`, `bibitem/contributor[role@type = "distributor"]`
 
-* Source: <<ISO690,clause 4.6>>
-* Serialisation: `bibitem/place, bibitem/contributor[role@type = "publisher"], bibitem/date`
+==== Roles
+
+===== General
+
+The organizations or people responsible are likely to be variously described in different kinds of resources. The order of preference should be:
+
+. publisher or production company;
+. distributor or issuing body or online host;
+. printer or manufacturer;
+. sponsoring body.
+
+The publisher is a subclass of creator (<<creator>>). Of the classes of creator that can be used as the publisher,
+"publisher or production company" and "printer or manufacturer" have
+`bibitem/contributor/role@type = "publisher"`;
+"distributor or issuing body" and "sponsoring body" have
+`bibitem/contributor/role@type = "distributor"`.
+<<ISO690>> allows that distributors, issuers and sponsors
+can be named in addition to publishers.
+
+[[publisher]]
+===== Publisher
+
+The organization or person shown most prominently in the cited information resource (see <<reference_elements_general>>) as responsible for the production of the resource should be given as publisher.
+
+====
+FINANCIAL TIMES. _Data archive_. London: FINANCIAL TIMES LTD, 2016.
+====
+
+Publishers' names may be abbreviated by omitting details not essential for identification.
+
+A public identity identifier (ISNI or other) may be added after the publisher's name, preceded by the identifier type. The identifier should be used if the name alone does not uniquely identify the publisher or if the publisher has changed name.
+
+====
+WSOY. [URN http://urn.fi/URN:NBN:fi:au:cn:32729A]
+
+[The publisher is Werner Söderström Osakeyhtiö].
+====
 
 
-=== Place
+If a publisher is unknown, an indication such as "`publisher not known`", or an equivalent abbreviation such as the Latin "`s.n.`" may be provided.
 
-Strictly speaking the place of production 
+====
+_Germania_: _cum priuilegio_. [ca. 1: 3,000,000.] Antwerp: s.n., 1579. 360 mm x 480 mm. University of Berne, the Ryhiner Map Collection Ryh 4301 7.
+====
+
+===== Multiple roles
+
+If the names of two or more organizations appear equally prominently in the same role, only one need to be given; the other names may be omitted if they do not provide added value.
+
+
+[[distributor_host]]
+===== Distributor, issuing body or online host
+
+The name of the distributor, issuing body, or online host should be given in the citation if appropriate and known.
+
+Any restrictions on access to a resource imposed by an online host (e.g. geographical restrictions) should be indicated in `bibitem/note`.
+
+====
+Paramount Pictures, 1928. London: Universal International Pictures (UK) (distributor in the UK).
+====
+
+====
+Arista Records, New York, NY (distributor). Originally released on Savoy MG9003, 1947.
+====
+
+A well-known acronym may be used, and a translation of the name may be given.
+
+====
+Available from: MedlinePlus (distributor),
+https://www.nlm.nih.gov/medlineplus/[https://www.nlm.nih.gov/medlineplus/].
+====
+
+====
+Available from: FSD [Finnish Social Science Data Archive] (distributor), https://services.fsd.uta.fi/catalogue/[https://services.fsd.uta.fi/catalogue/] .
+====
+
+If the online host is different than the publisher, both should be given.
+
+====
+_France v Croatia – 2018 FIFA World Cup Final – Highlights_ [video file]. FIFA. Uploaded by [FIFATV], Jul. 15, 2018. Available from: YouTube (distributor), https://www.youtube.com/watch?v=GrsEAvRerTg[https://www.youtube.com/watch?v=GrsEAvRerTg]. [viewed 2018-07-22].
+====
+
+If two copies of the information resource have been used, both should be cited if it is not known whether the copies are technically identical. If they are different or if they have different access restrictions, both shall be cited.
+
+====
+HAWKING, Stephen. _Do black holes have no hair? 2016 Reith lecture_. [audio file]. BBC Radio, 26 Jan 2016. Available from: BBC, https://www.bbc.co.uk/programmes/b06pttqf[https://www.bbc.co.uk/programmes/b06pttqf]. Available from: YouTube (distributor),  https://www.youtube.com/watch?v=G6SKUOoTo4g[https://www.youtube.com/watch?v=G6SKUOoTo4g].
+[viewed 2018-07-22 and 2019-07-01].
+====
+
+Online hosts may have technical requirements which have an impact on the usage of information resources on their sites. Site specific hardware and software requirements should not be included in references, since such requirements do change often.
+
+If an online host limits access to information resources permanently on e.g., geographical basis, the access barrier should be indicated.
+
+====
+YLE Areena. TV (distributor). Available from: https://areena.yle.fi/tv[https://areena.yle.fi/tv] [Accessible from Finland only].
+====
+
+
+===== Printer or manufacturer
+
+The name of the printer and manufacturer, if applicable and known, should be provided in the citation.
+
+====
+_Resources for Tomorrow_. Volume 2. Ottawa, ON: Queen's Printer (printer), 1961.
+====
+
+====
+_Nutrition label of SANPELLEGRINO Melograno E Arancia_. San Pellegrino Terme (BG), Italy: SANPELLEGRINO S.p.A. (manufacturer), 2019.
+====
+
+
+===== Sponsor
+
+Sponsors may have many roles, including funder, contributor, distributor or online host.
+
+The name and, if appropriate and known, the role of a sponsoring body may be given after the publisher's information.
+
+====
+Gaithersburg: National Institute of Standards Technology, 2010. Sponsored by the Federal Emergency Management Agency (funding sponsor).
+====
+
+====
+Florence: UNICEF Innocenti Research Centre. Sponsored by UNICEF (study sponsor).
+====
+
+If the publisher is also a sponsor, sponsorship information can be shown with the publisher.
+
+====
+Chichester: Phillimore (publication sponsor for the Society of Genealogists).
+====
+
+====
+Woodbridge: The Boydell Press (publication sponsor for The Royal Historical Society).
+====
+
+A publication that is published on behalf of another entity can be described after
+the publisher.
+
+====
+Geneva: World Health Organization (on behalf of the Special Programme for Research and Training in Tropical Diseases).
+====
+
+
+////
+====
+_Effective project planning and evaluation in biomedical research -- Step-by-step Guide -- Trainers._ Geneva: World Health Organization (on behalf of the Special Programme for Research and Training in Tropical Diseases), 2007.
+====
+
+====
+CHANDRAMOULI Ramaswamy, Teresa T. SCHWARZHOFF. _NISTIR 7601: Framework for Emergency Response Officials (ERO): Authentication and Authorization Infrastructure_. Gaithersburg: National Institute of Standards Technology, 2010. Federal Emergency Management Agency (funding sponsor). Available from: https://doi.org/10.6028/NIST.IR.7601
+====
+
+====
+ROVATSOS Michael, Brent MITTELSTADT, Ansgar KOENE. _Landscape Summary: Bias in Algorithmic Decision-Making_. London: The Centre for Data Ethics and Innovation, 2019.
+====
+////
+
+
+
+[[place]]
+==== Place
+
+[[place_general]]
+===== General
+
+The place of production should be given as it appears most prominently in the cited information resource. If the place is known but not mentioned in the cited resource, it may be supplied.
+
+For well-known places, the place name alone may be given. If there is another, less well-known place with the same name or if the place is less known, one or more qualifiers should be added (e.g., county, department, state, province, country) to the place name to avoid confusion and to aid correct localization.
+
+Strictly speaking the place of production
 is an attribute of the publisher, and it can in fact be modelled as
-`bibitem/contributor[role@type = "publisher"]/organization/address/city`. 
-However, it is modelled as a top-level attribute of the bibliographic item 
+`bibitem/contributor[role@type = "publisher"]/organization/address/city`.
+However, it is modelled as a top-level attribute of the bibliographic item
 to allow the place to be extracted by consumers of the serialisation more readily,
 to allow multiple locations to be associated with the publisher, and to allow
 only one of the places of the publisher to be associated with the production of the item.
@@ -22,6 +186,14 @@ A URI in a geographical registry may optionally be given as `place/@uri`.
 A region within which the place is located may be given as `place/@region`,
 for disambiguation purposes; using a ISO 3166 code for a country or subnational
 region is recommended.
+
+====
+London.
+====
+
+====
+London (Ontario).
+====
 
 ====
 SANGSTER, R. B. _Roman Jakobson and beyond_. Berlin, New York & The Hague: Mouton, 1984.
@@ -54,6 +226,14 @@ SANGSTER, R. B. _Roman Jakobson and beyond_. Berlin, New York & The Hague: Mouto
 ====
 
 ====
+London (CA, USA).
+====
+
+====
+London (Kiribati).
+====
+
+====
 London (Ontario)
 
 [source,xml]
@@ -62,217 +242,40 @@ London (Ontario)
 --
 ====
 
-=== Publisher
+===== Place codes
 
-The publisher is a subclass of creator (<<creator>>). <<ISO690,clause 4.1>>
-differentiates between
-"publisher, online information provider, production company" and
-"distributor, online host".
-Of the classes of creator that can be used as the publisher,
-"publisher or production company" and "printer or manufacturer" have
-`bibitem/contributor/role@type = "publisher"`;
-"distributor or issuing body" and "sponsoring body" have
-`bibitem/contributor/role@type = "distributor"`.
-<<ISO690,clause 4.6>> allows that distributors, issuers and sponsors 
-can be named in addition to publishers.
-
-Any restrictions on access to a resource imposed by an online host
-(e.g. geographical restrictions) should be indicated in `bibitem/note`.
-
-[[date]]
-=== Date
-
-For a point date, only `date/on` is populated. For a date range, `date/from`
-and `date/to` are populated. If the range is ongoing,
-the `date/to` element is left out.
-
-The date for `date/on`, `date/from` and `date/to` is by default given as a
-Gregorian date/time, following the conventions
-of <<ISO8601-1>>; in an XML serialisation, they would be expected to follow
-the XML Schema `xs:datetime` representation (<<xmlschema>>). However bibliographic
-dates often contain information that cannot be restricted to an ISO 8601 date
-(dates in other calendars, date corrections; other subdivisions of the year;
-approximate date or no date.) For that reason, the
-model allows dates to be expressed in text instead of as an ISO 8601 date
-(`date/on@text`, `date/from@text`, `date/to@text`), or as well as an ISO 8601
-date if a Gregorian date is still applicable. 
-If the textual value of a date is a date range, and ISO 8601
-dates are still to be provided for the start and end of the date range, then
-the textual value is repeated for `date/from@text` and `date/to@text`.
-
-Date corrections may also involve indications of provenance (<<provenance>>). 
-
-The date of copyright is associated expressly with the copyright holder, in
-`bibitem/copyright/date/from`. Unlike other bibliographic dates, the copyright
-date can only have a year value.
+Names of countries and their subdivisions may be encoded in accordance with <<ISO3166_1>> and <<ISO3166_2>>.
 
 ====
-ROGET, Peter Mark. _Roget's Thesaurus_. Revised by
-Susan M. LLOYD. Burnt Mill, Harlow, Essex: Longman Group Limited, 1982 [1852].
-
-[source,xml]
---
-<bibitem type="book">
-  <title>Roget's Thesaurus</title>
-  <date type="created"><on>1852</on></date>
-  <date type="updated"><on>1982</on></date>
-  <date type="published"><on>1982</on></date>
-  <contributor>
-    <role type="author"/>
-    <person>
-      <name>
-        <surname>Roget</surname>
-        <forename>Peter</forename>
-        <forename>Mark</forename>
-      </name>
-    </person>
-  </contributor>
-  <contributor>
-    <role type="editor">revised</role>
-    <person>
-      <name>
-        <surname>Lloyd</surname>
-        <forename>Susan</forename>
-        <forename>M.</forename>
-      </name>
-    </person>
-  </contributor>
-  <contributor>
-    <role type="publisher"/>
-    <organization>
-      <name>Longman Group Limited</name>
-    </organization>
-  </contributor>
-  <place>Burnt Mill, Harlow, Essex</place>
-</bibitem>
---
+Paris [FR].
 ====
 
 ====
-2018-05-09, 21:33:28
-
-<date type="created">
-  <on>2018-05-09T21:33:28</on>
-</date>
+Paris [CA-YT].
 ====
 
 ====
-Islamic calendar 1439 [2017–2018]
-
-<date type="created">
-  <from text="Islamic calendar 1439">2017</from>
-  <to text="Islamic calendar 1439">2018</to>
-</date>
+Paris [US-TX].
 ====
 
-====
-1959 [i.e. 1995]
+===== Place identifiers
 
-<date type="created">
-  <on>1959</on>
-</date>
-<date type="created" source="supplied">
-  <on text="1959 [i.e. 1995]">1995</on>
-</date>
-====
+An identifier may be added after the place name. The identifier may be used instead of a qualifier if the name alone does not uniquely identify the place.
 
 ====
-Michaelmas term (Oxford), 2002
-
-<date type="created">
-  <from text="Michaelmas term (Oxford), 2002">2002-10-91</from>
-  <to text="Michaelmas term (Oxford), 2002">2002-12-17</to>
-</date>
+Ahjo [http://www.yso.fi/onto/yso/p106955].
 ====
 
-====
-1650?
 
-<date type="created" text="1650?">
-  <on>1650</on>
-</date>
-====
+===== Multiple places
 
-====
-\[no date]
+If two or more place names appear equally prominently in association with one publisher, distributor, producer, etc., all names after the first in the cited information resource may be omitted.
 
-<date type="created" text="[no date]"/>
-====
+
+===== Unknown place
+
+If a publisher is given and no place is known for them, an indication such as "`place not known`" or a similar phrase in the language of the publication, or an equivalent abbreviation such as the Latin "`s. l.`" or the English "`n.p.`" may be provided.
 
 ====
-1951 copied 1957
-
-<date type="created">
-  <on>1951</on>
-</date>
-<date type="copied">
-  <on>1957</on>
-</date>
+[s. l.].
 ====
-
-====
-1951-
-
-<date type="published">
-  <from>1951</from>
-</date>
-====
-
-====
-© ISO, 2018
-
-<copyright>
-  <from>1951</from>
-  <owner><organization><name>ISO</name></organization></owner>
-</date>
-====
-
-[[datetypes]]
-==== Date types
-
-Dates are associated with specific phases of the production of a bibliographic
-item, and those phases  are named through `date@type`.
-The default type used in bibliography
-is the date of publication (`date[@type = "published"]`), but the "created",
-"updated", "unchanged", and "copied" dates in particular
-are often given where they differ from the date of publication.
-The date of transmission is used instead of the date of publication
-for a broadcast. 
-
-The repertoire of date types is expanded to deal with the particular requirements
-of standards:
-
-Normal bibliographic dates:
-
-created:: Date a resource was created.
-published:: Date a resource was published.
-accessed:: Date a resource was last accessed by the bibliographer; routinely used
-for online publications. (Unlike in <<ISO690>>, no distinction is made between
-"viewed" and "accessed" based on whether the resource is human-readable or
-machine-readable.)
-updated:: Date a resource was updated and republished. Used for new editions.
-unchanged:: Date a resource was reprinted, i.e. republished without any changes.
-circulated:: Date a draft version of a resource was circulated. (Drafts by definition
-are not published.)
-transmitted:: Date a resource was broadcast.
-copied:: Date a resource was physically copied, or recreated without any substantial
-change in content (allowing for change in medium).
-adapted:: Date a resource was adapted for a new purpose or audience, with some change 
-in content (includes translation).
-
-Standards bibliographic dates:
-
-implemented:: Date a standard takes effect.
-obsoleted:: Date a standard becomes no longer in effect.
-confirmed:: Date a standard is renewed to take effect.
-issued:: Date a standard is authorised for publication.
-
-The date of publication is taken to be the date when the current version of the resource
-was published, unless a separate "unchanged", "updated" or "copied" date is given; 
-in that case, the date of publication is assumed to be the date of initial publication.
-
-The date of creation is taken to apply to the work instantiated by the resource,
-rather than to a specific format or edition. The latter are represented by the date
-of adaptation and of update, respectively.
-
-

@@ -1,9 +1,322 @@
 
+[[other_elements]]
+=== Other elements
+
 [[additional-info]]
-== Additional general information
+==== General
+
+Additional categories of information that may be included are given below. When such information is included in a reference, it should comply with the guidelines provided.
+
+
+[[elements-classification]]
+==== Classification
+
+* Source: <<ISO690,clause 4.11>>
+* Serialisation: `bibitem/classification`
+
+Classification codes may be included, if they have been recorded in the cited information resource. The classification scheme should be indicated if a code is provided.
+
+The classification scheme is given in `classification/@type`.
+
+====
+_Recommendations for bibliographic references to maps and charts_. 2, References in books and articles. UDC 001.811.
+====
+
+====
+WHITE, Bebo. _Programming techniques for software development._ UDC 681.3.06.
+====
+
+====
+Int. CI. E02F3/76. GB CI. E1F12.
+====
+
+====
+Giesler, Patricia. _Canada Remembers the Korean War_. Dewey 971.06 GIE 2003.
+ISBN 0662674979. Charlottetown, P.E.I. : Veterans Affairs Canada. 2003.
+
+[source,xml]
+--
+<bibitem type="book">
+  <title>Canada Remembers the Korean War</title>
+  <docidentifier type="ISBN">0662674979</docidentifier>
+  <date type="published"><on>2003</on></date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <surname>Giesler</surname>
+        <forename>Patricia</forename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>Veterans Affairs Canada</name>
+    </organization>
+  </contributor>
+  <place>Charlottetown, P.E.I.</place>
+  <classification type="Dewey">971.06 GIE 2003</classification>
+</bibitem>
+--
+====
+
+==== Keywords
+
+* Source: N/A
+* Serialisation: `bibitem/keyword`
+
+Keywords associated with a bibliographic item may be given as plain strings, or
+as terms from controlled vocabularies (with the vocabulary identifier and term
+code). Taxonomic names may also be given as a taxon hierarchy.
+
+====
+[source,xml]
+--
+<keyword>Homo sapiens</keyword>
+
+<keyword>
+  <vocab>Homo sapiens</vocab>
+  <vocabid type="wikidata" uri="https://www.wikidata.org/wiki/Q15978631">
+    <code>Q15978631</code>
+    <term>Homo sapiens</term>
+  </vocabid>
+  <vocabid type="National Biodiversity Network">
+    <code>NHMSYS0000376773</code>
+  </vocabid>
+</keyword>
+
+<keyword>
+  <taxon>Hominidae</taxon>
+  <taxon>Homininae</taxon>
+  <taxon>Hominini</taxon>
+  <taxon>Hominina</taxon>
+  <taxon>Homo</taxon>
+  <taxon>Homo sapiens</taxon>
+  <vocabid type="wikispecies"><term>Homo_sapiens</term></vocabid>
+</keyword>
+--
+====
+
+[[element-size]]
+==== Size
+
+The size of a printed document may be included in a reference. It may, if appropriate, be given as:
+
+. the height only, in millimetres,
++
+====
+210 mm.
+====
+
+. the height followed by the width, or,
++
+====
+210 mm &times; 150 mm.
+====
+
+. if appropriate, the A-size designation (see <<ISO216>>) followed, when necessary, by "landscape".
++
+====
+A5 landscape.
+====
+
+If the printed document cited is exceptionally large, the size should be specified.
+
+[[element-filesize]]
+==== File size
+
+The file size of a cited digital information resource may be given after the URI of the resource. If the file is exceptionally large, the size should be specified.
+
+====
+Available from: https://doi.org/10.3886/ICPSR03414.v1[https://doi.org/10.3886/ICPSR03414.v1] [1 MB]
+====
+
+====
+Available from: https://doi.org/10.3886/ICPSR20520.v2[https://doi.org/10.3886/ICPSR20520.v2] [81 MB]
+====
+
+
+==== Price
+
+* Source: <<ISO690,clause 4.11>>
+* Serialisation: `bibitem/price`, `bibitem/note`
+
+Information about price may be given, as quoted by the publisher.
+
+Price is marked up as a distinct element, which contains the currency code, represented in ISO 4217.
+The price should be treated as nominal, rather than capturing all possible pricings at a given time.
+
+Availability information for a bibliographic item is treated
+as a note. This also applies to the availability of an online resource,
+and any access limitations, but not to licensing, which is encoded separately.
+
+====
+_The Supply of Machinery (Safety) (Amendment) Regulations 1994_ [United Kingdom]. London: HMSO Publications, 1994. 13p. GBP 3.20. ISBN 0-11-045063-9.
+====
+
+Price and format (<<formats>>) availability may be given together.
+
+====
+POPKIN, Samuel L. _The Rational Peasant: The Political Economy of Rural Society in Vietnam_. Berkeley: University of California Press, 1979. $18.50 (cloth); $5.95 (paper).
+====
+
+====
+_Pluralism in the Soviet Union: Essays in Honour of H. Gordon Skilling_.
+Edited by Susan Gross Solomon. New York: St. Martin's Press, 1983. xiii, 179 pp.
+$27.50. Available on request to the author.
+
+[source,xml]
+--
+<bibitem type="book">
+  <title>Pluralism in the Soviet Union: Essays in Honour of H. Gordon Skilling</title>
+  <date type="published"><on>1983</on></date>
+  <contributor>
+    <role type="editor"/>
+    <person>
+      <name>
+        <surname>Solonom</surname>
+        <forename>Susan</forename>
+        <forename>Gross</forename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>St Martin's Press</name>
+    </organization>
+  </contributor>
+  <note>Available on request to the author</note>
+  <place>New York</place>
+  <price currency="USD">27.50</price>
+  <extent type="page">
+    <referenceFrom>xiii</referenceFrom>
+  </extent>
+  <extent type="page">
+    <referenceFrom>179</referenceFrom>
+  </extent>
+</bibitem>
+--
+====
+
+
+[[registered_trademark]]
+==== Registered trademark
+
+A registered trademark may be denoted by the symbol "`®`" next to the trademarked phrase(s) or symbol(s).
+
+====
+_Factsheet: DOI® System and Standard Identifier Schemes_
+====
+
+
+[[rights_metadata]]
+==== Rights metadata
+
+* Source: <<ISO690,clause 4.11>>
+* Serialisation: `bibitem/license`, `bibitem/copyright`.
+
+Copyright status of the information resource may be provided, if known.
+
+Where available, URIs should be used to identify licenses unambiguously.
+If a URI is not available, a commonly accepted abbreviation or short name of
+the license should be used.
+
+Copyright is privileged with a separate element, incorporating copyright date
+and owner.
+
+If it is certain that no exclusive intellectual property rights apply to the cited information resource, e.g., it is in the public domain or is not subject to copyright, this information may be included in the reference. The phrase "`Public domain`" or its equivalent in the language of the publication should be used.
+
+NOTE: This allows the reader to know that the cited information resource may be used freely.
+
+====
+Public domain.
+====
+
+Materials may enter the public domain in one country sooner than they may in another. A work marked to be in the public domain in a jurisdiction may still be under copyright protection in another jurisdiction. Therefore, the jurisdiction where the cited information resource is in the public domain should be indicated whenever necessary.
+
+====
+Public domain in the EU.
+====
+
+Some created works are automatically placed in the public domain since they are not copyrightable. The jurisdiction where the cited information resource where this condition applies should be indicated.
+
+====
+Public domain, not copyrightable in the United States.
+====
+
+If intellectual property rights apply, the copyright date may be cited, preceded by the symbol "`©`" or "`cop`". Alternatively, the English word "`copyright`" or its equivalent in the language of the citation may be used. If the copyright date is different from that of the publication date, both may be given.
+
+====
+Paris: Plon, © 1961.
+====
+
+====
+1984{period} cop. 2013.
+====
+
+If intellectual property rights apply but there is a well-known license which allows the usage, the acronym of the license should be provided with the version number (if any). Language of the license may be included as the <<ISO639_1>> code. The acronym should be preceded by the English word "`license`" or its equivalent in the language of the citation.
+
+====
+License: CC BY 4.0 EN.
+====
+
+====
+license: GNU GPL version 2.
+====
+
+====
+<license>BSD-2</license>
+<license>https://creativecommons.org/licenses/by/2.0/</license>
+====
+
+Example references are provided below.
+
+====
+ANDRIĆ, Ivo. _Il est un pont sur la Drina: chronique de Višegrad_. Translated from Serbo-Croatian into French. Georges LUCIANI (translator).
+====
+
+====
+LEE Annabelle, Stanley R. SNOUFFER, Randall J. EASTER, James FOTI, Tom CASAR. _NIST Special Publication 800-29 -- A Comparison of the Security Requirements for Cryptographic Modules in FIPS 140-1 and FIPS 140-2_. National Institute of Standards and Technology, 2001. Public domain, not copyrightable in the United States.
+====
+
+====
+Linux kernel [program]. The Linux Kernel Organization, 2002–. License: GNU GPL version 2.
+====
+
+
+[[elements-provenance]]
+==== Provenance and authenticity
+
+* Source: <<ISO690,clause 4.11>>
+* Serialisation: `bibitem/note`
+
+The scope of provenance information varies depending on the information resource described. Traditionally, it has been limited to a record of ownership of a work of art, but provenance information may also describe the historical context of the data and its origins, including the workflows and applications used to generate the research data.
+
+If the cited information resource is a Web document, the citation may contain a checksum with which a user can make sure that the document she has retrieved is the one cited.
+
+If the cited resource consists of multiple files, checksums should be calculated for all of them.
+
+Notes on bibliographical provenance, and checksums for digital resources,
+are both given as bibliographic notes.
+
+Checksum algorithm should precede the checksum value. A standardized algorithm such as SHA3-256 (<<FIPS202>>) should be used.
+
+NOTE: There are free Web services for calculation of checksums.
+
+====
+Available from: https://www.w3.org/Provider/Style/URI[https://www.w3.org/Provider/Style/URI]. [SHA-256 ddeda5854f50c7bff8e55ccd30e2c1c3c45674768b3c83c7f88c142e81c3b9a7]
+====
+
+An example reference is provided below.
+
+====
+Berners-Lee, T.: Cool URIs don't change. W3C, 1998. Available from: https://www.w3.org/Provider/Style/URI[https://www.w3.org/Provider/Style/URI]. [SHA-256 ddeda5854f50c7bff8e55ccd30e2c1c3c45674768b3c83c7f88c142e81c3b9a7]. [cited 2018-09-07].
+====
 
 [[provenance]]
-=== Provenance
+===== Provenance of reference information
 
 Information in a reference typically comes from the publisher of a resource, and
 is included in the resource itself, as described in <<ISO690,clause 4.1.2>>.
@@ -88,153 +401,49 @@ given how open-ended emendations can be (e.g. appearing anywhere in a string):
 they would complicate any serialisation of the model, to little real benefit.
 
 
+[[system_requirements]]
+==== System requirements
 
-=== Classification
+In order to facilitate access to electronic resources, references may specify the requirements for accessing and rendering the cited information resources. In practice, providing this information is complicated for some information resource types. For instance, research data sets often require specific software tools and documentation of the content. In such cases, system requirements should be included in references since otherwise re-use of these resources may be difficult or impossible.
 
-* Source: <<ISO690,clause 4.11>>
-* Serialisation: `bibitem/classification`
+Content providers may impose different site-specific technical requirements to access the same information resource. For instance, a user may be required to have a Flash player and support JavaScript in one site, whereas another site may require HTML5 to access the same content. These provider specific system requirements should not be included in references, since the lifetime of such information is often short.
 
-====
-Giesler, Patricia. _Canada Remembers the Korean War_. Dewey 971.06 GIE 2003.
-ISBN 0662674979. Charlottetown, P.E.I. : Veterans Affairs Canada. 2003.
+System requirements for programs are application specific and may be provided in a note. The note may include:
 
-[source,xml]
---
-<bibitem type="book">
-  <title>Canada Remembers the Korean War</title>
-  <docidentifier type="ISBN">0662674979</docidentifier>
-  <date type="published"><on>2003</on></date>
-  <contributor>
-    <role type="author"/>
-    <person>
-      <name>
-        <surname>Giesler</surname>
-        <forename>Patricia</forename>
-      </name>
-    </person>
-  </contributor>
-  <contributor>
-    <role type="publisher"/>
-    <organization>
-      <name>Veterans Affairs Canada</name>
-    </organization>
-  </contributor>
-  <place>Charlottetown, P.E.I.</place>
-  <classification type="Dewey">971.06 GIE 2003</classification>
-</bibitem>
---
+* the type of computer or computers on which the program was designed to be used;
+* the name of the operating system or systems and its version on which the program will run;
+* the middleware and other applications on which the program was designed to be used;
+* the memory and disk requirements of the program;
+* the characteristics of recommended peripherals and the Internet connection.
+
+The wording supplied by the program itself or the related documentation should be used. To reduce ambiguity, the words "system requirements" or an equivalent phrase precede this information. A URI to a Web page giving additional information may be provided.
 
 ====
-
-=== Keywords
-
-* Source: N/A
-* Serialisation: `bibitem/keyword`
-
-====
-[source,xml]
---
-<keyword>Homo sapiens</keyword>
-
-<keyword>
-  <vocab>Homo sapiens</vocab>
-  <vocabid type="wikidata" uri="https://www.wikidata.org/wiki/Q15978631">
-    <code>Q15978631</code>
-    <term>Homo sapiens</term>
-  </vocabid>
-  <vocabid type="National Biodiversity Network">
-    <code>NHMSYS0000376773</code>
-  </vocabid>
-</keyword>
-
-<keyword>
-  <taxon>Hominidae</taxon>
-  <taxon>Homininae</taxon>
-  <taxon>Hominini</taxon>
-  <taxon>Hominina</taxon>
-  <taxon>Homo</taxon>
-  <taxon>Homo sapiens</taxon>
-  <vocabid type="wikispecies"><term>Homo_sapiens</term></vocabid>
-</keyword>
---
+Minimum system requirements: Windows 10 SAC, Windows Server 2019, or Windows 10 LTSC 2019 at release; 1.6 gigahertz (GHz) or faster 2-core processor, 4GB RAM (2GB RAM 32-bit); 4.0 GB of available disk space; 1280 &times; 768 screen resolution. [Additional information available from: https://products.office.com/en/office-system-requirements[https://products.office.com/en/office-system-requirements]].
 ====
 
-=== Price and availability
+System requirements are technology dependent and therefore become outdated quickly (see <<civ_game>>). But even when the described system has become outdated, information about it may still be useful because the description will enable potential users of the cited information resource to have a general idea of emulation requirements (and choose migration strategy, if emulation is too complicated).
 
-* Source: <<ISO690,clause 4.11>>
-* Serialisation: `bibitem/price`, `bibitem/note`
-
-
-Price is marked up as a distinct element, which contains the currency code, represented in ISO 4217.
-The price should be treated as nominal, rather than capturing all possible pricings at a given time.
-
-Availability information for a bibliographic item is treated
-as a note. This also applies to the availability of an online resource,
-and any access limitations, but not to licensing, which is encoded separately.
-
+[[civ_game]]
 ====
-_Pluralism in the Soviet Union: Essays in Honour of H. Gordon Skilling_.
-Edited by Susan Gross Solomon. New York: St. Martin's Press, 1983. xiii, 179 pp.
-$27.50. Available on request to the author.
-
-[source,xml]
---
-<bibitem type="book">
-  <title>Pluralism in the Soviet Union: Essays in Honour of H. Gordon Skilling</title>
-  <date type="published"><on>1983</on></date>
-  <contributor>
-    <role type="editor"/>
-    <person>
-      <name>
-        <surname>Solonom</surname>
-        <forename>Susan</forename>
-        <forename>Gross</forename>
-      </name>
-    </person>
-  </contributor>
-  <contributor>
-    <role type="publisher"/>
-    <organization>
-      <name>St Martin's Press</name>
-    </organization>
-  </contributor>
-  <note>Available on request to the author</note>
-  <place>New York</place>
-  <price currency="USD">27.50</price>
-  <extent type="page">
-    <referenceFrom>xiii</referenceFrom>
-  </extent>
-  <extent type="page">
-    <referenceFrom>179</referenceFrom>
-  </extent>
-</bibitem>
---
+Recommended system requirements: Windows 7x64 / Windows 8.1x64 / Windows 10x64; Fourth Generation Intel Core i5 2.5 Ghz or AMD FX8350 4.0 Ghz or greater; 8 GB RAM, 16 GB available space; AMD 7970 or nVidia 770 or greater with 2GB, DirectX 11 Video Card.
 ====
 
-=== License
 
-* Source: <<ISO690,clause 4.11>>
-* Serialisation: `bibitem/license`, `bibitem/copyright`.
+[[elements-restoration]]
+==== Restoration
 
-Where available, URIs should be used to identify licenses unambiguously.
-If a URI is not available, a commonly accepted abbreviation or short name of
-the license should be used.
-
-Copyright is privileged with a separate element, incorporating copyright date
-and owner.
+If the cited information resource is a restored version of the original such as digitally remastered version of a film or a recording, restoration year should also be provided. If the resource has been significantly altered during restoration, or if it has been restored multiple times, restoration year is mandatory.
 
 ====
-<license>BSD-2</license>
-<license>https://creativecommons.org/licenses/by/2.0/</license>
+1964 [restored 1994].
 ====
 
-=== Provenance and Authenticity
 
-* Source: <<ISO690,clause 4.11>>
-* Serialisation: `bibitem/note`
+==== Other information
 
-Notes on bibliographical provenance, and checksums for digital resources,
-are both given as bibliographic notes.
+Other information relevant to the purposes of the particular reference may be included. Such information may include, for instance, links to the datasets the cited information resource is based on, or links to the documentation which enables the usage of the resource.
 
-
-
+====
+KLEIN M, H. VAN DE SOMPEL, R. SANDERSON, H. SHANKAR, L. BALAKIREVA, K. ZHOU, et al. _Scholarly Context Not Found: One in Five Articles Suffers from Reference Rot._ Data availability: XML files which summarize the articles used are available from Figshare repository. Articles from arXiv are available from: https://doi.org/10.6084/m9.figshare.1132671[https://doi.org/10.6084/m9.figshare.1132671]; articles from Elsevier are available from: https://doi.org/10.6084/m9.figshare.1132677[https://doi.org/10.6084/m9.figshare.1132677]; https://doi.org/10.6084/m9.figshare.1132676[https://doi.org/10.6084/m9.figshare.1132676].
+====

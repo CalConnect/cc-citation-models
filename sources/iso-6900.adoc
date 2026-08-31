@@ -10,7 +10,7 @@
 :title-intro-fr: Information et documentation
 :title-main-fr: Modèles de référence bibliographique et d'information sur les citations et sérialisation
 :doctype: international-standard
-:docstage: 00
+:docstage: 40
 :docsubstage: 00
 :technical-committee-type: TC
 :technical-committee-number: 46

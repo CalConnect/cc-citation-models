@@ -1,0 +1,72 @@
+
+[[surrogates]]
+=== Surrogate
+
+* Source: <<ISO690,clause 7.14.8>>
+* Serialisation: `bibitem/relation[type=manifestationOf|reproductionOf]`
+
+A digital surrogate of a work is serialised as a `relation` from the surrogate to the resource it embodies or reproduces (see <<docrelation-types>>).
+
+If the cited information resource is a work of art, there may be many digital surrogates of it available in the Internet. They may differ significantly from one another, with respect to reproduction fidelity and quality.
+
+If the cited information resource is a surrogate in Internet, HTTP URIs of the surrogates shall be included. If several surrogates of the same work have been used, they should all be included.
+
+The name or nom de plume of the person or organization which uploaded the resource, date and the distributor should be included.
+
+====
+SIBELIUS, Jean. _Violin concerto in D minor, Op. 47._ [video]. Maxim VENGEROV (violin). Chicago Symphony Orchestra. Daniel BARENBOIM (conductor). Teldec Classics, 1996. Video file uploaded by AgoraVoxFrance, Sept. 26, 2011. Available from: YouTube (distributor), https://www.youtube.com/watch?v=YsbrRAgv1b4[https://www.youtube.com/watch?v=YsbrRAgv1b4]. [viewed 2018-03-12].
+
+[source,xml]
+--
+<bibitem type="audiovisual">
+  <title>Violin concerto in D minor, Op. 47</title>
+  <uri type="src">https://www.youtube.com/watch?v=YsbrRAgv1b4</uri>
+  <date type="accessed"><on>2018-03-12</on></date>
+  <relation type="reproductionOf">
+    <bibitem type="audiovisual">
+      <title>Violin concerto in D minor, Op. 47</title>
+      <contributor>
+        <role type="performer"/>
+        <person><name><completename>Maxim Vengerov</completename></name></person>
+      </contributor>
+      <place>Chicago</place>
+      <date type="published"><on>1996</on></date>
+    </bibitem>
+  </relation>
+</bibitem>
+--
+====
+
+For clarity, the phrase "digital surrogate" in the language of citation may be used to indicate the nature of the copy.
+
+====
+DÜRER, Albrecht. _A hare_ [watercolour, 1502]. At: Albertina, Vienna, Austria. Digital surrogate available from: http://sammlungenonline.albertina.at/?query=Inventarnummer=%5b3073%5d&showtype=record[]. [viewed 2017-07-04].
+====
+
+====
+BOWIE, David. _TVC 15_ [audio file]. Uploaded by [Alluurpo]. Available from: YouTube (distributor), https://www.youtube.com/watch?v=oTjsOzeIpc0[https://www.youtube.com/watch?v=oTjsOzeIpc0].
+====
+
+====
+BOWIE, David. _TVC 15_ [audio file]. [lyrics]. Uploaded by [jozhob]. Available from: YouTube (distributor), https://www.youtube.com/watch?v=5fyE1gXNTpA[https://www.youtube.com/watch?v=5fyE1gXNTpA].
+====
+
+====
+BOWIE, David with Klaus Nomi. _TVC 15_ [audio file]. Available from: Vimeo (distributor), https://vimeo.com/152500331[https://vimeo.com/152500331].
+====
+
+All surrogates used should be included in the reference.
+
+====
+Digital surrogate available from: Solomon R. Guggenheim Founding Collection, https://www.guggenheim.org/artwork/793[https://www.guggenheim.org/artwork/793] [Web page]. [viewed 2017-07-10].
+Digital surrogate available from: Wikiart, http://www.wikiart.org/en/marc-chagall/paris-through-the-window-1913[http://www.wikiart.org/en/marc-chagall/paris-through-the-window-1913] [Web page].
+Archived copy available from: Internet Archive (distributor), {chagall_archive} [viewed 2017-02-13].
+====
+
+Names of the online hosts and URIs of the surrogates should be provided. Specific features of surrogates such as size may be included when deemed relevant.
+
+====
+DÜRER, Albrecht. _Feldhase_ [aquarell, 1502]. At: Albertina, Vienna, Austria.
+Digital surrogate available from: Wikimedia (distributor), https://commons.wikimedia.org/wiki/File:Durer_Young_Hare.jpg[https://commons.wikimedia.org/wiki/File:Durer_Young_Hare.jpg]. [still image, 3.731 &times; 4.123 pixels] [viewed 2018-07-16].
+Digital surrogate available from: Google arts and culture (distributor), https://artsandculture.google.com/asset/hase/1QHEnzUGYMDG_w. [still image]. [viewed 2019-07-04].
+====

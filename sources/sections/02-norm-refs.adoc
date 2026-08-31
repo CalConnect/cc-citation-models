@@ -20,3 +20,15 @@ edition of the referenced document (including any amendments) applies.
 * [[[ISO15924,ISO 15924]]], _Information and documentation -- Codes for the representation of names of scripts_
 
 * [[[ISO24229,ISO 24229]]]  footnote:[Under preparation. (Stage at the time of publication ISO/DIS 24229)], _Information and documentation -- Codes for the representation of script conversion systems_
+
+* [[[ISO4,ISO 4]]], _Information and documentation -- Rules for the abbreviation of title words and titles of publications_
+
+* [[[ISO216,ISO 216]]], _Writing paper and certain classes of printed matter -- Trimmed sizes -- A and B series, and indication of machine direction_
+
+* [[[ISO639_1,ISO 639-1]]], _Codes for the representation of names of languages -- Part 1: Alpha-2 code_
+
+* [[[ISO832,ISO 832]]], _Information and documentation -- Bibliographic description and references -- Rules for the abbreviation of bibliographic terms_
+
+* [[[ISO3166_1,ISO 3166-1]]], _Codes for the representation of names of countries and their subdivisions -- Part 1: Country codes_
+
+* [[[ISO3166_2,ISO 3166-2]]], _Codes for the representation of names of countries and their subdivisions -- Part 2: Country subdivision code_

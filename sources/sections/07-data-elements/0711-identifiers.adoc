@@ -1,18 +1,21 @@
 
 [[identifiers]]
-== Identifiers
+=== Identifiers
 
-=== General
+[[international_standard_identifiers]]
+==== International standard identifiers
 
-* Source: <<ISO690,clause 4.9>>
+* Source: <<ISO690,clause 4.9>>; <<ISO690,clause 7.11>>
 * Serialisation: `bibitem/docidentifier`
 
 image::relaton-models/relaton/images/RelBib_BibliographicItem.png[]
 
-<<ISO690,clause 4.9>> states that unique international standard identifiers
+<<ISO690>> states that unique international standard identifiers
 must be included in the bibliography. In practice, identifiers are included
 at the discretion of the bibliographer: they are routinely included in
 bibliographic databases, but seldom in references within documents.
+
+If the cited information resource has an international standard identifier (e.g., ISSN, ISBN, ISMN, ISRC, etc.) that uniquely identifies the resource, it may be included in the reference (see <<key_title>>) in a human readable form.
 
 The namespace of an identifier is indicated through its type attribute.
 The scope of an identifier is introduced to disambiguate the identifier
@@ -30,20 +33,29 @@ vocabulary, and one is unlikely to be derived. Identifier type should
 follow established practice in the domain; most well-known identifiers
 have a widely used short name or abbreviation.
 
-Invalid or cancelled identifiers should be so identified through the
-identifier scope: the cancellation of the identifier does not impact
-its namespace, but its connnection to a referent.
 
-Standards body identifiers for standards (<<ISO690,clause 5.9>>)
-may be modelled as series numbers or as identifiers (<<series>>).
-We recommend that the canonical identifier issued for a standard by a
-standards body be encoded as an identifier; other identifiers assigned
-to the same document may be better identified with a series title, as a
-named and numbered grouping of documents.
+Cited information resources can have both manifestation and work identifiers. These identifiers have different roles in information retrieval. For instance, a track published on a CD can have ISWC (International Standard Musical Work Code) assigned to the composition, and ISRC (International Standard Recording Code) assigned to a specific recording of the composition. With the latter it is possible to find different copies of the same recording in the Internet or on other carriers; with the former a user can find other recordings or interpretations of the same work, if no manifestations of the cited recording can be located.
 
-Identifiers can be expressed as HTTP URIs may be so expressed, without
-changing the identifier type. A DOI for example may be expressed as either
-the DOI proper, or as a doi.org URI.
+
+Depending on how the information resource is cited, either the work identifier or the manifestation identifier may be the best choice. The former is a good choice if any manifestation of the work will do. Both identifiers may be included in the reference, if appropriate.
+
+NOTE: ISSN can have multiple roles. There is an agreement to consider it as an identifier for both works and manifestations, because a serial work is also a plan for how a serial will be expressed and manifested. Therefore a serial may only have one expression and one manifestation.
+
+====
+_Geological Magazine_. ISSN 0016-7568.
+====
+
+====
+MANN, Thomas. _Mario the magician & other stories_. Translated from German. H.T. LOWE-PORTER (translator). London: Vintage Classics, 2000. ISBN 0-7493-8662-2.
+====
+
+====
+_Animal farm: a fairy story_ [ISTC 0A3200912B4A1057].
+====
+
+====
+ORWELL, George. _Animal farm: a fairy story_ [ISTC 0A3200912B4A1057]. [London]. Penguin Books, 2018. ISBN 978-0-241-34166-7.
+====
 
 ====
 _International Journal of Islamic Thought_. e-ISSN 2289-6023.
@@ -53,10 +65,79 @@ ISSN 2232-1314.
 --
 <bibitem type="journal">
   <title>International Journal of Islamic Thought</title>
-  <docidentifier scope="digital" type="e-ISSSN">2289-6023</docidentifier>
-  <docidentifier scope="print" type="ISSSN">2232-1314</docidentifier>
+  <docidentifier scope="digital" type="e-ISSN">2289-6023</docidentifier>
+  <docidentifier scope="print" type="ISSN">2232-1314</docidentifier>
 </bibitem>
 --
+====
+
+If other metadata elements in the reference do not guarantee unique identification of the cited information resource (for instance, if there are several periodicals sharing the same title) the identifier of the cited information resource should be included.
+
+====
+In: Guardian (Vancouver). ISSN 1197-2386.
+// In: Guardian. ISSN 1197-2386. (Published in Vancouver)
+====
+
+====
+In: Guardian (Palmerston North). ISSN 1170-0475.
+// In: Guardian. ISSN 1170-0475. (Published in Palmerston North, New Zealand)
+====
+
+If the cited information resource has more than one identifier (for instance, a book published in a series may have both ISSN and ISBN), only the one that most precisely identifies the resource used should be included in the reference.
+
+If the cited information resource has both ISBN-10 and ISBN-13, only ISBN-13 should be included in the reference.
+
+If the identifier in the cited information resource is cancelled or invalid, it may be included, preceded by term "Invalid" or "Cancelled" or an appropriate phrase in the language of the publication.
+
+Invalid or cancelled identifiers should be so identified through the
+identifier scope: the cancellation of the identifier does not impact
+its namespace, but its connnection to a referent.
+
+====
+_Elävän kuvan vuosikirja_. Helsinki: Suomen elokuvasäätiö ja Suomen elokuva-arkisto, 1988–1996. ISSN 0785-8015 [Invalid].
+====
+
+If the correct identifier is known, it should be used in the citation. The invalid or cancelled identifier may also be included in brackets, preceded by term "Invalid" or "Cancelled" or an appropriate phrase in the language of the publication.
+
+====
+_Elävän kuvan vuosikirja_. Helsinki: Suomen elokuvasäätiö ja Suomen elokuva-arkisto, 1988–1996. ISSN 0786-5386. [Invalid ISSN 0785-8015].
+====
+
+Standards body identifiers for standards
+may be modelled as series numbers or as identifiers (<<series_title_number>>).
+We recommend that the canonical identifier issued for a standard by a
+standards body be encoded as an identifier; other identifiers assigned
+to the same document may be better identified with a series title, as a
+named and numbered grouping of documents.
+
+Identifiers can be expressed as HTTP URIs may be so expressed, without
+changing the identifier type. A DOI for example may be expressed as either
+the DOI proper, or as a doi.org URI.
+
+[[persistent_identifiers]]
+==== Persistent identifiers
+
+If the cited information resource has a persistent identifier (PID) such as ARK, DOI name, Handle or URN, it shall be included in the reference.
+
+Actionable PIDs should be expressed as hyperlinks (HTTP URIs). Un-actionable versions of persistent identifiers such as `doi:10.3886/ICPSR31521.v1` or `URN:NBN:fi:au:cn:39756A` should not be used.
+
+If the PID is present in the reference as a hyperlink, the network location (URL) of the cited information resource shall not be used.
+
+If the cited Web resource has both a traditional identifier and a persistent identifier based on it (for instance ISBN and URN:ISBN or ISBN-A), both should be included in the reference.
+
+====
+GROSS, Oskar. _Word associations as a language model for generative and creative tasks._ [online] Helsinki: Helsinki University, 2016. ISBN 978-951-51-2090-8. Available from: http://urn.fi/URN:ISBN:978-951-51-2090-8[http://urn.fi/URN:ISBN:978-951-51-2090-8]. [viewed 2018-03-07].
+====
+
+:sa_uri: [AKADEMIE VON FINNLAND]. SUOMEN AKATEMIA. [http://urn.fi/URN:NBN:fi:au:cn:39756A]
+====
+{sa_uri}
+====
+
+If the cited resource is a component part, the traditional identifier of the host information resource should be included in addition to the persistent identifiers of the cited information resource. For instance, a journal article may have a DOI name, and the journal itself an ISSN.
+
+====
+ROBINSON, R. _Quiet and Poised: "Silent" Genes Accumulate Transcription Machinery_. [online]. PLoS Biol. 2010, *8*(1), e1000269. ISSN 1544-9173.  Available from: https://doi.org/10.1371/journal.pbio.1000269 [viewed 2019-09-11].
 ====
 
 ====
@@ -68,10 +149,23 @@ https://doi.org/10.24035/ijit.14.2018.001.
 [source,xml]
 --
 <bibitem type="article">
-<title>International Journal of Islamic Thought</title>
-<docidentifier scope="journal" type="doi">10.24035/ijit</docidentifier>
-<docidentifier scope="article" type="doi">https://doi.org/10.24035/ijit.14.2018.001</docidentifier>
+  <title>International Journal of Islamic Thought</title>
+  <docidentifier scope="journal" type="doi">10.24035/ijit</docidentifier>
+  <docidentifier scope="article" type="doi">https://doi.org/10.24035/ijit.14.2018.001</docidentifier>
 </bibitem>
 --
 ====
 
+////
+====
+ROBINSON, R. _Quiet and Poised: "Silent" Genes Accumulate Transcription Machinery_. PLoS Biol. 2010, *8*(1), e1000269. eISSN https://portal.issn.org/resource/ISSN/1545-7885[https://portal.issn.org/resource/ISSN/1545-7885]. ISSN https://portal.issn.org/resource/ISSN/1544-9173[https://portal.issn.org/resource/ISSN/1544-9173]. Available from: https://doi.org/10.1371/journal.pbio.1000269[https://doi.org/10.1371/journal.pbio.1000269]
+====
+////
+
+If the cited information resource has more than one persistent identifier, they may all be included in the reference. Each PID facilitates access to a different copy of the cited resource, and these copies may have different access rights (for instance, one provides a link to a copy in a system maintained by the publisher, another to an open archive hosted by a university). If only one PID is included, it should provide a link to a copy that does not have access limitations.
+
+Persistent identifiers often resolve to URLs of landing pages, which contain links to the actual resources. In such cases, it is sometimes not obvious if the PID identifies the cited resource or its landing page (or both), but such PIDs should nevertheless always be included in references, since they facilitate access to the cited resources.
+
+====
+HÜNING, Anne K., Frank MELZNER, Jörn THOMSEN, Magdalena A. GUTOWSKA, Lars KRÄMER, Mika KOHNO, Philip ROSENSTIEL, Hans-Otto PÖRTNER, Eva E. R. PHILIPP, Magnus LUCASSEN. _Seawater carbonate chemistry and mantle gene expression patterns of the Baltic Sea blue mussel in a laboratory experiment_.  PANGAEA, 2013. Available from: https://doi.org/10.1594/PANGAEA.833670 [viewed 2019-09-12].
+====

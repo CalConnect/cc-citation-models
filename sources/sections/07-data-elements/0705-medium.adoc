@@ -1,9 +1,18 @@
 
 [[medium]]
-== Medium
+=== Formats and resource type categorization
 
-* Source: <<ISO690,clause 4.4>>, <<ISO690,clause 5.4>>
+[[formats]]
+==== Formats
+
+* Source: <<ISO690,clause 4.4>>; <<ISO690,clause 7.5>>
 * Serialisation: `bibitem/medium`
+
+An information resource with identical content can be published in multiple formats, potentially manifesting via multiple types of media.
+
+NOTE: While some formats are labelled as "`editions`", this document uses the term "`edition`" specifically to indicate content revision.
+
+In specifying format, it is recommended not to specify the reading or interpreting device used. It is generally unnecessary to indicate the actual digital file format.
 
 <<ISO690>> differentiates between the content type of the item,
 the media type (which includes file format for electronic media),
@@ -30,10 +39,34 @@ subclass of bibliographic type or content.
 Information about alternate formats should be modelled as related bibliographic
 items (through the "instance" document relation), each with their own medium information.
 
-The size and scale of the item (`medium/size`, `medium/scale`) 
+The size and scale of the item (`medium/size`, `medium/scale`)
 usually contains numerical information, but is modelled as a string,
 given the complications of how size and scale can be described, particularly for
 cartographic material.
+
+====
+PLOKHY, Serhii. _Chernobyl: The History of a Nuclear Catastrophe_. Kindle edition.
+====
+
+====
+SKLOOT, R. _The Immortal Life of Henrietta Lacks._ Audiobook.
+====
+
+====
+SEUSS, Dr. _The Cat in the Hat_. Loose leaf.
+====
+
+====
+SEUSS, Dr. _Green Eggs and Ham_. Board book.
+====
+
+====
+TORIYAMA, Akira. _Dragon Ball_ [ドラゴンボール]. Paperback.
+====
+
+====
+WU, Cheng'en. _Journey to the West_ [西遊記]. Paperback. Translated from Chinese into English. W.J.F. JENNER (translator).
+====
 
 ====
 Sigur Rós.
@@ -75,8 +108,8 @@ Mosfellsbær: Sundlaugin, 2002.
 ====
 
 ====
-Easterbrook, Don J. _Geologic Map of Western Whatcom County, Washington_. 
-Map. 1:62,500. col. 68 x 69 cm. fold. in envelope 30 x 24 cm. 
+Easterbrook, Don J. _Geologic Map of Western Whatcom County, Washington_.
+Map. 1:62,500. col. 68 x 69 cm. fold. in envelope 30 x 24 cm.
 Miscellaneous Investigations Series, map 1-854-B. Reston, VA: U.S. Geological Survey, 1976.
 
 [source,xml]
@@ -104,14 +137,13 @@ Miscellaneous Investigations Series, map 1-854-B. Reston, VA: U.S. Geological Su
   <place>Reston, VA</place>
 </bibitem>
 --
-
 ====
 
 ====
-GATES, B. [BillGates]. (2013, February 26). 
-#Polio is 99% eradicated. Join me & @FCBarcelona as we work to finish the job and #EndPolio. 
-[Tweet]. Available from: https://twitter.com/BillGates/status/306195345845665792. 
-[viewed 2016-07-06T12:30:15+02:00]. See also VIDEO: http://b-gat.es/X75Lvy. 
+GATES, B. [BillGates]. (2013, February 26).
+#Polio is 99% eradicated. Join me & @FCBarcelona as we work to finish the job and #EndPolio.
+[Tweet]. Available from: https://twitter.com/BillGates/status/306195345845665792.
+[viewed 2016-07-06T12:30:15+02:00]. See also VIDEO: http://b-gat.es/X75Lvy.
 
 [source,xml]
 --
@@ -145,3 +177,135 @@ GATES, B. [BillGates]. (2013, February 26).
 --
 ====
 
+
+==== Resource type categorization
+
+===== General
+
+Content, media and carrier type should be specified if they have a significant impact on the intellectual content, look and feel, or usage of the cited information resource.
+
+The information should be taken from the resource if it is provided. Otherwise, an external reference may be used when necessary for identification purposes, such as:
+
+* IANA Media Types list{blank}footnote:[https://www.iana.org/assignments/media-types/media-types.xhtml];
+
+* Resource Description and Access (RDA)
+  content types{blank}footnote:[http://www.loc.gov/standards/valuelist/rdacontent.html],
+  media types{blank}footnote:[http://www.loc.gov/standards/valuelist/rdamedia.html],
+  and carrier types{blank}footnote:[http://www.loc.gov/standards/valuelist/rdacarrier.html].
+
+Resource type description does not always provide added value for citations.
+
+====
+A printed book would have content type "`text`", and carrier type "`volume`". Such information is seldom relevant for citations.
+====
+
+====
+A Web site would have content type "`text`", media type "`computer`" and carrier type "`online`". Only the carrier type here is relevant for citation.
+====
+
+===== Content type
+
+Content type should be provided when it is required for the identification of the cited work. For instance, there may be several related interrelated works which share the same title.
+
+====
+_Macbeth_ [film].
+====
+
+===== Carrier type
+
+Digital information resources can be fragile. In order to preserve them,
+it will be necessary to transfer them to new carriers. For instance,
+audio tapes last only up to 30 years, but their lifespan can be even
+shorter if the tapes are not stored correctly. And even if the carrier
+itself is still fine, finding a player for an outdated carrier type
+(e.g. a C-cassette deck) may be difficult.
+
+Since carrier type information will become outdated, carrier type should not be specified if the same version of the information resource is known to be available on multiple carriers (e.g. LP, C-cassette, CD) or if the information used is available even on versions published on other carriers.
+
+Carrier type should be provided if the carrier type is relevant for the citation.
+
+====
+If the quality and special features of a 5-channel recording released on SA-CD are discussed, the citation specifies the carrier type, since other carriers such as LP or CD do not provide the relevant features.
+
+À la russe. [SA-CD]. BIS-2150 SACD
+====
+
+
+==== Digital file formats
+
+The digital file format of the cited online electronic information resource should be specified.
+This is especially the case when the carrier type is not provided or if the carrier type does
+not provide sufficient detail about the file format.
+
+Identification of digital file formats may utilize the following information:
+
+* file extension of the information resource;
+* <<IANAMediaTypes>>;
+* well-known format designations like the <<PRONOM>> Unique Identifier.
+
+NOTE: Both IANA Media Type and file extension may be insufficient if there are several incompatible versions of the same file format with significantly different characteristics. In such cases, different rendering tools may be required.
+
+====
+[application/pdf].
+====
+
+====
+[PDF].
+====
+
+====
+[fmt/14]. (PRONOM Unique Identifier for PDF version 1.0)
+====
+
+====
+[EPUB 3.0.1].
+====
+
+If the format of the cited resource is uncommon, sufficient technical metadata or a link to such metadata should be provided. In cases where the cited resource is from an archive with a digital preservation program, this may be covered by the archive.
+
+NOTE: A file format specification can be accompanied by one or more applications capable of rendering resources in the format, and for provenance purposes the application with which the information resource was created should sometimes be provided. However, including technical metadata in references is not very practical since it changes over time. If file format is specified using the PRONOM identifier, the identifier can be used to find up to date information about the format, including rendering tools, from the PRONOM database.
+
+If the format is widely known and supported (e.g., HTML), the RDA term "`online resource`" or just "`online`" may be used instead of the file format designation. Type of the resource may also be specified.
+
+====
+[online resource].
+====
+
+====
+[online serial].
+====
+
+The specific type of electronic information resource may also be specified, if it is not clear from the context. The level of specificity may be chosen, as appropriate.
+
+====
+[statistical dataset].
+====
+
+====
+[LiDAR dataset].
+====
+
+====
+[statistical analysis program].
+====
+
+====
+[IBM SPSS Statistics].
+====
+
+Information about other file formats in which the cited information resource is available (e.g., a PDF version of an HTML document which was originally used) may be provided in addition to the cited resource. Information about alternative formats should be clearly separated from the information pertaining to the file format used, and it should be preceded by an appropriate phrase, including the file format and the online host if necessary.
+
+====
+[Available also in PDF format].
+====
+
+If an alternative file format is included in the reference, a check should be made to verify that the alternative resource contains the cited information. Digital surrogates of printed resources can differ significantly from the original documents.
+
+
+==== Migrated medium
+
+If the information resource used has been migrated and the original resource is no longer accessible, the migrated resource may be used if it contains the cited information. A note about the original version may be added.
+
+====
+[PDF/A]. [Originally a Microsoft Word document].
+====
