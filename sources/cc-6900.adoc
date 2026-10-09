@@ -22,6 +22,12 @@
 :data-uri-image:
 
 include::sections-cc/00-foreword.adoc[]
+
+[abstract]
+== Abstract
+
+This document provides information models in support of the guidelines specified in ISO 690, including models for the citation of information resources, bibliographic references to information resources, and bibliographic reference lists. The models are intended to facilitate data encoding and interchange of citation and bibliographic information, and machine-readable bibliographic references and citations.
+
 include::sections/00-intro.adoc[]
 include::sections/01-scope.adoc[]
 include::sections/02-norm-refs.adoc[]
